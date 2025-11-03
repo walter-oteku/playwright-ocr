@@ -1,0 +1,33 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - img "SAF Logo" [ref=e17]
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - heading "OCR System" [level=1] [ref=e21]
+        - heading "Welcome back" [level=6] [ref=e22]
+        - paragraph [ref=e23]: Use your Email Address/Username and password to log in to OCR.
+      - generic [ref=e25]:
+        - generic [ref=e27]:
+          - generic: Email Address/Username
+          - generic [ref=e28]:
+            - textbox "Email Address/Username" [ref=e29]:
+              - /placeholder: Enter your email or username
+            - group:
+              - generic: Email Address/Username
+        - generic [ref=e30]:
+          - generic: Password
+          - generic [ref=e31]:
+            - textbox "Password" [ref=e32]:
+              - /placeholder: Enter your password
+            - button [ref=e34] [cursor=pointer]:
+              - img [ref=e35]
+            - group
+        - button "Sign in" [ref=e37] [cursor=pointer]
+        - link "Forgot your password?" [ref=e39] [cursor=pointer]:
+          - /url: /forgot-password
+        - paragraph [ref=e41]: OCR 1.0
+  - alert [ref=e42]
+```

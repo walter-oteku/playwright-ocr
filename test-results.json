@@ -1,0 +1,153 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upload.spec.js",
+      "file": "upload.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full document workflow: upload, search, filter, view, edit, delete",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10407,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for login success...\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "📁 Navigating to 'Upload' tab...\n"
+                    },
+                    {
+                      "text": "✅ Upload page loaded.\n"
+                    },
+                    {
+                      "text": "📎 Uploading sample document...\n"
+                    },
+                    {
+                      "text": "✅ File uploaded successfully!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T22:50:26.234Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "795c7691ef25a13245f8-bb0445549e72afa6691e",
+          "file": "upload.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-10-27T22:50:24.058Z",
+    "duration": 14023.867,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

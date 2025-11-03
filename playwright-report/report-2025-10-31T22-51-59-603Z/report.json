@@ -1,0 +1,2354 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-10-31T22-51-59-603Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-10-31T22-51-59-603Z/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.js",
+      "file": "auth.setup.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9166,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Starting authentication setup...\n"
+                    },
+                    {
+                      "text": "Authentication setup completed!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:52:01.686Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f376efe52c54b1a876fd-9d03a3bb502e264caa3f",
+          "file": "auth.setup.js",
+          "line": 3,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "analytics.spec.js",
+      "file": "analytics.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Analytics dashboard interaction flow with date filter",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37062,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for login success...\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "📊 Navigating to 'Analytics' tab...\n"
+                    },
+                    {
+                      "text": "✅ Analytics page loaded successfully!\n"
+                    },
+                    {
+                      "text": "🗓 Clicking on date range section...\n"
+                    },
+                    {
+                      "text": "📅 Date picker opened!\n"
+                    },
+                    {
+                      "text": "✍️ Typing custom Start and End Dates...\n"
+                    },
+                    {
+                      "text": "✅ Clicking Apply to confirm filter...\n"
+                    },
+                    {
+                      "text": "🎯 Applied date filter successfully!\n"
+                    },
+                    {
+                      "text": "🌀 Reopened date picker to test Cancel flow...\n"
+                    },
+                    {
+                      "text": "❌ Cancelled date selection as expected!\n"
+                    },
+                    {
+                      "text": "🧾 Hovering over report summary cards...\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Total Documents\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Success Rate\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Avg Processing Time\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Accuracy Rate\n"
+                    },
+                    {
+                      "text": "📈 Scrolling to Processing Trends chart...\n"
+                    },
+                    {
+                      "text": "📊 Hovered over 'Processing Trends' chart.\n"
+                    },
+                    {
+                      "text": "📉 Scrolling to Document Types chart...\n"
+                    },
+                    {
+                      "text": "📚 Hovered over 'Document Types' chart.\n"
+                    },
+                    {
+                      "text": "✨ Final slow scroll to bottom for full analytics view...\n"
+                    },
+                    {
+                      "text": "✅ Analytics dashboard interaction flow completed smoothly and human-like!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:52:14.206Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0311e98a1a308e49cae4-4273b4e7d8f7b9d7606e",
+          "file": "analytics.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "audit-log.spec.js",
+      "file": "audit-log.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Audit Logs dashboard interaction and filter flow",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 43531,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//input[@value=\\'2025-10-23\\'])[1]') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//input[@value=\\'2025-10-23\\'])[1]') to be visible\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\audit-log.spec.js:82:17",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\audit-log.spec.js",
+                      "column": 17,
+                      "line": 82
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 80 |\u001b[39m \u001b[90m// Start Date\u001b[39m\n \u001b[90m 81 |\u001b[39m \u001b[36mconst\u001b[39m startDate \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//input[@value='2025-10-23'])[1]\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 82 |\u001b[39m \u001b[36mawait\u001b[39m startDate\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 83 |\u001b[39m \u001b[36mawait\u001b[39m startDate\u001b[33m.\u001b[39mfill(\u001b[32m'2025-10-23'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 85 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\audit-log.spec.js",
+                        "column": 17,
+                        "line": 82
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//input[@value=\\'2025-10-23\\'])[1]') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 80 |\u001b[39m \u001b[90m// Start Date\u001b[39m\n \u001b[90m 81 |\u001b[39m \u001b[36mconst\u001b[39m startDate \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//input[@value='2025-10-23'])[1]\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 82 |\u001b[39m \u001b[36mawait\u001b[39m startDate\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 83 |\u001b[39m \u001b[36mawait\u001b[39m startDate\u001b[33m.\u001b[39mfill(\u001b[32m'2025-10-23'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 85 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\audit-log.spec.js:82:17\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for login success...\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "📋 Navigating to 'Audit Logs' tab...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for Audit Logs page to load...\n"
+                    },
+                    {
+                      "text": "✅ Audit Logs page loaded successfully!\n"
+                    },
+                    {
+                      "text": "🧾 Hovering over summary cards...\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Total Logs\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Errors\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Warnings\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Success\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Active Users\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Document Actions\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: System Actions\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Info Logs\n"
+                    },
+                    {
+                      "text": "🎛 Scrolling to filter section...\n"
+                    },
+                    {
+                      "text": "🪟 Clicking 'Show Filters'...\n"
+                    },
+                    {
+                      "text": "✅ 'Show Filters' section displayed.\n"
+                    },
+                    {
+                      "text": "✍️ Setting Start and End Dates...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:52:14.303Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\audit-log.spec.js",
+                    "column": 17,
+                    "line": 82
+                  }
+                },
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 45895,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//input[@value=\\'2025-10-23\\'])[1]') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//input[@value=\\'2025-10-23\\'])[1]') to be visible\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\audit-log.spec.js:82:17",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\audit-log.spec.js",
+                      "column": 17,
+                      "line": 82
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 80 |\u001b[39m \u001b[90m// Start Date\u001b[39m\n \u001b[90m 81 |\u001b[39m \u001b[36mconst\u001b[39m startDate \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//input[@value='2025-10-23'])[1]\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 82 |\u001b[39m \u001b[36mawait\u001b[39m startDate\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 83 |\u001b[39m \u001b[36mawait\u001b[39m startDate\u001b[33m.\u001b[39mfill(\u001b[32m'2025-10-23'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 85 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\audit-log.spec.js",
+                        "column": 17,
+                        "line": 82
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//input[@value=\\'2025-10-23\\'])[1]') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 80 |\u001b[39m \u001b[90m// Start Date\u001b[39m\n \u001b[90m 81 |\u001b[39m \u001b[36mconst\u001b[39m startDate \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//input[@value='2025-10-23'])[1]\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 82 |\u001b[39m \u001b[36mawait\u001b[39m startDate\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 83 |\u001b[39m \u001b[36mawait\u001b[39m startDate\u001b[33m.\u001b[39mfill(\u001b[32m'2025-10-23'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 85 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\audit-log.spec.js:82:17\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for login success...\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "📋 Navigating to 'Audit Logs' tab...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for Audit Logs page to load...\n"
+                    },
+                    {
+                      "text": "✅ Audit Logs page loaded successfully!\n"
+                    },
+                    {
+                      "text": "🧾 Hovering over summary cards...\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Total Logs\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Errors\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Warnings\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Success\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Active Users\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Document Actions\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: System Actions\n"
+                    },
+                    {
+                      "text": "🪶 Hovered over card: Info Logs\n"
+                    },
+                    {
+                      "text": "🎛 Scrolling to filter section...\n"
+                    },
+                    {
+                      "text": "🪟 Clicking 'Show Filters'...\n"
+                    },
+                    {
+                      "text": "✅ 'Show Filters' section displayed.\n"
+                    },
+                    {
+                      "text": "✍️ Setting Start and End Dates...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-31T22:53:02.079Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\audit-log.spec.js",
+                    "column": 17,
+                    "line": 82
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7fe617d7a0236b3f9b64-5ee47a9aa7be353b1b46",
+          "file": "audit-log.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "dashboard.spec.js",
+      "file": "dashboard.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login, then navigate dashboard with scrollbar for charts and recent documents",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 44815,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In button...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for success message...\n"
+                    },
+                    {
+                      "text": "✅ Login successful\n"
+                    },
+                    {
+                      "text": "🏠 Navigating to dashboard...\n"
+                    },
+                    {
+                      "text": "✅ Dashboard loaded successfully\n"
+                    },
+                    {
+                      "text": "\n🖱️ Testing: Upload Documents\n"
+                    },
+                    {
+                      "text": "📍 Current URL: https://ocr-engine.netlify.app/dashboard\n"
+                    },
+                    {
+                      "text": "👆 Clicking Upload Documents...\n"
+                    },
+                    {
+                      "text": "📍 Navigated to: https://ocr-engine.netlify.app/upload\n"
+                    },
+                    {
+                      "text": "🔄 Returning to dashboard...\n"
+                    },
+                    {
+                      "text": "✅ Completed Upload Documents\n"
+                    },
+                    {
+                      "text": "\n🖱️ Testing: Manual Review\n"
+                    },
+                    {
+                      "text": "📍 Current URL: https://ocr-engine.netlify.app/dashboard\n"
+                    },
+                    {
+                      "text": "👆 Clicking Manual Review...\n"
+                    },
+                    {
+                      "text": "📍 Navigated to: https://ocr-engine.netlify.app/review\n"
+                    },
+                    {
+                      "text": "🔄 Returning to dashboard...\n"
+                    },
+                    {
+                      "text": "✅ Completed Manual Review\n"
+                    },
+                    {
+                      "text": "\n🖱️ Testing: Pending Review\n"
+                    },
+                    {
+                      "text": "📍 Current URL: https://ocr-engine.netlify.app/dashboard\n"
+                    },
+                    {
+                      "text": "👆 Clicking Pending Review...\n"
+                    },
+                    {
+                      "text": "📍 Navigated to: https://ocr-engine.netlify.app/review/pending\n"
+                    },
+                    {
+                      "text": "🔄 Returning to dashboard...\n"
+                    },
+                    {
+                      "text": "✅ Completed Pending Review\n"
+                    },
+                    {
+                      "text": "\n🖱️ Testing: Analytics\n"
+                    },
+                    {
+                      "text": "📍 Current URL: https://ocr-engine.netlify.app/dashboard\n"
+                    },
+                    {
+                      "text": "👆 Clicking Analytics...\n"
+                    },
+                    {
+                      "text": "📍 Navigated to: https://ocr-engine.netlify.app/analytics\n"
+                    },
+                    {
+                      "text": "🔄 Returning to dashboard...\n"
+                    },
+                    {
+                      "text": "✅ Completed Analytics\n"
+                    },
+                    {
+                      "text": "\n🖱️ Testing: User Management\n"
+                    },
+                    {
+                      "text": "📍 Current URL: https://ocr-engine.netlify.app/dashboard\n"
+                    },
+                    {
+                      "text": "👆 Clicking User Management...\n"
+                    },
+                    {
+                      "text": "📍 Navigated to: https://ocr-engine.netlify.app/users\n"
+                    },
+                    {
+                      "text": "🔄 Returning to dashboard...\n"
+                    },
+                    {
+                      "text": "✅ Completed User Management\n"
+                    },
+                    {
+                      "text": "\n🖱️ Testing: System Settings\n"
+                    },
+                    {
+                      "text": "📍 Current URL: https://ocr-engine.netlify.app/dashboard\n"
+                    },
+                    {
+                      "text": "👆 Clicking System Settings...\n"
+                    },
+                    {
+                      "text": "📍 Navigated to: https://ocr-engine.netlify.app/system\n"
+                    },
+                    {
+                      "text": "⚡ Using fast return for System Settings...\n"
+                    },
+                    {
+                      "text": "✅ Completed System Settings\n"
+                    },
+                    {
+                      "text": "\n📈 Starting chart hover with scrollbar functionality...\n"
+                    },
+                    {
+                      "text": "\n📈 Starting chart hover with scrollbar positioning...\n"
+                    },
+                    {
+                      "text": "🔄 Scrolling to charts...\n"
+                    },
+                    {
+                      "text": "🔍 Looking for charts after scrolling...\n"
+                    },
+                    {
+                      "text": "📊 Processing Trends visible: true\n"
+                    },
+                    {
+                      "text": "📈 Document Types visible: true\n"
+                    },
+                    {
+                      "text": "🎨 Found 0 canvas elements\n"
+                    },
+                    {
+                      "text": "❌ No canvas elements found for charts\n"
+                    },
+                    {
+                      "text": "✅ Chart hover tests completed with scrollbar\n"
+                    },
+                    {
+                      "text": "\n📋 Starting recent documents check with scrollbar...\n"
+                    },
+                    {
+                      "text": "\n📋 Checking recent documents section...\n"
+                    },
+                    {
+                      "text": "🔄 Scrolling to recent-documents...\n"
+                    },
+                    {
+                      "text": "✅ Found recent documents section: text=Recent Documents\n"
+                    },
+                    {
+                      "text": "📄 Found 0 potential document rows/items\n"
+                    },
+                    {
+                      "text": "❌ No document items found in recent documents section\n"
+                    },
+                    {
+                      "text": "✅ Recent documents check completed\n"
+                    },
+                    {
+                      "text": "✅ Recent documents check completed\n"
+                    },
+                    {
+                      "text": "🔄 Scrolling to top...\n"
+                    },
+                    {
+                      "text": "⬆️ Scrolled back to top\n"
+                    },
+                    {
+                      "text": "\n🎯 Full test sequence completed with scrollbar functionality\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:52:52.046Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1bb41a2bd6df77ed2f7-e67324b091656eceb669",
+          "file": "dashboard.spec.js",
+          "line": 187,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "documents.spec.js",
+      "file": "documents.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full document workflow: upload, search, filter, view, edit, delete",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 52410,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for login success...\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "📁 Navigating to 'Documents' tab...\n"
+                    },
+                    {
+                      "text": "✅ Documents page loaded.\n"
+                    },
+                    {
+                      "text": "📤 Clicking 'Upload Documents' button...\n"
+                    },
+                    {
+                      "text": "✅ Upload page opened successfully!\n"
+                    },
+                    {
+                      "text": "📎 Uploading sample document...\n"
+                    },
+                    {
+                      "text": "✅ File uploaded successfully!\n"
+                    },
+                    {
+                      "text": "🔄 Navigated back to Documents list.\n"
+                    },
+                    {
+                      "text": "🔍 Searching for uploaded document...\n"
+                    },
+                    {
+                      "text": "✅ Search completed.\n"
+                    },
+                    {
+                      "text": "🧹 Clearing search field for next steps...\n"
+                    },
+                    {
+                      "text": "✅ Search field cleared — ready for next actions.\n"
+                    },
+                    {
+                      "text": "⚙️ Opening the Filters dropdown...\n"
+                    },
+                    {
+                      "text": "✅ Selecting 'Completed' status...\n"
+                    },
+                    {
+                      "text": "✅ Status filter applied.\n"
+                    },
+                    {
+                      "text": "📄 Selecting 'Business Permit' document type...\n"
+                    },
+                    {
+                      "text": "✅ Document type filter applied.\n"
+                    },
+                    {
+                      "text": "🧹 Clicking 'Clear all' to reset filters...\n"
+                    },
+                    {
+                      "text": "✅ Filters cleared successfully.\n"
+                    },
+                    {
+                      "text": "📅 Filling in Upload Date Range...\n"
+                    },
+                    {
+                      "text": "✅ Date range entered.\n"
+                    },
+                    {
+                      "text": "📊 Filling in Confidence Score Range...\n"
+                    },
+                    {
+                      "text": "✅ Confidence Score Range entered successfully!\n"
+                    },
+                    {
+                      "text": "⬆️ Collapsing Filters panel...\n"
+                    },
+                    {
+                      "text": "✅ Filters panel collapsed successfully!\n"
+                    },
+                    {
+                      "text": "🔎 Searching for existing document...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for search results to load...\n"
+                    },
+                    {
+                      "text": "👁 Attempting to view document...\n"
+                    },
+                    {
+                      "text": "✅ View icon clicked using direct xpath!\n"
+                    },
+                    {
+                      "text": "✅ Document view page loaded successfully!\n"
+                    },
+                    {
+                      "text": "⬇️ Attempting to download document...\n"
+                    },
+                    {
+                      "text": "✅ Download icon clicked using direct xpath!\n"
+                    },
+                    {
+                      "text": "✅ Document download triggered successfully!\n"
+                    },
+                    {
+                      "text": "🗑 Attempting to delete document...\n"
+                    },
+                    {
+                      "text": "✅ Delete button clicked using direct xpath!\n"
+                    },
+                    {
+                      "text": "🧹 Delete confirmation dialog opened...\n"
+                    },
+                    {
+                      "text": "⚠️ Delete action failed: locator.isVisible: Error: strict mode violation: getByRole('button', { name: /delete/i }) resolved to 3 elements:\n    1) <button title=\"Delete document\" class=\"text-gray-400 hover:text-red-500 p-1\">…</button> aka getByRole('button', { name: 'Delete document' }).first()\n    2) <button title=\"Delete document\" class=\"text-gray-400 hover:text-red-500 p-1\">…</button> aka getByRole('button', { name: 'Delete document' }).nth(1)\n    3) <button title=\"Delete document\" class=\"text-gray-400 hover:text-red-500 p-1\">…</button> aka getByRole('button', { name: 'Delete document' }).nth(2)\n\nCall log:\n\u001b[2m    - checking visibility of getByRole('button', { name: /delete/i })\u001b[22m\n\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:53:36.928Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d6a5e959622d2fd9deae-226290e1ee92fa55c4e2",
+          "file": "documents.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "example.spec.js",
+      "file": "example.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "homepage has Playwright in title",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:53:54.421Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-04c36369a6852cadfa37",
+          "file": "example.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "integrated-login.spec.js",
+      "file": "integrated-login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify valid login with password toggle, checkbox, and visible typing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 14641,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "👁️ Toggling password visibility before typing...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "✅ Checking 'Remember me'...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In button...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for success message...\n"
+                    },
+                    {
+                      "text": "✅ Login test passed!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:54:01.866Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68afb5d3ed6c8996897b-80ace1a4ad808f979962",
+          "file": "integrated-login.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "invalid-email.spec.js",
+      "file": "invalid-email.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify invalid login with invalid email",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 10898,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": " Navigating to login page...\n"
+                    },
+                    {
+                      "text": "Typing email...\n"
+                    },
+                    {
+                      "text": "Typing password...\n"
+                    },
+                    {
+                      "text": "Clicking Sign In button...\n"
+                    },
+                    {
+                      "text": "Waiting for Error message...\n"
+                    },
+                    {
+                      "text": "Login test passed!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:54:16.570Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0213210222ae23756e4b-edc492b08c18f405c8a7",
+          "file": "invalid-email.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "invalid-password.spec.js",
+      "file": "invalid-password.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify invalid login with invalid password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 11445,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": " Navigating to login page...\n"
+                    },
+                    {
+                      "text": "Typing email...\n"
+                    },
+                    {
+                      "text": "Typing password...\n"
+                    },
+                    {
+                      "text": "Clicking Sign In button...\n"
+                    },
+                    {
+                      "text": "Waiting for Error message...\n"
+                    },
+                    {
+                      "text": "Login test passed!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:54:27.515Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b55fe855bc43fd042cea-bd83314a807d92f99d4d",
+          "file": "invalid-password.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "logout.spec.js",
+      "file": "logout.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full login and logout flow with visible typing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17585,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In button...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for login success message...\n"
+                    },
+                    {
+                      "text": "✅ Login confirmed successfully!\n"
+                    },
+                    {
+                      "text": "👤 Opening profile dropdown...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking 'Sign out'...\n"
+                    },
+                    {
+                      "text": "✅ Successfully logged out! 🎉\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:54:29.407Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b7773ae6a53e211c23cf-9c12c477acafac8c23bc",
+          "file": "logout.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "manual-review.spec.js",
+      "file": "manual-review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Manual Review workflow: navigate, filter, view, edit, approve",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 40494,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for login success...\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "📋 Navigating to Manual Review tab...\n"
+                    },
+                    {
+                      "text": "✅ Manual Review page loaded!\n"
+                    },
+                    {
+                      "text": "👀 Hovering over summary cards...\n"
+                    },
+                    {
+                      "text": "⚠️ Could not find or hover on card: Total Pending — locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//div[contains(@class, \\'bg-white\\') or contains(@class, \\'rounded\\') or contains(@class, \\'shadow\\')]//*[contains(text(),\"Total Pending\")]/ancestor::div[contains(@class,\\'bg-white\\')])[1]') to be visible\u001b[22m\n\n"
+                    },
+                    {
+                      "text": "✅ Hovered on Pending Review — Awaiting manual review\n"
+                    },
+                    {
+                      "text": "✅ Hovered on Failed Processing — Processing failed\n"
+                    },
+                    {
+                      "text": "⚠️ Could not find or hover on card: High Priority — locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//div[contains(@class, \\'bg-white\\') or contains(@class, \\'rounded\\') or contains(@class, \\'shadow\\')]//*[contains(text(),\"High Priority\")]/ancestor::div[contains(@class,\\'bg-white\\')])[1]') to be visible\u001b[22m\n\n"
+                    },
+                    {
+                      "text": "🎛 Clicking Filter icon...\n"
+                    },
+                    {
+                      "text": "✅ Filter panel opened.\n"
+                    },
+                    {
+                      "text": "🧩 Applying filters...\n"
+                    },
+                    {
+                      "text": "✅ Selected Document Type: Business Permit\n"
+                    },
+                    {
+                      "text": "✅ Selected Confidence Threshold: Below 80%\n"
+                    },
+                    {
+                      "text": "✅ Selected Priority: Medium Priority\n"
+                    },
+                    {
+                      "text": "✅ Entered Assigned To ID: 32005767\n"
+                    },
+                    {
+                      "text": "✅ Applied filters successfully!\n"
+                    },
+                    {
+                      "text": "🎛 Clicking Filter icon...\n"
+                    },
+                    {
+                      "text": "✅ Filter panel opened.\n"
+                    },
+                    {
+                      "text": "📄 Selecting document...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for table or no-data message...\n"
+                    },
+                    {
+                      "text": "❌ Timeout waiting for table data or no-data message: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//table//tr').first() to be visible\u001b[22m\n\n"
+                    },
+                    {
+                      "text": "👁 Opening document for viewing...\n"
+                    },
+                    {
+                      "text": "✅ Document view opened.\n"
+                    },
+                    {
+                      "text": "🔍 Zoom in and out actions performed.\n"
+                    },
+                    {
+                      "text": "🖥 Attempting fullscreen toggle...\n"
+                    },
+                    {
+                      "text": "⚠️ Enter fullscreen button not found.\n"
+                    },
+                    {
+                      "text": "✏️ Editing extracted data...\n"
+                    },
+                    {
+                      "text": "↩️ Returned to Manual Review page.\n"
+                    },
+                    {
+                      "text": "✅ Attempting to approve document...\n"
+                    },
+                    {
+                      "text": "🟢 Approve dialog opened.\n"
+                    },
+                    {
+                      "text": "⚠️ No approval dialog detected.\n"
+                    },
+                    {
+                      "text": "🏁 Manual Review workflow completed successfully!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:54:39.078Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "37bc065da8989cc20a6c-3da48a53ba7f81bcd402",
+          "file": "manual-review.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "model-training.spec.js",
+      "file": "model-training.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full model training workflow: login, navigate, upload, start training",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 22150,
+                  "error": {
+                    "message": "TimeoutError: locator.type: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.type: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js:13:51",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js",
+                      "column": 51,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"📧 Typing email...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Enter your email\"\u001b[39m)\u001b[33m.\u001b[39mtype(\u001b[32m\"admin\"\u001b[39m\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m100\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"🔑 Typing password...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Enter your password\"\u001b[39m)\u001b[33m.\u001b[39mtype(\u001b[32m\"admin123\"\u001b[39m\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m100\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js",
+                        "column": 51,
+                        "line": 13
+                      },
+                      "message": "TimeoutError: locator.type: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"📧 Typing email...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Enter your email\"\u001b[39m)\u001b[33m.\u001b[39mtype(\u001b[32m\"admin\"\u001b[39m\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m100\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"🔑 Typing password...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Enter your password\"\u001b[39m)\u001b[33m.\u001b[39mtype(\u001b[32m\"admin123\"\u001b[39m\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m100\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js:13:51\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:54:47.073Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-Full-model--aca5f-igate-upload-start-training-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-Full-model--aca5f-igate-upload-start-training-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-Full-model--aca5f-igate-upload-start-training-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js",
+                    "column": 51,
+                    "line": 13
+                  }
+                },
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 24403,
+                  "error": {
+                    "message": "TimeoutError: locator.type: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.type: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js:13:51",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js",
+                      "column": 51,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"📧 Typing email...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Enter your email\"\u001b[39m)\u001b[33m.\u001b[39mtype(\u001b[32m\"admin\"\u001b[39m\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m100\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"🔑 Typing password...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Enter your password\"\u001b[39m)\u001b[33m.\u001b[39mtype(\u001b[32m\"admin123\"\u001b[39m\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m100\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js",
+                        "column": 51,
+                        "line": 13
+                      },
+                      "message": "TimeoutError: locator.type: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"📧 Typing email...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Enter your email\"\u001b[39m)\u001b[33m.\u001b[39mtype(\u001b[32m\"admin\"\u001b[39m\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m100\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"🔑 Typing password...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Enter your password\"\u001b[39m)\u001b[33m.\u001b[39mtype(\u001b[32m\"admin123\"\u001b[39m\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m100\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js:13:51\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-31T22:55:11.759Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-Full-model--aca5f-igate-upload-start-training-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-Full-model--aca5f-igate-upload-start-training-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-Full-model--aca5f-igate-upload-start-training-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-Full-model--aca5f-igate-upload-start-training-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js",
+                    "column": 51,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4f4daf50f7a5a1f7b0a5-18aee3a47533cc441698",
+          "file": "model-training.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "profile.spec.js",
+      "file": "profile.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Profile navigation, edit, reset and logout flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 18184,
+                  "error": {
+                    "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Manual Review') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Manual Review') to be visible\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js:121:14",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js",
+                      "column": 14,
+                      "line": 121
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 119 |\u001b[39m\n \u001b[90m 120 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"⏳ Waiting for dashboard...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 121 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'text=Manual Review'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 122 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"✅ Logged in successfully!\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m\n \u001b[90m 124 |\u001b[39m   \u001b[90m// === STEP 2: Open Profile Menu ===\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js",
+                        "column": 14,
+                        "line": 121
+                      },
+                      "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Manual Review') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 119 |\u001b[39m\n \u001b[90m 120 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"⏳ Waiting for dashboard...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 121 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'text=Manual Review'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 122 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"✅ Logged in successfully!\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m\n \u001b[90m 124 |\u001b[39m   \u001b[90m// === STEP 2: Open Profile Menu ===\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js:121:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for dashboard...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:55:19.653Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js",
+                    "column": 14,
+                    "line": 121
+                  }
+                },
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 14855,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for dashboard...\n"
+                    },
+                    {
+                      "text": "✅ Logged in successfully!\n"
+                    },
+                    {
+                      "text": "👤 Opening profile dropdown...\n"
+                    },
+                    {
+                      "text": "🧭 Navigating to 'Your Profile'...\n"
+                    },
+                    {
+                      "text": "🧑‍💻 Filling in personal information...\n"
+                    },
+                    {
+                      "text": "🔐 Updating password...\n"
+                    },
+                    {
+                      "text": "🧾 Verifying account information...\n"
+                    },
+                    {
+                      "text": "✅ Role verified: admin\n"
+                    },
+                    {
+                      "text": "✅ Last login verified: 11/1/2025\n"
+                    },
+                    {
+                      "text": "💾 Saving changes...\n"
+                    },
+                    {
+                      "text": "✅ Profile changes saved successfully!\n"
+                    },
+                    {
+                      "text": "♻️ Clicking Reset button...\n"
+                    },
+                    {
+                      "text": "✅ Reset button clicked successfully!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-31T22:55:42.108Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\profile-Profile-navigation-edit-reset-and-logout-flow-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "d3b94327e94fcbd90a1b-ed22ef3d787029fab0d2",
+          "file": "profile.spec.js",
+          "line": 102,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "system-config.spec.js",
+      "file": "system-config.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "System Configuration, Status & Logs workflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 63049,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "✅ Logged in successfully!\n"
+                    },
+                    {
+                      "text": "⚙️ Navigating to 'System Config' tab...\n"
+                    },
+                    {
+                      "text": "✅ System Config page loaded!\n"
+                    },
+                    {
+                      "text": "🧩 Clicking 'Edit Configuration'...\n"
+                    },
+                    {
+                      "text": "✅ Edit Configuration form opened!\n"
+                    },
+                    {
+                      "text": "✍️ Editing File Upload Settings...\n"
+                    },
+                    {
+                      "text": "✅ File upload size limit updated successfully!\n"
+                    },
+                    {
+                      "text": "🧩 Updating allowed file types...\n"
+                    },
+                    {
+                      "text": "✅ Allowed file types updated successfully!\n"
+                    },
+                    {
+                      "text": "⚙️ Editing Processing Settings...\n"
+                    },
+                    {
+                      "text": "✅ Classification threshold set to 0.8!\n"
+                    },
+                    {
+                      "text": "⚙️ Setting Extraction Threshold...\n"
+                    },
+                    {
+                      "text": "✅ Extraction threshold updated to 0.8!\n"
+                    },
+                    {
+                      "text": "📨 Editing Notification Settings...\n"
+                    },
+                    {
+                      "text": "✅ Notification settings updated successfully!\n"
+                    },
+                    {
+                      "text": "✅ Email notifications enabled!\n"
+                    },
+                    {
+                      "text": "🔁 Webhook notifications toggled and re-enabled!\n"
+                    },
+                    {
+                      "text": "🌐 Webhook URL updated!\n"
+                    },
+                    {
+                      "text": "💾 Attempting to save configuration...\n"
+                    },
+                    {
+                      "text": "🚀 'Save Configuration' button clicked — waiting for page to stabilize...\n"
+                    },
+                    {
+                      "text": "ℹ️ No success message detected, proceeding cautiously...\n"
+                    },
+                    {
+                      "text": "📊 Navigating to 'System Status' tab...\n"
+                    },
+                    {
+                      "text": "⚙️ Attempt 1: Looking for 'System Status' tab...\n"
+                    },
+                    {
+                      "text": "✅ Found 'System Status' tab using selector: //button[contains(normalize-space(.), 'System Status')]\n"
+                    },
+                    {
+                      "text": "✅ System Status page opened successfully!\n"
+                    },
+                    {
+                      "text": "🔍 Scrolling through system overview...\n"
+                    },
+                    {
+                      "text": "📈 Viewed System Overview, Status, and Metrics.\n"
+                    },
+                    {
+                      "text": "🪵 Navigating to 'System Logs' tab...\n"
+                    },
+                    {
+                      "text": "🔁 Attempt 1: Looking for 'System Logs' tab...\n"
+                    },
+                    {
+                      "text": "✅ Found 'System Logs' tab using selector: //button[contains(normalize-space(.), 'System Logs')]\n"
+                    },
+                    {
+                      "text": "✅ System Logs page opened successfully!\n"
+                    },
+                    {
+                      "text": "🔍 Searching log entry 'User authentication successful'...\n"
+                    },
+                    {
+                      "text": "✅ Search and clear actions completed.\n"
+                    },
+                    {
+                      "text": "⚠️ Filtering logs by 'Error' level...\n"
+                    },
+                    {
+                      "text": "🕐 Waiting for logs to refresh after selecting 'Error'...\n"
+                    },
+                    {
+                      "text": "✅ Logs filtered by 'Error' level.\n"
+                    },
+                    {
+                      "text": "🧠 Filtering logs by source 'OCR Engine'...\n"
+                    },
+                    {
+                      "text": "🕐 Waiting for logs to refresh after selecting 'OCR Engine'...\n"
+                    },
+                    {
+                      "text": "✅ Logs filtered by 'OCR Engine' source.\n"
+                    },
+                    {
+                      "text": "⚠️ No visible filtered logs — might be empty or still loading.\n"
+                    },
+                    {
+                      "text": "🎉 System Configuration workflow test completed successfully!\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "⚠️ URL did not match /status/, proceeding anyway...\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:55:40.325Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ee9758f44988daf75be1-417d4dc5170b9ba61e7b",
+          "file": "system-config.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "upload.spec.js",
+      "file": "upload.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full document workflow: upload, search, filter, view, edit, delete",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 32322,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/upload successful|document uploaded/i)\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/upload successful|document uploaded/i)\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/upload successful|document uploaded/i)\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/upload successful|document uploaded/i)\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js:51:72",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                      "column": 72,
+                      "line": 51
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 49 |\u001b[39m\n \u001b[90m 50 |\u001b[39m   \u001b[90m// === OPTIONAL: Verify upload success message ===\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/upload successful|document uploaded/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"🎉 Upload confirmed as successful!\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m\n \u001b[90m 54 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                        "column": 72,
+                        "line": 51
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/upload successful|document uploaded/i)\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/upload successful|document uploaded/i)\u001b[22m\n\n\n\u001b[0m \u001b[90m 49 |\u001b[39m\n \u001b[90m 50 |\u001b[39m   \u001b[90m// === OPTIONAL: Verify upload success message ===\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/upload successful|document uploaded/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"🎉 Upload confirmed as successful!\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m\n \u001b[90m 54 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js:51:72\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for login success...\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "📁 Navigating to 'Upload' tab...\n"
+                    },
+                    {
+                      "text": "✅ Upload page loaded.\n"
+                    },
+                    {
+                      "text": "📎 Preparing to upload sample document...\n"
+                    },
+                    {
+                      "text": "⌛ Starting simulated slow upload...\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 0%\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 20%\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 40%\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 60%\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 80%\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 100%\n"
+                    },
+                    {
+                      "text": "📤 File upload initiated...\n"
+                    },
+                    {
+                      "text": "✅ File uploaded successfully!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:55:59.045Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                    "column": 72,
+                    "line": 51
+                  }
+                },
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 34256,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/upload successful|document uploaded/i)\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/upload successful|document uploaded/i)\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/upload successful|document uploaded/i)\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/upload successful|document uploaded/i)\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js:51:72",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                      "column": 72,
+                      "line": 51
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 49 |\u001b[39m\n \u001b[90m 50 |\u001b[39m   \u001b[90m// === OPTIONAL: Verify upload success message ===\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/upload successful|document uploaded/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"🎉 Upload confirmed as successful!\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m\n \u001b[90m 54 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                        "column": 72,
+                        "line": 51
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/upload successful|document uploaded/i)\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/upload successful|document uploaded/i)\u001b[22m\n\n\n\u001b[0m \u001b[90m 49 |\u001b[39m\n \u001b[90m 50 |\u001b[39m   \u001b[90m// === OPTIONAL: Verify upload success message ===\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/upload successful|document uploaded/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"🎉 Upload confirmed as successful!\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m\n \u001b[90m 54 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js:51:72\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for login success...\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "📁 Navigating to 'Upload' tab...\n"
+                    },
+                    {
+                      "text": "✅ Upload page loaded.\n"
+                    },
+                    {
+                      "text": "📎 Preparing to upload sample document...\n"
+                    },
+                    {
+                      "text": "⌛ Starting simulated slow upload...\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 0%\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 20%\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 40%\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 60%\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 80%\n"
+                    },
+                    {
+                      "text": "🚀 Upload progress: 100%\n"
+                    },
+                    {
+                      "text": "📤 File upload initiated...\n"
+                    },
+                    {
+                      "text": "✅ File uploaded successfully!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-31T22:56:34.232Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                    "column": 72,
+                    "line": 51
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "795c7691ef25a13245f8-bb0445549e72afa6691e",
+          "file": "upload.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "user.spec.js",
+      "file": "user.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full user workflow: create, filter, edit, and delete users",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 39790,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔑 Typing password...\n"
+                    },
+                    {
+                      "text": "🚪 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for login success...\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "👥 Navigating to 'Users' tab...\n"
+                    },
+                    {
+                      "text": "✅ Users page loaded successfully!\n"
+                    },
+                    {
+                      "text": "➕ Clicking 'Add User' button...\n"
+                    },
+                    {
+                      "text": "✅ Navigated to 'Create New User' form.\n"
+                    },
+                    {
+                      "text": "📝 Filling new user details...\n"
+                    },
+                    {
+                      "text": "👁️ Checking password visibility toggle...\n"
+                    },
+                    {
+                      "text": "✅ Eye icon is visible.\n"
+                    },
+                    {
+                      "text": "🔓 Password visibility toggle working perfectly!\n"
+                    },
+                    {
+                      "text": "📜 Selecting user role...\n"
+                    },
+                    {
+                      "text": "✅ Role selected as Manager.\n"
+                    },
+                    {
+                      "text": "🚀 Creating new user...\n"
+                    },
+                    {
+                      "text": "🧠 Waiting for user creation process to complete...\n"
+                    },
+                    {
+                      "text": "✅ User created successfully!\n"
+                    },
+                    {
+                      "text": "🎛 Opening filter dropdown...\n"
+                    },
+                    {
+                      "text": "✅ Filter dropdown opened!\n"
+                    },
+                    {
+                      "text": "🔍 Selecting filters for role and status...\n"
+                    },
+                    {
+                      "text": "✅ Role 'Admin' selected!\n"
+                    },
+                    {
+                      "text": "✅ Status 'Active' selected!\n"
+                    },
+                    {
+                      "text": "🎯 Filters applied successfully!\n"
+                    },
+                    {
+                      "text": "🛑 Testing cancel filter functionality...\n"
+                    },
+                    {
+                      "text": "✏️ Editing an existing user...\n"
+                    },
+                    {
+                      "text": "✅ Edit icon clicked.\n"
+                    },
+                    {
+                      "text": "📜 Updating user role...\n"
+                    },
+                    {
+                      "text": "🔁 Role changed to Manager.\n"
+                    },
+                    {
+                      "text": "💾 Changes saved successfully!\n"
+                    },
+                    {
+                      "text": "🗑 Attempting to delete user...\n"
+                    },
+                    {
+                      "text": "🧹 Delete icon clicked!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:56:43.983Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5bb1f9dec247018c1123-c198f1c8f40b915a9140",
+          "file": "user.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "valid-login.spec.js",
+      "file": "valid-login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify valid login with visible typing and success message",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 11326,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": " Navigating to login page...\n"
+                    },
+                    {
+                      "text": "Typing email...\n"
+                    },
+                    {
+                      "text": "Typing password...\n"
+                    },
+                    {
+                      "text": "Clicking Sign In button...\n"
+                    },
+                    {
+                      "text": "Waiting for success message...\n"
+                    },
+                    {
+                      "text": "Login test passed!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-31T22:57:15.269Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f94298620166c6de14e5-f7d5907db5b4157d59f3",
+          "file": "valid-login.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-10-31T22:51:59.618Z",
+    "duration": 328140.574,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 1
+  }
+}
