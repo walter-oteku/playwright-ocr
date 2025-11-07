@@ -1,0 +1,172 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-04T18-59-22-351Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-04T18-59-22-351Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-04T18-59-22-351Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.js",
+      "file": "auth.setup.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37324,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🚀 Starting authentication setup...\n"
+                    },
+                    {
+                      "text": "🌐 Login page loaded successfully.\n"
+                    },
+                    {
+                      "text": "📝 Credentials entered.\n"
+                    },
+                    {
+                      "text": "👀 Sign in button located, clicking...\n"
+                    },
+                    {
+                      "text": "🔐 Clicked Sign in. Waiting for dashboard...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting... dashboard not found yet with text=Documents\n"
+                    },
+                    {
+                      "text": "⏳ Waiting... dashboard not found yet with text=Dashboard\n"
+                    },
+                    {
+                      "text": "⏳ Waiting... dashboard not found yet with text=Welcome\n"
+                    },
+                    {
+                      "text": "✅ Dashboard detected via selector: text=Welcome\n"
+                    },
+                    {
+                      "text": "💾 Authentication state saved to C:\\Users\\walte\\playwright-ocr\\playwright\\.auth\\user.json\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-04T18:59:24.332Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f376efe52c54b1a876fd-9d03a3bb502e264caa3f",
+          "file": "auth.setup.js",
+          "line": 43,
+          "column": 6
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-04T18:59:22.365Z",
+    "duration": 40216.404,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

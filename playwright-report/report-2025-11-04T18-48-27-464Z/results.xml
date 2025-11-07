@@ -1,0 +1,108 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="78.612416">
+<testsuite name="auth.setup.js" timestamp="2025-11-04T18:48:27.629Z" hostname="setup" tests="1" failures="1" skipped="0" time="72.88" errors="0">
+<testcase name="authenticate" classname="auth.setup.js" time="72.88">
+<failure message="auth.setup.js:44:6 authenticate" type="FAILURE">
+<![CDATA[  [setup] › auth.setup.js:44:6 › authenticate ──────────────────────────────────────────────────────
+
+    TimeoutError: page.screenshot: Timeout 15000ms exceeded.
+    Call log:
+      - taking page screenshot
+      - waiting for fonts to load...
+
+
+      93 |     // Make sure folder exists before saving screenshot
+      94 |     if (!fs.existsSync('test-results')) fs.mkdirSync('test-results', { recursive: true });
+    > 95 |     await page.screenshot({
+         |                ^
+      96 |       path: 'test-results/auth-failure.png',
+      97 |       fullPage: true,
+      98 |     });
+        at C:\Users\walte\playwright-ocr\tests\auth.setup.js:95:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth.setup.js-authenticate-setup\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\auth.setup.js-authenticate-setup\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForLoadState: Timeout 20000ms exceeded.
+    =========================== logs ===========================
+      "commit" event fired
+      "domcontentloaded" event fired
+    ============================================================
+
+      61 |     await signInButton.waitFor({ state: 'visible', timeout: 10000 });
+      62 |     await Promise.all([
+    > 63 |       page.waitForLoadState('networkidle', { timeout: 20000 }), // wait for AJAX calls to finish
+         |            ^
+      64 |       signInButton.click(),
+      65 |     ]);
+      66 |     console.log('🔐 Clicked Sign in... waiting for dashboard.');
+        at C:\Users\walte\playwright-ocr\tests\auth.setup.js:63:12
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth.setup.js-authenticate-setup-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🚀 Starting authentication setup...
+🌐 Login page loaded.
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\trace.zip]]
+🚀 Starting authentication setup...
+🌐 Login page loaded.
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Authentication setup failed: page.waitForLoadState: Timeout 20000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+============================================================
+❌ Authentication setup failed: page.waitForLoadState: Timeout 20000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+============================================================
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

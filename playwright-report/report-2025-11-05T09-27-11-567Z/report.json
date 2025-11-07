@@ -1,0 +1,203 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-05T09-27-11-567Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-05T09-27-11-567Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-05T09-27-11-567Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "audit-log.spec.js",
+      "file": "audit-log.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Audit Logs: Export CSV and view details flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21807,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🚀 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "👤 Entering username...\n"
+                    },
+                    {
+                      "text": "🔒 Entering password...\n"
+                    },
+                    {
+                      "text": "🔓 Clicking 'Sign In'...\n"
+                    },
+                    {
+                      "text": "🕒 Waiting for dashboard to load...\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "📋 Navigating to 'Audit Logs'...\n"
+                    },
+                    {
+                      "text": "✅ Audit Logs page loaded.\n"
+                    },
+                    {
+                      "text": "📦 Opening export format dropdown...\n"
+                    },
+                    {
+                      "text": "🧾 Selecting CSV format...\n"
+                    },
+                    {
+                      "text": "✅ CSV format selected.\n"
+                    },
+                    {
+                      "text": "📤 Clicking 'Export Audit Logs' button...\n"
+                    },
+                    {
+                      "text": "✅ Export initiated — CSV download should begin shortly.\n"
+                    },
+                    {
+                      "text": "🔍 Scrolling to audit log entries...\n"
+                    },
+                    {
+                      "text": "👁️ Clicking 'View details' icon for a log entry...\n"
+                    },
+                    {
+                      "text": "🪟 Viewing audit log details...\n"
+                    },
+                    {
+                      "text": "❌ Closing the details view...\n"
+                    },
+                    {
+                      "text": "✅ Audit log details closed successfully.\n"
+                    },
+                    {
+                      "text": "🎉 Full export and view flow completed successfully!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-05T09:27:14.061Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7fe617d7a0236b3f9b64-879c2cc97af2dd7646aa",
+          "file": "audit-log.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-05T09:27:11.585Z",
+    "duration": 25823.608,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

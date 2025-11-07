@@ -1,0 +1,107 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="84.97983099999999">
+<testsuite name="documents.spec.js" timestamp="2025-11-04T19:27:49.480Z" hostname="chromium" tests="1" failures="1" skipped="0" time="78.499" errors="0">
+<testcase name="Full document workflow: upload, search, filter, view, edit, delete" classname="documents.spec.js" time="78.499">
+<failure message="documents.spec.js:4:5 Full document workflow: upload, search, filter, view, edit, delete" type="FAILURE">
+<![CDATA[  [chromium] › documents.spec.js:4:5 › Full document workflow: upload, search, filter, view, edit, delete 
+
+    TimeoutError: page.waitForURL: Timeout 15000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      50 |   console.log("📁 Navigating to 'Documents' tab...");
+      51 |   await page.locator('a[href="/documents"]').first().click();
+    > 52 |   await page.waitForURL(/documents/, { timeout: 15000 });
+         |              ^
+      53 |   console.log("✅ Documents page loaded.");
+      54 |
+      55 |   // === STEP 2: Click Upload Documents ===
+        at C:\Users\walte\playwright-ocr\tests\documents.spec.js:52:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForURL: Timeout 15000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      50 |   console.log("📁 Navigating to 'Documents' tab...");
+      51 |   await page.locator('a[href="/documents"]').first().click();
+    > 52 |   await page.waitForURL(/documents/, { timeout: 15000 });
+         |              ^
+      53 |   console.log("✅ Documents page loaded.");
+      54 |
+      55 |   // === STEP 2: Click Upload Documents ===
+        at C:\Users\walte\playwright-ocr\tests\documents.spec.js:52:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[ Navigating to login page...
+📧 Typing email slowly...
+🔒 Typing password slowly...
+Clicking Sign In button...
+Waiting for success message...
+📁 Navigating to 'Documents' tab...
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\trace.zip]]
+ Navigating to login page...
+📧 Typing email slowly...
+🔒 Typing password slowly...
+Clicking Sign In button...
+Waiting for success message...
+📁 Navigating to 'Documents' tab...
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

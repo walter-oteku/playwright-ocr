@@ -1,0 +1,233 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-04T02-55-18-494Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-04T02-55-18-494Z/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.(spec|test|js)/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.js",
+      "file": "auth.setup.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5397,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Starting authentication setup...\n"
+                    },
+                    {
+                      "text": "Authentication setup completed!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-04T02:55:20.242Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f376efe52c54b1a876fd-9d03a3bb502e264caa3f",
+          "file": "auth.setup.js",
+          "line": 3,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "profile.spec.js",
+      "file": "profile.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Profile navigation, edit, reset and logout flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23238,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": " Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Typing email slowly...\n"
+                    },
+                    {
+                      "text": "🔒 Typing password slowly...\n"
+                    },
+                    {
+                      "text": "Clicking Sign In button...\n"
+                    },
+                    {
+                      "text": "Waiting for success message...\n"
+                    },
+                    {
+                      "text": "👤 Opening profile dropdown...\n"
+                    },
+                    {
+                      "text": "🧭 Navigating to 'Your Profile'...\n"
+                    },
+                    {
+                      "text": "🧑‍💻 Filling in personal information...\n"
+                    },
+                    {
+                      "text": "🔐 Updating password...\n"
+                    },
+                    {
+                      "text": "🧾 Verifying account information...\n"
+                    },
+                    {
+                      "text": "✅ Role verified: \n"
+                    },
+                    {
+                      "text": "✅ Last login verified: \n"
+                    },
+                    {
+                      "text": "💾 Saving changes...\n"
+                    },
+                    {
+                      "text": "✅ Profile changes saved successfully!\n"
+                    },
+                    {
+                      "text": "♻️ Clicking Reset button...\n"
+                    },
+                    {
+                      "text": "✅ Reset button clicked successfully!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-04T02:55:28.615Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d3b94327e94fcbd90a1b-ed22ef3d787029fab0d2",
+          "file": "profile.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-04T02:55:18.507Z",
+    "duration": 34734.671,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

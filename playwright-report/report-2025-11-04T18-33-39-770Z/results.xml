@@ -1,0 +1,91 @@
+<testsuites id="" name="" tests="2" failures="1" skipped="1" errors="0" time="24.788874">
+<testsuite name="auth.setup.js" timestamp="2025-11-04T18:33:40.094Z" hostname="setup" tests="1" failures="1" skipped="0" time="18.906" errors="0">
+<testcase name="authenticate" classname="auth.setup.js" time="18.906">
+<failure message="auth.setup.js:7:6 authenticate" type="FAILURE">
+<![CDATA[  [setup] › auth.setup.js:7:6 › authenticate ───────────────────────────────────────────────────────
+
+    Error: page.screenshot: Target page, context or browser has been closed
+
+      30 |   } catch (err) {
+      31 |     console.error('❌ Authentication setup failed:', err.message);
+    > 32 |     await page.screenshot({ path: 'test-results/auth-failure.png', fullPage: true });
+         |                ^
+      33 |     throw err;
+      34 |   }
+      35 | });
+        at C:\Users\walte\playwright-ocr\tests\auth.setup.js:32:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\auth.setup.js-authenticate-setup\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: page.screenshot: Target page, context or browser has been closed
+
+      30 |   } catch (err) {
+      31 |     console.error('❌ Authentication setup failed:', err.message);
+    > 32 |     await page.screenshot({ path: 'test-results/auth-failure.png', fullPage: true });
+         |                ^
+      33 |     throw err;
+      34 |   }
+      35 | });
+        at C:\Users\walte\playwright-ocr\tests\auth.setup.js:32:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🚀 Starting authentication setup...
+🌐 Login page loaded.
+🔐 Clicked Sign in... waiting for redirect.
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\trace.zip]]
+🚀 Starting authentication setup...
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Authentication setup failed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "https://ocr.techsavanna.technology/login?identifier=admin%40ocrplatform.com&password=admin123"
+============================================================
+❌ Authentication setup failed: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://ocr.techsavanna.technology/login", waiting until "domcontentloaded"[22m
+
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="documents.spec.js" timestamp="2025-11-04T18:33:40.094Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Full document workflow: upload, search, filter, view, edit, delete" classname="documents.spec.js" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

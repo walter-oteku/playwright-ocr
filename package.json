@@ -1,4 +1,4 @@
- {
+{
   "name": "playwright-ocr",
   "version": "1.0.0",
   "main": "index.js",
@@ -7,25 +7,31 @@
     "test:headed": "npx playwright test --headed",
     "test:debug": "npx playwright test --debug",
     "test:ui": "npx playwright test --ui",
+
     "test:documents": "npx playwright test tests/documents.spec.js",
     "test:documents:headed": "npx playwright test tests/documents.spec.js --headed",
     "test:api": "npx playwright test tests/api/",
     "test:visual": "npx playwright test tests/visual/",
     "test:smoke": "npx playwright test --grep @smoke",
+
     "report": "npx playwright show-report",
-    "report:share": "npx playwright show-report --host 0.0.0.0",
-    "report:port": "npx playwright show-report --port 9323",
     "report:serve": "npx playwright show-report --host 0.0.0.0 --port 9323",
-    "codegen": "npx playwright codegen",
+
     "trace": "npx playwright show-trace",
     "install:browsers": "npx playwright install",
-    "install:deps": "npm install && npx playwright install"
+    "install:deps": "npm install && npx playwright install",
+
+    "test:staging": "cross-env ENV=staging npx playwright test",
+    "test:prod": "cross-env ENV=prod npx playwright test",
+    "test:local": "cross-env ENV=local npx playwright test"
   },
   "keywords": ["playwright", "testing", "automation", "ocr"],
-  "author": "",
-  "license": "ISC",
   "description": "Playwright test automation for OCR system",
+  "author": "Walter Oteku",
+  "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.56.0"
+    "@playwright/test": "^1.56.0",
+    "cross-env": "^7.0.3"
   }
 }
+

@@ -1,0 +1,119 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="39.088858">
+<testsuite name="forgot-password.spec.js" timestamp="2025-11-07T06:30:44.950Z" hostname="chromium" tests="1" failures="1" skipped="0" time="30.54" errors="0">
+<testcase name="Forgot Password Flow - Invalid and Valid Email" classname="forgot-password.spec.js" time="30.54">
+<failure message="forgot-password.spec.js:3:5 Forgot Password Flow - Invalid and Valid Email" type="FAILURE">
+<![CDATA[  [chromium] › forgot-password.spec.js:3:5 › Forgot Password Flow - Invalid and Valid Email ────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText(/password reset link has been sent|check your email/i)
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for getByText(/password reset link has been sent|check your email/i)
+
+
+      35 |   // Expect success message or confirmation
+      36 |   await expect(page.getByText(/password reset link has been sent|check your email/i))
+    > 37 |     .toBeVisible({ timeout: 10000 });
+         |      ^
+      38 |   console.log("Reset link successfully sent to valid email 📩");
+      39 |
+      40 |   // === OPTIONAL: Navigate back to Sign In page ===
+        at C:\Users\walte\playwright-ocr\tests\forgot-password.spec.js:37:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText(/password reset link has been sent|check your email/i)
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for getByText(/password reset link has been sent|check your email/i)
+
+
+      35 |   // Expect success message or confirmation
+      36 |   await expect(page.getByText(/password reset link has been sent|check your email/i))
+    > 37 |     .toBeVisible({ timeout: 10000 });
+         |      ^
+      38 |   console.log("Reset link successfully sent to valid email 📩");
+      39 |
+      40 |   // === OPTIONAL: Navigate back to Sign In page ===
+        at C:\Users\walte\playwright-ocr\tests\forgot-password.spec.js:37:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[Navigated to OCR Login Page ✅
+Clicked on Forgot Password link 🔗
+Testing invalid email submission... ❌
+Error message correctly displayed for invalid email 🚫
+Testing valid email submission... ✅
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip]]
+Navigated to OCR Login Page ✅
+Clicked on Forgot Password link 🔗
+Testing invalid email submission... ❌
+Error message correctly displayed for invalid email 🚫
+Testing valid email submission... ✅
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

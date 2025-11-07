@@ -1,45 +1,4 @@
 {
-  "cookies": [
-    {
-      "name": "next-auth.csrf-token",
-      "value": "08400282929400820bb75b066c31a3991d333e7358f0719bb0e8ea622e27b168%7C16539783c8b9b496362423e9ad4377e038799e6b2127e2aa597442e1c38e75fa",
-      "domain": "ocr-engine.netlify.app",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "next-auth.callback-url",
-      "value": "http%3A%2F%2Flocalhost%3A3000",
-      "domain": "ocr-engine.netlify.app",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "next-auth.session-token",
-      "value": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..1oHcEZ3yWo64E_J8.7vNKldWEwj9YA7vVrQWl8zx7CJyon3PG4uZ3dv2ag8gocO2OEtnYiAsiCR8HbxNOm2seklwa7VQwWiqmQkos4S_CE5SdAo4W03u7QTOA1KAf21IMyZ62S2dy2SoYiInjFgKmQWHwkK68bZV--tEhAG613cYGFOFDvUJ8XQN_kg4B2dmsqnjO40QanaJVmnBrtTtIaiwp87ki07VInqgqFtuH6Tibd7x_l3xItJOvCYeRP2o6lVboaQ.6bzw8sehuQL1ckbGxICULg",
-      "domain": "ocr-engine.netlify.app",
-      "path": "/",
-      "expires": 1762038917.167767,
-      "httpOnly": true,
-      "secure": false,
-      "sameSite": "Lax"
-    }
-  ],
-  "origins": [
-    {
-      "origin": "https://ocr-engine.netlify.app",
-      "localStorage": [
-        {
-          "name": "nextauth.message",
-          "value": "{\"event\":\"session\",\"data\":{\"trigger\":\"getSession\"},\"timestamp\":1761952515}"
-        }
-      ]
-    }
-  ]
+  "cookies": [],
+  "origins": []
 }

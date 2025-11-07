@@ -1,0 +1,97 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="50.011095999999995">
+<testsuite name="auth.setup.js" timestamp="2025-11-04T18:52:42.133Z" hostname="setup" tests="1" failures="1" skipped="0" time="44.215" errors="0">
+<testcase name="authenticate" classname="auth.setup.js" time="44.215">
+<failure message="auth.setup.js:44:6 authenticate" type="FAILURE">
+<![CDATA[  [setup] › auth.setup.js:44:6 › authenticate ──────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('text=Documents') to be visible
+
+
+      64 |
+      65 | // Wait for something unique on the dashboard instead of loadstate
+    > 66 | await page.waitForSelector("text=Documents", { timeout: 30000 });
+         |            ^
+      67 |
+      68 |     // await Promise.all([
+      69 |     //   page.waitForLoadState('networkidle', { timeout: 20000 }), // wait for AJAX calls to finish
+        at C:\Users\walte\playwright-ocr\tests\auth.setup.js:66:12
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth.setup.js-authenticate-setup\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\auth.setup.js-authenticate-setup\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: page.screenshot: Target page, context or browser has been closed
+
+       99 |     // Make sure folder exists before saving screenshot
+      100 |     if (!fs.existsSync('test-results')) fs.mkdirSync('test-results', { recursive: true });
+    > 101 |     await page.screenshot({
+          |                ^
+      102 |       path: 'test-results/auth-failure.png',
+      103 |       fullPage: true,
+      104 |     });
+        at C:\Users\walte\playwright-ocr\tests\auth.setup.js:101:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🚀 Starting authentication setup...
+🌐 Login page loaded.
+🔐 Clicked Sign in... waiting for visible dashboard element...
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\trace.zip]]
+🚀 Starting authentication setup...
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Authentication setup failed: page.waitForSelector: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('text=Documents') to be visible[22m
+
+❌ Authentication setup failed: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://ocr.techsavanna.technology/login", waiting until "domcontentloaded"[22m
+
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

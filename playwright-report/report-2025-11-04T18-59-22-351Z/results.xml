@@ -1,0 +1,19 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="40.216404000000004">
+<testsuite name="auth.setup.js" timestamp="2025-11-04T18:59:22.540Z" hostname="setup" tests="1" failures="0" skipped="0" time="37.324" errors="0">
+<testcase name="authenticate" classname="auth.setup.js" time="37.324">
+<system-out>
+<![CDATA[🚀 Starting authentication setup...
+🌐 Login page loaded successfully.
+📝 Credentials entered.
+👀 Sign in button located, clicking...
+🔐 Clicked Sign in. Waiting for dashboard...
+⏳ Waiting... dashboard not found yet with text=Documents
+⏳ Waiting... dashboard not found yet with text=Dashboard
+⏳ Waiting... dashboard not found yet with text=Welcome
+✅ Dashboard detected via selector: text=Welcome
+💾 Authentication state saved to C:\Users\walte\playwright-ocr\playwright\.auth\user.json
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,278 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-04T02-00-56-347Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-04T02-00-56-347Z/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.(spec|test|js)/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.js",
+      "file": "auth.setup.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4898,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Starting authentication setup...\n"
+                    },
+                    {
+                      "text": "Authentication setup completed!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-04T02:00:57.923Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f376efe52c54b1a876fd-9d03a3bb502e264caa3f",
+          "file": "auth.setup.js",
+          "line": 3,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "dashboard.spec.js",
+      "file": "dashboard.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login → Dashboard Navigation (Charts + Documents)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 88118,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "📧 Entering email...\n"
+                    },
+                    {
+                      "text": "🔒 Entering password...\n"
+                    },
+                    {
+                      "text": "🚪 Signing in...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for dashboard to load...\n"
+                    },
+                    {
+                      "text": "✅ Successfully logged in to dashboard!\n"
+                    },
+                    {
+                      "text": "⚡ Testing Quick Action cards...\n"
+                    },
+                    {
+                      "text": "🖱️ Clicking on: Upload Documents\n"
+                    },
+                    {
+                      "text": "✅ Upload Documents section loaded successfully!\n"
+                    },
+                    {
+                      "text": "⚠️ Failed Upload Documents: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//h6[normalize-space()=\\'Dashboard\\'])[1]') to be visible\u001b[22m\n\n"
+                    },
+                    {
+                      "text": "🖱️ Clicking on: Manual Review\n"
+                    },
+                    {
+                      "text": "✅ Manual Review section loaded successfully!\n"
+                    },
+                    {
+                      "text": "⚠️ Failed Manual Review: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//h6[normalize-space()=\\'Dashboard\\'])[1]') to be visible\u001b[22m\n\n"
+                    },
+                    {
+                      "text": "🖱️ Clicking on: Pending Documents\n"
+                    },
+                    {
+                      "text": "⚠️ Failed Pending Documents: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//h6[normalize-space()=\\'Pending Documents\\'])[1]') to be visible\u001b[22m\n\n"
+                    },
+                    {
+                      "text": "🖱️ Clicking on: Analytics\n"
+                    },
+                    {
+                      "text": "⚠️ Failed Analytics: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//h6[normalize-space()=\\'Analytics\\'])[1]') to be visible\u001b[22m\n\n"
+                    },
+                    {
+                      "text": "🖱️ Clicking on: User Management\n"
+                    },
+                    {
+                      "text": "⚠️ Failed User Management: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//h6[normalize-space()=\\'User Management\\'])[1]') to be visible\u001b[22m\n\n"
+                    },
+                    {
+                      "text": "🖱️ Clicking on: System Settings\n"
+                    },
+                    {
+                      "text": "⚠️ Failed System Settings: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//h6[normalize-space()=\\'System Settings\\'])[1]') to be visible\u001b[22m\n\n"
+                    },
+                    {
+                      "text": "\n📈 Starting chart hover with scrollbar positioning...\n"
+                    },
+                    {
+                      "text": "🔄 Scrolling to charts...\n"
+                    },
+                    {
+                      "text": "🎨 Found 0 canvas charts\n"
+                    },
+                    {
+                      "text": "✅ Chart hover sequence completed\n"
+                    },
+                    {
+                      "text": "\n📋 Checking recent documents section...\n"
+                    },
+                    {
+                      "text": "🔄 Scrolling to recent-documents...\n"
+                    },
+                    {
+                      "text": "📄 Found 0 document items\n"
+                    },
+                    {
+                      "text": "✅ Finished checking recent documents\n"
+                    },
+                    {
+                      "text": "🔄 Scrolling to top...\n"
+                    },
+                    {
+                      "text": "\n🎯 Full dashboard navigation sequence completed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-04T02:01:06.049Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1bb41a2bd6df77ed2f7-65bffbffdb590812ed98",
+          "file": "dashboard.spec.js",
+          "line": 474,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-04T02:00:56.361Z",
+    "duration": 98778.27500000001,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

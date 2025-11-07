@@ -1,0 +1,261 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-04T18-48-27-464Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-04T18-48-27-464Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-04T18-48-27-464Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.js",
+      "file": "auth.setup.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 45030,
+                  "error": {
+                    "message": "TimeoutError: page.screenshot: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n",
+                    "stack": "TimeoutError: page.screenshot: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\auth.setup.js:95:16",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\auth.setup.js",
+                      "column": 16,
+                      "line": 95
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 93 |\u001b[39m     \u001b[90m// Make sure folder exists before saving screenshot\u001b[39m\n \u001b[90m 94 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mfs\u001b[33m.\u001b[39mexistsSync(\u001b[32m'test-results'\u001b[39m)) fs\u001b[33m.\u001b[39mmkdirSync(\u001b[32m'test-results'\u001b[39m\u001b[33m,\u001b[39m { recursive\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m       path\u001b[33m:\u001b[39m \u001b[32m'test-results/auth-failure.png'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 97 |\u001b[39m       fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 98 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\auth.setup.js",
+                        "column": 16,
+                        "line": 95
+                      },
+                      "message": "TimeoutError: page.screenshot: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\n\n\u001b[0m \u001b[90m 93 |\u001b[39m     \u001b[90m// Make sure folder exists before saving screenshot\u001b[39m\n \u001b[90m 94 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mfs\u001b[33m.\u001b[39mexistsSync(\u001b[32m'test-results'\u001b[39m)) fs\u001b[33m.\u001b[39mmkdirSync(\u001b[32m'test-results'\u001b[39m\u001b[33m,\u001b[39m { recursive\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m       path\u001b[33m:\u001b[39m \u001b[32m'test-results/auth-failure.png'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 97 |\u001b[39m       fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 98 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\auth.setup.js:95:16\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🚀 Starting authentication setup...\n"
+                    },
+                    {
+                      "text": "🌐 Login page loaded.\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "❌ Authentication setup failed: page.waitForLoadState: Timeout 20000ms exceeded.\n=========================== logs ===========================\n  \"commit\" event fired\n  \"domcontentloaded\" event fired\n============================================================\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-11-04T18:48:29.168Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\auth.setup.js-authenticate-setup\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\auth.setup.js-authenticate-setup\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\auth.setup.js-authenticate-setup\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\auth.setup.js",
+                    "column": 16,
+                    "line": 95
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 27850,
+                  "error": {
+                    "message": "TimeoutError: page.waitForLoadState: Timeout 20000ms exceeded.\n=========================== logs ===========================\n  \"commit\" event fired\n  \"domcontentloaded\" event fired\n============================================================",
+                    "stack": "TimeoutError: page.waitForLoadState: Timeout 20000ms exceeded.\n=========================== logs ===========================\n  \"commit\" event fired\n  \"domcontentloaded\" event fired\n============================================================\n    at C:\\Users\\walte\\playwright-ocr\\tests\\auth.setup.js:63:12",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\auth.setup.js",
+                      "column": 12,
+                      "line": 63
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 61 |\u001b[39m     \u001b[36mawait\u001b[39m signInButton\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m       page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m20000\u001b[39m })\u001b[33m,\u001b[39m \u001b[90m// wait for AJAX calls to finish\u001b[39m\n \u001b[90m    |\u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m       signInButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\n \u001b[90m 65 |\u001b[39m     ])\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🔐 Clicked Sign in... waiting for dashboard.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\auth.setup.js",
+                        "column": 12,
+                        "line": 63
+                      },
+                      "message": "TimeoutError: page.waitForLoadState: Timeout 20000ms exceeded.\n=========================== logs ===========================\n  \"commit\" event fired\n  \"domcontentloaded\" event fired\n============================================================\n\n\u001b[0m \u001b[90m 61 |\u001b[39m     \u001b[36mawait\u001b[39m signInButton\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m       page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m20000\u001b[39m })\u001b[33m,\u001b[39m \u001b[90m// wait for AJAX calls to finish\u001b[39m\n \u001b[90m    |\u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m       signInButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\n \u001b[90m 65 |\u001b[39m     ])\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🔐 Clicked Sign in... waiting for dashboard.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\auth.setup.js:63:12\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🚀 Starting authentication setup...\n"
+                    },
+                    {
+                      "text": "🌐 Login page loaded.\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "❌ Authentication setup failed: page.waitForLoadState: Timeout 20000ms exceeded.\n=========================== logs ===========================\n  \"commit\" event fired\n  \"domcontentloaded\" event fired\n============================================================\n"
+                    }
+                  ],
+                  "retry": 1,
+                  "startTime": "2025-11-04T18:49:17.150Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\auth.setup.js-authenticate-setup-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\auth.setup.js-authenticate-setup-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\auth.setup.js-authenticate-setup-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\auth.setup.js-authenticate-setup-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\auth.setup.js",
+                    "column": 12,
+                    "line": 63
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f376efe52c54b1a876fd-9d03a3bb502e264caa3f",
+          "file": "auth.setup.js",
+          "line": 44,
+          "column": 6
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-04T18:48:27.477Z",
+    "duration": 78612.416,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "validUser": { "email": "admin@ocrplatform.com", "password": "admin123" },
+  "invalidUser": { "email": "fake@ocr.com", "password": "wrongpass" }
+}

@@ -1,0 +1,295 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-04T01-30-29-059Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-04T01-30-29-059Z/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.(spec|test|js)/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.js",
+      "file": "auth.setup.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4616,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Starting authentication setup...\n"
+                    },
+                    {
+                      "text": "Authentication setup completed!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-04T01:30:30.838Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f376efe52c54b1a876fd-9d03a3bb502e264caa3f",
+          "file": "auth.setup.js",
+          "line": 3,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "dashboard.spec.js",
+      "file": "dashboard.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login, then navigate dashboard with scrollbar for charts and recent documents",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 46645,
+                  "error": {
+                    "message": "TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.",
+                    "stack": "TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.\n    at C:\\Users\\walte\\playwright-ocr\\tests\\dashboard.spec.js:232:14",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\dashboard.spec.js",
+                      "column": 14,
+                      "line": 232
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 230 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"🏠 Navigating to dashboard...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 231 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://ocr.techsavanna.technology/dashboard'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 232 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 233 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"✅ Dashboard loaded successfully\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 234 |\u001b[39m\n \u001b[90m 235 |\u001b[39m   \u001b[90m// === QUICK ACTION CARDS ===\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\dashboard.spec.js",
+                        "column": 14,
+                        "line": 232
+                      },
+                      "message": "TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.\n\n\u001b[0m \u001b[90m 230 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"🏠 Navigating to dashboard...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 231 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://ocr.techsavanna.technology/dashboard'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 232 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 233 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"✅ Dashboard loaded successfully\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 234 |\u001b[39m\n \u001b[90m 235 |\u001b[39m   \u001b[90m// === QUICK ACTION CARDS ===\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\dashboard.spec.js:232:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "📧 Typing email slowly...\n"
+                    },
+                    {
+                      "text": "🔒 Typing password slowly...\n"
+                    },
+                    {
+                      "text": "Clicking Sign In button...\n"
+                    },
+                    {
+                      "text": "⏳ Waiting for dashboard to load...\n"
+                    },
+                    {
+                      "text": "✅ Successfully logged in!\n"
+                    },
+                    {
+                      "text": "🏠 Navigating to dashboard...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-04T01:30:38.288Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\dashboard-Login-then-navig-49b08-charts-and-recent-documents-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\dashboard-Login-then-navig-49b08-charts-and-recent-documents-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\dashboard-Login-then-navig-49b08-charts-and-recent-documents-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\dashboard.spec.js",
+                    "column": 14,
+                    "line": 232
+                  }
+                },
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5494,
+                  "error": {
+                    "message": "Error: locator.type: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email or username')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"text\" name=\"identifier\" id=\"_R_hlbinpfjrb_\" aria-invalid=\"false\" autocomplete=\"username\" placeholder=\"Enter your email or username\" class=\"MuiInputBase-input MuiOutlinedInput-input css-1pk1fka\"/>\u001b[22m\n\u001b[2m  - elementHandle.type(\"admin@ocrplatform.com\")\u001b[22m\n",
+                    "stack": "Error: locator.type: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email or username')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"text\" name=\"identifier\" id=\"_R_hlbinpfjrb_\" aria-invalid=\"false\" autocomplete=\"username\" placeholder=\"Enter your email or username\" class=\"MuiInputBase-input MuiOutlinedInput-input css-1pk1fka\"/>\u001b[22m\n\u001b[2m  - elementHandle.type(\"admin@ocrplatform.com\")\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\dashboard.spec.js:201:18",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\dashboard.spec.js",
+                      "column": 18,
+                      "line": 201
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 199 |\u001b[39m \u001b[36mawait\u001b[39m emailField\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 200 |\u001b[39m \u001b[36mawait\u001b[39m emailField\u001b[33m.\u001b[39mfill(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Clear field first\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 201 |\u001b[39m \u001b[36mawait\u001b[39m emailField\u001b[33m.\u001b[39mtype(\u001b[32m\"admin@ocrplatform.com\"\u001b[39m\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m150\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// Simulate human typing\u001b[39m\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 202 |\u001b[39m\n \u001b[90m 203 |\u001b[39m \u001b[90m// Step 3: Enter password with visible typing\u001b[39m\n \u001b[90m 204 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m\"🔒 Typing password slowly...\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\dashboard.spec.js",
+                        "column": 18,
+                        "line": 201
+                      },
+                      "message": "Error: locator.type: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email or username')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"text\" name=\"identifier\" id=\"_R_hlbinpfjrb_\" aria-invalid=\"false\" autocomplete=\"username\" placeholder=\"Enter your email or username\" class=\"MuiInputBase-input MuiOutlinedInput-input css-1pk1fka\"/>\u001b[22m\n\u001b[2m  - elementHandle.type(\"admin@ocrplatform.com\")\u001b[22m\n\n\n\u001b[0m \u001b[90m 199 |\u001b[39m \u001b[36mawait\u001b[39m emailField\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 200 |\u001b[39m \u001b[36mawait\u001b[39m emailField\u001b[33m.\u001b[39mfill(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Clear field first\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 201 |\u001b[39m \u001b[36mawait\u001b[39m emailField\u001b[33m.\u001b[39mtype(\u001b[32m\"admin@ocrplatform.com\"\u001b[39m\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m150\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// Simulate human typing\u001b[39m\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 202 |\u001b[39m\n \u001b[90m 203 |\u001b[39m \u001b[90m// Step 3: Enter password with visible typing\u001b[39m\n \u001b[90m 204 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m\"🔒 Typing password slowly...\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\dashboard.spec.js:201:18\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "📧 Typing email slowly...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-04T01:31:27.639Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\dashboard-Login-then-navig-49b08-charts-and-recent-documents-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\dashboard-Login-then-navig-49b08-charts-and-recent-documents-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\dashboard.spec.js",
+                    "column": 18,
+                    "line": 201
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a1bb41a2bd6df77ed2f7-e67324b091656eceb669",
+          "file": "dashboard.spec.js",
+          "line": 187,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-04T01:30:29.072Z",
+    "duration": 65789.95700000001,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

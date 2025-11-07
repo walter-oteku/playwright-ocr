@@ -1,144 +1,90 @@
 import { test, expect } from '@playwright/test';
 
-test('Audit Logs dashboard interaction and filter flow', async ({ page }) => {
+test('Audit Logs: Export CSV and view details flow', async ({ page }) => {
   test.setTimeout(180000);
 
-  // === LOGIN FLOW ===
-  console.log("🌐 Navigating to login page...");
-  await page.goto('https://ocr-engine.netlify.app/login');
+  // === STEP 1: LOGIN ===
+  console.log("🚀 Navigating to login page...");
+  await page.goto('https://ocr.techsavanna.technology/login');
   await page.waitForLoadState('domcontentloaded');
 
-  console.log("📧 Typing email...");
-  await page.getByPlaceholder("Enter your email").type("admin@example.com", { delay: 100 });
+  // Enter username
+  console.log("👤 Entering username...");
+  const emailField = page.locator("(//input[@id='_R_hlbinpfjrb_'])[1]");
+  await emailField.waitFor({ state: 'visible', timeout: 10000 });
+  await emailField.fill("reviewer1");
 
-  console.log("🔑 Typing password...");
-  await page.getByPlaceholder("Enter your password").type("password123", { delay: 100 });
+  // Enter password
+  console.log("🔒 Entering password...");
+  const passwordField = page.locator("(//input[@id='_R_ilbinpfjrb_'])[1]");
+  await passwordField.waitFor({ state: 'visible', timeout: 10000 });
+  await passwordField.fill("password123");
 
-  console.log("🚪 Clicking Sign In...");
-  await page.getByRole('button', { name: /sign in/i }).click();
+  // Click Sign In
+  console.log("🔓 Clicking 'Sign In'...");
+  const signInButton = page.locator("//button[normalize-space()='Sign in']");
+  await signInButton.waitFor({ state: 'visible', timeout: 10000 });
+  await signInButton.click();
 
-  console.log("⏳ Waiting for login success...");
-  await expect(page.getByText(/login successful/i)).toBeVisible({ timeout: 15000 });
+  // Wait for dashboard to load
+  console.log("🕒 Waiting for dashboard to load...");
+  await page.waitForSelector("text=Dashboard", { timeout: 20000 });
   console.log("✅ Login successful!");
 
-  // === STEP 1: Navigate to Audit Logs ===
-console.log("📋 Navigating to 'Audit Logs' tab...");
+  // === STEP 2: NAVIGATE TO AUDIT LOGS ===
+  console.log("📋 Navigating to 'Audit Logs'...");
+  const auditLogsTab = page.locator("(//a[normalize-space()='Audit Logs'])[1]");
+  await auditLogsTab.waitFor({ state: 'visible', timeout: 15000 });
+  await auditLogsTab.click();
 
-const auditLogsTab = page.locator("(//a[normalize-space()='Audit Logs'])[1]");
-await auditLogsTab.waitFor({ state: 'visible', timeout: 10000 });
-await auditLogsTab.click();
+  await page.waitForURL(/audit/, { timeout: 15000 });
+  console.log("✅ Audit Logs page loaded.");
 
-console.log("⏳ Waiting for Audit Logs page to load...");
-await page.waitForURL(/audit/, { timeout: 15000 });
+  // === STEP 3: EXPORT AUDIT LOGS TO CSV ===
+  console.log("📦 Opening export format dropdown...");
+  const exportDropdown = page.locator("(//div[@id='export-format'])[1]");
+  await exportDropdown.waitFor({ state: 'visible', timeout: 10000 });
+  await exportDropdown.click();
+  await page.waitForTimeout(1000);
 
-console.log("✅ Audit Logs page loaded successfully!");
-await page.waitForTimeout(2000);
+  console.log("🧾 Selecting CSV format...");
+  const csvOption = page.locator("//li[normalize-space()='CSV']");
+  await csvOption.waitFor({ state: 'visible', timeout: 10000 });
+  await csvOption.click();
+  console.log("✅ CSV format selected.");
 
+  console.log("📤 Clicking 'Export Audit Logs' button...");
+  const exportButton = page.locator("(//button[normalize-space()='Export Audit Logs'])[1]");
+  await exportButton.waitFor({ state: 'visible', timeout: 10000 });
+  await exportButton.click();
+  console.log("✅ Export initiated — CSV download should begin shortly.");
 
-  // === STEP 2: Hover over Dashboard Cards ===
-  console.log("🧾 Hovering over summary cards...");
-  const summaryCards = [
-    "Total Logs",
-    "Errors",
-    "Warnings",
-    "Success",
-    "Active Users",
-    "Document Actions",
-    "System Actions",
-    "Info Logs"
-  ];
+  await page.waitForTimeout(3000); // small grace period for download to start
 
-  for (const card of summaryCards) {
-    const cardLocator = page.locator(`text=${card}`).first();
-    if (await cardLocator.isVisible()) {
-      await cardLocator.hover();
-      console.log(`🪶 Hovered over card: ${card}`);
-      await page.waitForTimeout(1200);
-    }
-  }
-
-  // === STEP 3: Scroll to Filter Section ===
-  console.log("🎛 Scrolling to filter section...");
+  // === STEP 4: VIEW A SPECIFIC AUDIT LOG ===
+  console.log("🔍 Scrolling to audit log entries...");
   await page.mouse.wheel(0, 800);
-  await page.waitForTimeout(2000);
+  await page.waitForTimeout(1500);
 
- // === STEP 2: Click 'Show Filters' ===
-console.log("🪟 Clicking 'Show Filters'...");
+  console.log("👁️ Clicking 'View details' icon for a log entry...");
+  const viewButton = page.locator("(//button[@aria-label='View details'])[6]");
+  await viewButton.waitFor({ state: 'visible', timeout: 10000 });
+  await viewButton.click();
 
-const showFilterBtn = page.locator("(//button[normalize-space()='Show Filters'])[1]");
-await showFilterBtn.waitFor({ state: 'visible', timeout: 10000 });
-await page.waitForTimeout(500); // 👀 tiny pause before clicking (feels natural)
-await showFilterBtn.click();
+  console.log("🪟 Viewing audit log details...");
+  await page.waitForSelector("//button[normalize-space()='Close']", { timeout: 15000 });
+  await page.mouse.wheel(0, 500);
+  await page.waitForTimeout(1500);
 
-console.log("✅ 'Show Filters' section displayed.");
-await page.waitForTimeout(1500);
+  // === STEP 5: CLOSE DETAILS MODAL ===
+  console.log("❌ Closing the details view...");
+  const closeButton = page.locator("(//button[normalize-space()='Close'])[1]");
+  await closeButton.waitFor({ state: 'visible', timeout: 10000 });
+  await closeButton.click();
 
+  console.log("✅ Audit log details closed successfully.");
 
- // === STEP 4: Fill Filter Fields ===
-console.log("✍️ Setting Start and End Dates...");
-
-// Start Date
-const startDate = page.locator("(//input[@value='2025-10-23'])[1]");
-await startDate.waitFor({ state: 'visible', timeout: 10000 });
-await startDate.fill('2025-10-23');
-await page.waitForTimeout(1200);
-
-// End Date
-const endDate = page.locator("(//input[@value='2025-10-30'])[1]");
-await endDate.waitFor({ state: 'visible', timeout: 10000 });
-await endDate.fill('2025-10-30');
-await page.waitForTimeout(1200);
-console.log("📅 Dates filled successfully!");
-
-// Action dropdown
-console.log("🔽 Selecting 'Action' filter...");
-const actionDropdown = page.locator("(//select[@class='w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500'])[1]");
-await actionDropdown.waitFor({ state: 'visible', timeout: 10000 });
-await actionDropdown.selectOption({ index: 1 });
-await page.waitForTimeout(1000);
-console.log("✅ Action filter selected!");
-
-// Resource dropdown
-console.log("🧩 Selecting 'Resource' filter...");
-const resourceDropdown = page.locator("(//select[@class='w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500'])[2]");
-await resourceDropdown.waitFor({ state: 'visible', timeout: 10000 });
-await resourceDropdown.selectOption({ index: 1 });
-await page.waitForTimeout(1000);
-console.log("✅ Resource filter selected!");
-
-// User ID input
-console.log("🆔 Entering User ID...");
-const userIdField = page.locator("(//input[@placeholder='Enter user ID...'])[1]");
-await userIdField.waitFor({ state: 'visible', timeout: 10000 });
-await userIdField.fill('1');
-await page.waitForTimeout(1500);
-console.log("✅ User ID set to 1.");
-
-
-  // === STEP 5: Select and View Audit Log ===
-console.log("📜 Selecting a specific audit log entry...");
-
-const viewIcon = page.locator("(//*[name()='svg'][@class='h-4 w-4'])[1]");
-await viewIcon.waitFor({ state: 'visible', timeout: 5000 });
-await viewIcon.click();
-
-console.log("👁️ Audit log details opened.");
-await page.waitForTimeout(2000);
-
-
-// === STEP 6: Close Audit Log Modal ===
-console.log("❌ Closing audit log details modal...");
-
-const closeModal = page.locator("(//*[name()='svg'][@class='h-6 w-6'])[3]");
-await closeModal.waitFor({ state: 'visible', timeout: 5000 });
-await page.waitForTimeout(1000); // Give the modal a beat to fully render
-await closeModal.click();
-
-console.log("✅ Audit log modal closed successfully!");
-await page.waitForTimeout(1500); // Ensure modal transition finishes before next step
-
-
-  // === STEP 7: Wrap Up ===
-  await page.waitForTimeout(2000);
-  console.log("🎉 Completed full audit log filter and view flow smoothly!");
+  // === STEP 6: DONE ===
+  await page.waitForTimeout(1500);
+  console.log("🎉 Full export and view flow completed successfully!");
 });

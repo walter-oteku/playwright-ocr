@@ -1,0 +1,89 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="49.543282000000005">
+<testsuite name="documents.spec.js" timestamp="2025-11-04T19:25:10.852Z" hostname="chromium" tests="1" failures="1" skipped="0" time="43.328" errors="0">
+<testcase name="Full document workflow: upload, search, filter, view, edit, delete" classname="documents.spec.js" time="43.328">
+<failure message="documents.spec.js:4:5 Full document workflow: upload, search, filter, view, edit, delete" type="FAILURE">
+<![CDATA[  [chromium] › documents.spec.js:4:5 › Full document workflow: upload, search, filter, view, edit, delete 
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for getByPlaceholder(/Search documents/i)
+
+
+      80 |   console.log("🔍 Searching for uploaded document...");
+      81 |   const searchBox = page.getByPlaceholder(/Search documents/i);
+    > 82 |   await searchBox.click();
+         |                   ^
+      83 |   await searchBox.fill("Parklands_Training_Tracker");
+      84 |   await page.keyboard.press('Enter');
+      85 |   await page.waitForTimeout(3000);
+        at C:\Users\walte\playwright-ocr\tests\documents.spec.js:82:19
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://ocr.techsavanna.technology/login", waiting until "load"
+
+
+       8 |  // Step 1: Navigate to the login page
+       9 |   console.log(" Navigating to login page...");
+    > 10 |   await page.goto('https://ocr.techsavanna.technology/login');
+         |              ^
+      11 |   await page.waitForLoadState('domcontentloaded');
+      12 |
+      13 |  // Step 2: Enter email address with visible typing
+        at C:\Users\walte\playwright-ocr\tests\documents.spec.js:10:14
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[ Navigating to login page...
+📧 Typing email slowly...
+🔒 Typing password slowly...
+Clicking Sign In button...
+Waiting for success message...
+📁 Navigating to 'Documents' tab...
+✅ Documents page loaded.
+📤 Clicking 'Upload Documents' button...
+✅ Upload page opened successfully!
+📎 Uploading sample document...
+✅ File uploaded successfully!
+🔄 Navigated back to Documents list.
+🔍 Searching for uploaded document...
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium\trace.zip]]
+ Navigating to login page...
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\documents-Full-document-wo-832eb-rch-filter-view-edit-delete-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

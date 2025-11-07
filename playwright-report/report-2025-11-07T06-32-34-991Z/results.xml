@@ -1,0 +1,16 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="17.853058">
+<testsuite name="forgot-password.spec.js" timestamp="2025-11-07T06:32:35.170Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.49" errors="0">
+<testcase name="Forgot Password Flow - Invalid and Valid Email" classname="forgot-password.spec.js" time="14.49">
+<system-out>
+<![CDATA[Navigated to OCR Login Page ✅
+Clicked on Forgot Password link 🔗
+Testing invalid email submission... ❌
+Error message correctly displayed for invalid email 🚫
+Testing valid email submission... ✅
+Reset link successfully sent to valid email 📩
+Returned to Sign In page 🏠
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,112 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="102.08392500000001">
+<testsuite name="auth.setup.js" timestamp="2025-11-04T18:40:31.782Z" hostname="setup" tests="1" failures="1" skipped="0" time="96.558" errors="0">
+<testcase name="authenticate" classname="auth.setup.js" time="96.558">
+<failure message="auth.setup.js:7:6 authenticate" type="FAILURE">
+<![CDATA[  [setup] › auth.setup.js:7:6 › authenticate ───────────────────────────────────────────────────────
+
+    TimeoutError: page.screenshot: Timeout 15000ms exceeded.
+    Call log:
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+
+
+      30 |   } catch (err) {
+      31 |     console.error('❌ Authentication setup failed:', err.message);
+    > 32 |     await page.screenshot({ path: 'test-results/auth-failure.png', fullPage: true });
+         |                ^
+      33 |     throw err;
+      34 |   }
+      35 | });
+        at C:\Users\walte\playwright-ocr\tests\auth.setup.js:32:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\auth.setup.js-authenticate-setup\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.screenshot: Timeout 15000ms exceeded.
+    Call log:
+      - taking page screenshot
+      - waiting for fonts to load...
+      - fonts loaded
+
+
+      30 |   } catch (err) {
+      31 |     console.error('❌ Authentication setup failed:', err.message);
+    > 32 |     await page.screenshot({ path: 'test-results/auth-failure.png', fullPage: true });
+         |                ^
+      33 |     throw err;
+      34 |   }
+      35 | });
+        at C:\Users\walte\playwright-ocr\tests\auth.setup.js:32:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth.setup.js-authenticate-setup-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🚀 Starting authentication setup...
+🌐 Login page loaded.
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\trace.zip]]
+🚀 Starting authentication setup...
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup-retry1\trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Authentication setup failed: locator.click: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('//button[normalize-space()=\'Sign in\']')[22m
+[2m    - locator resolved to <button tabindex="0" type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorSuccess MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorSuccess MuiButton-fullWidth css-1iczvv6">Sign in</button>[22m
+[2m  - attempting click action[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - performing click action[22m
+[2m    - click action done[22m
+[2m    - waiting for scheduled navigations to finish[22m
+
+❌ Authentication setup failed: page.goto: Timeout 15000ms exceeded.
+Call log:
+[2m  - navigating to "https://ocr.techsavanna.technology/login", waiting until "domcontentloaded"[22m
+
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

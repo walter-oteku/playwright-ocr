@@ -1,0 +1,117 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="87.220192">
+<testsuite name="user.spec.js" timestamp="2025-11-05T10:04:42.752Z" hostname="chromium" tests="1" failures="1" skipped="0" time="73.406" errors="0">
+<testcase name="Full user workflow: create, filter, edit, and delete users" classname="user.spec.js" time="73.406">
+<failure message="user.spec.js:3:5 Full user workflow: create, filter, edit, and delete users" type="FAILURE">
+<![CDATA[  [chromium] › user.spec.js:3:5 › Full user workflow: create, filter, edit, and delete users ───────
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//span[normalize-space()=\'Filters\'])[1]') to be visible
+
+
+      116 |   console.log("🎛 Opening filter dropdown...");
+      117 |   const filterDropdown = page.locator("(//span[normalize-space()='Filters'])[1]");
+    > 118 |   await filterDropdown.waitFor({ state: 'visible', timeout: 10000 });
+          |                        ^
+      119 |   await filterDropdown.click();
+      120 |   console.log("✅ Filter dropdown opened!");
+      121 |
+        at C:\Users\walte\playwright-ocr\tests\user.spec.js:118:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: locator.waitFor: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('xpath=(//span[normalize-space()=\'Filters\'])[1]') to be visible
+
+
+      116 |   console.log("🎛 Opening filter dropdown...");
+      117 |   const filterDropdown = page.locator("(//span[normalize-space()='Filters'])[1]");
+    > 118 |   await filterDropdown.waitFor({ state: 'visible', timeout: 10000 });
+          |                        ^
+      119 |   await filterDropdown.click();
+      120 |   console.log("✅ Filter dropdown opened!");
+      121 |
+        at C:\Users\walte\playwright-ocr\tests\user.spec.js:118:24
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🌐 Navigating to login page...
+📧 Typing email slowly...
+🔒 Typing password slowly...
+🖱 Clicking Sign In button...
+⏳ Waiting for success message...
+👥 Navigating to 'Users' tab...
+✅ Users page loaded successfully!
+➕ Clicking 'Add User' button...
+✅ Navigated to 'Create New User' form.
+📝 Filling new user details...
+📜 Selecting user role...
+✅ Role selected as Manager.
+🚀 Creating new user...
+🧠 Waiting for user creation process to complete...
+✅ User created successfully!
+🎛 Opening filter dropdown...
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\trace.zip]]
+🌐 Navigating to login page...
+📧 Typing email slowly...
+🔒 Typing password slowly...
+🖱 Clicking Sign In button...
+⏳ Waiting for success message...
+👥 Navigating to 'Users' tab...
+✅ Users page loaded successfully!
+➕ Clicking 'Add User' button...
+✅ Navigated to 'Create New User' form.
+📝 Filling new user details...
+📜 Selecting user role...
+✅ Role selected as Manager.
+🚀 Creating new user...
+🧠 Waiting for user creation process to complete...
+✅ User created successfully!
+🎛 Opening filter dropdown...
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

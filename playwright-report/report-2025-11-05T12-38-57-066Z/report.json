@@ -1,0 +1,111 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-05T12-38-57-066Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-05T12-38-57-066Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-05T12-38-57-066Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "SyntaxError: C:\\Users\\walte\\playwright-ocr\\tests\\system-config.spec.js: Identifier 'successMessage' has already been declared. (120:8)\n\n\u001b[0m \u001b[90m 118 |\u001b[39m\n \u001b[90m 119 |\u001b[39m   \u001b[90m// === CHECK FOR SUCCESS MESSAGE ===\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 120 |\u001b[39m   \u001b[36mconst\u001b[39m successMessage \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\n \u001b[90m     |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 121 |\u001b[39m     \u001b[32m\"//div[contains(., 'Configuration saved') or contains(., 'successfully') or contains(., 'updated')]\"\u001b[39m\n \u001b[90m 122 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m successMessage\u001b[33m.\u001b[39misVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\u001b[0m",
+      "stack": "SyntaxError: C:\\Users\\walte\\playwright-ocr\\tests\\system-config.spec.js: Identifier 'successMessage' has already been declared. (120:8)\n\n\u001b[0m \u001b[90m 118 |\u001b[39m\n \u001b[90m 119 |\u001b[39m   \u001b[90m// === CHECK FOR SUCCESS MESSAGE ===\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 120 |\u001b[39m   \u001b[36mconst\u001b[39m successMessage \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\n \u001b[90m     |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 121 |\u001b[39m     \u001b[32m\"//div[contains(., 'Configuration saved') or contains(., 'successfully') or contains(., 'updated')]\"\u001b[39m\n \u001b[90m 122 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m successMessage\u001b[33m.\u001b[39misVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\u001b[0m",
+      "location": {
+        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\system-config.spec.js",
+        "line": 120,
+        "column": 8
+      },
+      "snippet": "\u001b[90m   at \u001b[39msystem-config.spec.js:120\n\n\u001b[0m \u001b[90m 118 |\u001b[39m\n \u001b[90m 119 |\u001b[39m   \u001b[90m// === CHECK FOR SUCCESS MESSAGE ===\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 120 |\u001b[39m   \u001b[36mconst\u001b[39m successMessage \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\n \u001b[90m     |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 121 |\u001b[39m     \u001b[32m\"//div[contains(., 'Configuration saved') or contains(., 'successfully') or contains(., 'updated')]\"\u001b[39m\n \u001b[90m 122 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m successMessage\u001b[33m.\u001b[39misVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\u001b[0m"
+    },
+    {
+      "message": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments.",
+      "stack": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments."
+    }
+  ],
+  "stats": {
+    "startTime": "2025-11-05T12:38:57.084Z",
+    "duration": 154.90200000000004,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

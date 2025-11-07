@@ -1,0 +1,107 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="107.780072">
+<testsuite name="analytics.spec.js" timestamp="2025-11-05T09:09:48.393Z" hostname="chromium" tests="1" failures="1" skipped="0" time="97.935" errors="0">
+<testcase name="Analytics dashboard interaction flow with date filter" classname="analytics.spec.js" time="97.935">
+<failure message="analytics.spec.js:4:5 Analytics dashboard interaction flow with date filter" type="FAILURE">
+<![CDATA[  [chromium] › analytics.spec.js:4:5 › Analytics dashboard interaction flow with date filter ───────
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//a[normalize-space()="Analytics"])[1]')
+
+
+      50 |   // === STEP 1: Navigate to Analytics ===
+      51 |   console.log("📊 Navigating to 'Analytics' tab...");
+    > 52 |   await page.locator('(//a[normalize-space()="Analytics"])[1]').click();
+         |                                                                 ^
+      53 |   await page.waitForURL(/analytics/, { timeout: 10000 });
+      54 |   console.log("✅ Analytics page loaded successfully!");
+      55 |   await page.waitForTimeout(2000);
+        at C:\Users\walte\playwright-ocr\tests\analytics.spec.js:52:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForURL: Timeout 10000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      51 |   console.log("📊 Navigating to 'Analytics' tab...");
+      52 |   await page.locator('(//a[normalize-space()="Analytics"])[1]').click();
+    > 53 |   await page.waitForURL(/analytics/, { timeout: 10000 });
+         |              ^
+      54 |   console.log("✅ Analytics page loaded successfully!");
+      55 |   await page.waitForTimeout(2000);
+      56 |
+        at C:\Users\walte\playwright-ocr\tests\analytics.spec.js:53:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[ Navigating to login page...
+📧 Typing email slowly...
+🔒 Typing password slowly...
+Clicking Sign In button...
+Waiting for success message...
+📊 Navigating to 'Analytics' tab...
+
+[[ATTACHMENT|..\..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium\trace.zip]]
+ Navigating to login page...
+📧 Typing email slowly...
+🔒 Typing password slowly...
+Clicking Sign In button...
+Waiting for success message...
+📊 Navigating to 'Analytics' tab...
+
+[[ATTACHMENT|..\..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\analytics-Analytics-dashbo-48a6b-ction-flow-with-date-filter-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

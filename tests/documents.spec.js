@@ -1,384 +1,200 @@
 import { test, expect } from '@playwright/test';
 import path from 'path';
 
-test('Full document workflow: upload, search, filter, view, edit, delete', async ({ page }) => {
+test('Full document workflow: upload, search, filter, view, download, delete', async ({ page }) => {
   test.setTimeout(180000);
 
-  // === LOGIN ===
-  console.log("🌐 Navigating to login page...");
-  await page.goto('https://ocr-engine.netlify.app/login');
+  // ===========================================================
+  // === LOGIN SECTION ===
+  // ===========================================================
+  console.log("🚀 Navigating to login page...");
+  await page.goto('https://ocr.techsavanna.technology/login');
   await page.waitForLoadState('domcontentloaded');
 
-  console.log("📧 Typing email...");
-  await page.getByPlaceholder("Enter your email").type("admin@example.com", { delay: 100 });
+  console.log("📧 Typing username...");
+  const emailField = page.locator("(//input[@id='_R_hlbinpfjrb_'])[1]");
+  await emailField.waitFor({ state: "visible", timeout: 10000 });
+  await emailField.fill("reviewer1", { delay: 120 });
 
-  console.log("🔑 Typing password...");
-  await page.getByPlaceholder("Enter your password").type("password123", { delay: 100 });
+  console.log("🔒 Typing password...");
+  const passwordField = page.locator("(//input[@id='_R_ilbinpfjrb_'])[1]");
+  await passwordField.waitFor({ state: "visible", timeout: 10000 });
+  await passwordField.fill("password123", { delay: 120 });
 
-  console.log("🚪 Clicking Sign In...");
-  await page.getByRole('button', { name: /sign in/i }).click();
+  console.log("🖱️ Clicking 'Sign In' button...");
+  const signInButton = page.locator("//button[normalize-space()='Sign in']");
+  await signInButton.click();
 
-  console.log("⏳ Waiting for login success...");
-  await expect(page.getByText(/login successful/i)).toBeVisible({ timeout: 15000 });
-  console.log("✅ Login successful!");
+  console.log("⏳ Waiting for dashboard to load...");
+  await page.waitForURL(/dashboard/, { timeout: 20000 });
+  console.log("✅ Logged in successfully!");
 
-  // === STEP 1: Navigate to Documents ===
-  console.log("📁 Navigating to 'Documents' tab...");
+  // ===========================================================
+  // === NAVIGATE TO DOCUMENTS ===
+  // ===========================================================
+  console.log("📂 Opening 'Documents' tab...");
   await page.locator('a[href="/documents"]').first().click();
   await page.waitForURL(/documents/, { timeout: 15000 });
   console.log("✅ Documents page loaded.");
 
-  // === STEP 2: Click Upload Documents ===
-  console.log("📤 Clicking 'Upload Documents' button...");
-  await page.locator("//button[normalize-space()='Upload Documents']").click();
+  // ===========================================================
+  // === UPLOAD DOCUMENT ===
+  // ===========================================================
+  console.log("📤 Clicking 'Upload Documents'...");
+  const uploadDocsBtn = page.locator("//button[normalize-space()='Upload Documents']");
+  await uploadDocsBtn.waitFor({ state: "visible" });
+  await uploadDocsBtn.click();
+
   await page.waitForURL(/upload/, { timeout: 15000 });
   console.log("✅ Upload page opened successfully!");
 
-  // === STEP 3: Upload a sample file ===
-  console.log("📎 Uploading sample document...");
+  console.log("📎 Selecting file to upload...");
   const filePath = path.resolve('C:/Users/walte/OneDrive/Documents/Parklands_Training_Tracker.pdf');
   const fileInput = page.locator('input[type="file"]');
   await fileInput.setInputFiles(filePath);
-  console.log("✅ File uploaded successfully!");
+  console.log("✅ File selected successfully!");
 
-  // Simulate clicking upload/submit button if present
+  console.log("🚀 Submitting file upload...");
   const uploadButton = page.getByRole('button', { name: /Submit|Upload/i });
   if (await uploadButton.isVisible()) {
     await uploadButton.click();
-    console.log("🚀 Upload initiated...");
+    console.log("✅ Upload started...");
+  } else {
+    console.log("⚠️ Upload button not visible, skipping click.");
   }
 
   await page.waitForTimeout(5000);
-  await page.goto('https://ocr-engine.netlify.app/documents');
-  console.log("🔄 Navigated back to Documents list.");
+  await page.goto('https://ocr.techsavanna.technology/documents');
+  console.log("🔄 Returned to Documents list.");
 
-  // === STEP 4: Search for the uploaded document ===
+  // ===========================================================
+  // === SEARCH FUNCTIONALITY ===
+  // ===========================================================
   console.log("🔍 Searching for uploaded document...");
   const searchBox = page.getByPlaceholder(/Search documents/i);
-  await searchBox.click();
   await searchBox.fill("Parklands_Training_Tracker");
   await page.keyboard.press('Enter');
   await page.waitForTimeout(3000);
   console.log("✅ Search completed.");
 
-  // === STEP 4B: Clear the search field before continuing ===
-  console.log("🧹 Clearing search field for next steps...");
+  // Clear search for next steps
+  console.log("🧹 Clearing search field...");
   await searchBox.click();
   await page.keyboard.press('Control+A');
   await page.keyboard.press('Backspace');
-  await page.waitForTimeout(1000);
-  console.log("✅ Search field cleared — ready for next actions.");
 
+  // ===========================================================
   // === FILTERING SECTION ===
-  console.log("⚙️ Opening the Filters dropdown...");
+  // ===========================================================
+  console.log("⚙️ Opening Filters...");
   const filterButton = page.getByRole('button', { name: /Filters/i });
   await filterButton.click();
-  await page.waitForTimeout(2000); // Increased timeout for UI to settle
+  await page.waitForTimeout(1000);
 
-  // === Apply Status Filter ===
-  console.log("✅ Selecting 'Completed' status...");
-  const statusCheckbox = page.locator('label:has-text("Completed") input[type="checkbox"]');
-  if (await statusCheckbox.isVisible()) {
-    await statusCheckbox.waitFor({ state: 'visible', timeout: 5000 });
-    await statusCheckbox.check();
-    await page.waitForTimeout(1500); // Wait for filter to apply
-    console.log("✅ Status filter applied.");
-  } else {
-    console.log("⚠️ Status filter not visible — skipping.");
+  console.log("✅ Applying 'Completed' status filter...");
+  const completedCheck = page.locator('label:has-text("Completed") input[type="checkbox"]');
+  if (await completedCheck.isVisible()) {
+    await completedCheck.check();
   }
 
-  // === Apply Document Type Filter ===
-  console.log("📄 Selecting 'Business Permit' document type...");
-  const docTypeCheckbox = page.locator('label:has-text("Business Permit") input[type="checkbox"]');
-  if (await docTypeCheckbox.isVisible()) {
-    await docTypeCheckbox.waitFor({ state: 'visible', timeout: 5000 });
-    await docTypeCheckbox.check();
-    await page.waitForTimeout(1500); // Wait for filter to apply
-    console.log("✅ Document type filter applied.");
-  } else {
-    console.log("⚠️ Document type filter not visible — skipping.");
+  console.log("✅ Applying 'Business Permit' type filter...");
+  const docTypeCheck = page.locator('label:has-text("Business Permit") input[type="checkbox"]');
+  if (await docTypeCheck.isVisible()) {
+    await docTypeCheck.check();
   }
 
-  // === Click 'Clear All' to reset filters ===
-  console.log("🧹 Clicking 'Clear all' to reset filters...");
-  const clearAllButton = page.getByRole('button', { name: /Clear all/i });
-  if (await clearAllButton.isVisible()) {
-    await clearAllButton.waitFor({ state: 'visible', timeout: 5000 });
-    await clearAllButton.click();
-    await page.waitForTimeout(1500); // Wait for clear to complete
-    console.log("✅ Filters cleared successfully.");
-  } else {
-    console.log("⚠️ 'Clear all' button not visible — skipping.");
+  console.log("🧹 Clearing all filters...");
+  const clearFilters = page.getByRole('button', { name: /Clear all/i });
+  if (await clearFilters.isVisible()) {
+    await clearFilters.click();
   }
 
-  // === Fill Upload Date Range ===
-  console.log("📅 Filling in Upload Date Range...");
+  // === Date & Confidence Range ===
+  console.log("📅 Setting Upload Date Range...");
   await page.fill('(//input[@type="date"])[1]', '2025-10-01');
   await page.fill('(//input[@type="date"])[2]', '2025-10-27');
-  await page.waitForTimeout(1000);
-  console.log("✅ Date range entered.");
 
-  console.log("📊 Filling in Confidence Score Range...");
-  await page.locator('text=Confidence Score Range').click().catch(() => {});
-  await page.waitForTimeout(1000);
+  console.log("📊 Setting Confidence Score Range...");
+  const minScore = page.locator('(//input[@type="number"])[1]');
+  const maxScore = page.locator('(//input[@type="number"])[2]');
+  await minScore.fill('6');
+  await maxScore.fill('10');
+  console.log("✅ Filters configured successfully.");
 
-  const minScoreInput = page.locator('(//input[@type="number"])[1]');
-  const maxScoreInput = page.locator('(//input[@type="number"])[2]');
-
-  await minScoreInput.waitFor({ state: 'visible', timeout: 10000 });
-  await maxScoreInput.waitFor({ state: 'visible', timeout: 10000 });
-
-  await minScoreInput.fill('');
-  await minScoreInput.type('6', { delay: 100 });
-  await maxScoreInput.fill('');
-  await maxScoreInput.type('10', { delay: 100 });
-  await page.waitForTimeout(1000);
-  console.log("✅ Confidence Score Range entered successfully!");
-
-  // === Collapse Filters ===
   console.log("⬆️ Collapsing Filters panel...");
-  const collapseArrow = page.locator('xpath=/html/body/div/div[2]/main/div/div/div/div[2]/div/div[2]/button/*[name()="svg"][2]');
-  await collapseArrow.waitFor({ state: 'visible', timeout: 10000 });
-  await collapseArrow.click();
-  await page.waitForTimeout(2000);
-  console.log("✅ Filters panel collapsed successfully!");
+  const collapseArrow = page.locator('(//button[contains(@class,"collapse")])[1]');
+  await collapseArrow.click().catch(() => console.log("⚠️ Could not collapse filters."));
 
-  // === STEP 6: Search for existing document (using what's actually in the table) ===
-  console.log("🔎 Searching for existing document...");
-  const searchBoxAgain = page.getByPlaceholder(/Search documents/i);
-  await searchBoxAgain.click();
-  
-  // Search for a document that actually exists based on your screenshot
-  await searchBoxAgain.fill("Business Permit");
-  await page.keyboard.press('Enter');
-  
-  console.log("⏳ Waiting for search results to load...");
-  await page.waitForTimeout(4000);
-
-  // Get the first row for actions
+  // ===========================================================
+  // === VIEW / DOWNLOAD / DELETE ACTIONS ===
+  // ===========================================================
   const firstRow = page.locator('table tbody tr').first();
 
-  // === STEP 7: View Document (Eye Icon) ===
-console.log("👁 Attempting to view document...");
-try {
-  // Method 1: Use the exact xpath you provided
-  const viewIcon = page.locator('(//*[name()="svg"][@class="h-4 w-4"])[1]');
-  
-  // Method 2: Alternative - look for the eye icon specifically in the first row
-  const viewIconInRow = firstRow.locator('(//*[name()="svg"][@class="h-4 w-4"])[1]');
-  
-  // Method 3: More specific - look for SVG with class in the actions column
-  const viewIconActions = firstRow.locator('svg.h-4.w-4').first();
-  
-  if (await viewIcon.isVisible({ timeout: 5000 })) {
-    await viewIcon.click();
-    console.log("✅ View icon clicked using direct xpath!");
-    await page.waitForLoadState('domcontentloaded');
+  // === VIEW DOCUMENT ===
+  console.log("👁 Viewing first document...");
+  const viewBtn = firstRow.locator('(//*[name()="svg"][@class="h-4 w-4"])[1]');
+  if (await viewBtn.isVisible()) {
+    await viewBtn.click();
     await page.waitForTimeout(3000);
-    
-    // Verify we're on a document view page
-    if (page.url().includes('/document/') || page.url().includes('/view/') || page.url().includes('/documents/')) {
-      console.log("✅ Document view page loaded successfully!");
-    } else {
-      console.log("📄 Navigated to:", page.url());
-    }
-    
+    console.log("✅ Document view opened!");
     await page.goBack();
-    await page.waitForLoadState('domcontentloaded');
-    await page.waitForTimeout(2000);
-    
-  } else if (await viewIconInRow.isVisible({ timeout: 5000 })) {
-    await viewIconInRow.click();
-    console.log("✅ View icon clicked using row-specific xpath!");
-    await page.waitForLoadState('domcontentloaded');
-    await page.waitForTimeout(3000);
-    await page.goBack();
-    await page.waitForLoadState('domcontentloaded');
-    await page.waitForTimeout(2000);
-    
-  } else if (await viewIconActions.isVisible({ timeout: 5000 })) {
-    await viewIconActions.click();
-    console.log("✅ View icon clicked using class selector!");
-    await page.waitForLoadState('domcontentloaded');
-    await page.waitForTimeout(3000);
-    await page.goBack();
-    await page.waitForLoadState('domcontentloaded');
-    await page.waitForTimeout(2000);
-    
   } else {
-    console.log("⚠️ Eye icon not found with specified selectors");
-    
-    // Debug: List all SVGs in the row to see what's available
-    const allSvgs = firstRow.locator('svg');
-    const svgCount = await allSvgs.count();
-    console.log(`🔍 Found ${svgCount} SVG icons in the row`);
-    
-    for (let i = 0; i < svgCount; i++) {
-      const svgClass = await allSvgs.nth(i).getAttribute('class');
-      console.log(`   SVG ${i + 1}: class="${svgClass}"`);
-    }
+    console.log("⚠️ View icon not visible.");
   }
-} catch (error) {
-  console.log("⚠️ View action failed:", error.message);
-}
-  // === STEP 8: Download Document (Download Icon) ===
-console.log("⬇️ Attempting to download document...");
-try {
-  // Method 1: Use the exact xpath you provided for download (second SVG)
-  const downloadIcon = page.locator('(//*[name()="svg"][@class="h-4 w-4"])[2]');
-  
-  // Method 2: Alternative - look for the download icon specifically in the first row
-  const downloadIconInRow = firstRow.locator('(//*[name()="svg"][@class="h-4 w-4"])[2]');
-  
-  // Method 3: More specific - look for second SVG with class in the actions column
-  const downloadIconActions = firstRow.locator('svg.h-4.w-4').nth(1);
-  
-  if (await downloadIcon.isVisible({ timeout: 5000 })) {
-    await downloadIcon.click();
-    console.log("✅ Download icon clicked using direct xpath!");
-    await page.waitForTimeout(3000);
-    
-    // Check if download was triggered (you might see a download dialog or file saving)
-    console.log("✅ Document download triggered successfully!");
-    
-  } else if (await downloadIconInRow.isVisible({ timeout: 5000 })) {
-    await downloadIconInRow.click();
-    console.log("✅ Download icon clicked using row-specific xpath!");
-    await page.waitForTimeout(3000);
-    console.log("✅ Document download triggered successfully!");
-    
-  } else if (await downloadIconActions.isVisible({ timeout: 5000 })) {
-    await downloadIconActions.click();
-    console.log("✅ Download icon clicked using class selector (second SVG)!");
-    await page.waitForTimeout(3000);
-    console.log("✅ Document download triggered successfully!");
-    
-  } else {
-    console.log("⚠️ Download icon not found with specified selectors");
-    
-    // Debug: List all SVGs in the row to see what's available
-    const allSvgs = firstRow.locator('svg');
-    const svgCount = await allSvgs.count();
-    console.log(`🔍 Found ${svgCount} SVG icons in the row`);
-    
-    for (let i = 0; i < svgCount; i++) {
-      const svgClass = await allSvgs.nth(i).getAttribute('class');
-      console.log(`   SVG ${i + 1}: class="${svgClass}"`);
-    }
-  }
-} catch (error) {
-  console.log("⚠️ Download action failed:", error.message);
-}
 
- // === STEP 9: Delete Document (Delete Icon) ===
-console.log("🗑 Attempting to delete document...");
-try {
-  // Method 1: Use the exact xpath you provided for delete (second delete button)
-  const deleteButton = page.locator('(//button[@title="Delete document"])[2]');
-  
-  // Method 2: Alternative - look for the delete button specifically in the first row
-  const deleteButtonInRow = firstRow.locator('(//button[@title="Delete document"])[2]');
-  
-  // Method 3: More specific - look for delete button in the actions column
-  const deleteButtonActions = firstRow.locator('button[title="Delete document"]').nth(1);
-  
-  if (await deleteButton.isVisible({ timeout: 5000 })) {
-    await deleteButton.click();
-    console.log("✅ Delete button clicked using direct xpath!");
-    await page.waitForTimeout(2000);
-    
-    // Handle confirmation dialog
-    await handleDeleteConfirmation();
-    
-  } else if (await deleteButtonInRow.isVisible({ timeout: 5000 })) {
-    await deleteButtonInRow.click();
-    console.log("✅ Delete button clicked using row-specific xpath!");
-    await page.waitForTimeout(2000);
-    
-    // Handle confirmation dialog
-    await handleDeleteConfirmation();
-    
-  } else if (await deleteButtonActions.isVisible({ timeout: 5000 })) {
-    await deleteButtonActions.click();
-    console.log("✅ Delete button clicked using title selector (second button)!");
-    await page.waitForTimeout(2000);
-    
-    // Handle confirmation dialog
-    await handleDeleteConfirmation();
-    
+  // === DOWNLOAD DOCUMENT ===
+  console.log("⬇️ Downloading document...");
+  const downloadBtn = firstRow.locator('(//*[name()="svg"][@class="h-4 w-4"])[2]');
+  if (await downloadBtn.isVisible()) {
+    const [ download ] = await Promise.all([
+      page.waitForEvent('download'),
+      downloadBtn.click()
+    ]);
+    const suggestedName = download.suggestedFilename();
+    console.log(`✅ Document download started: ${suggestedName}`);
   } else {
-    console.log("⚠️ Delete button not found with specified selectors");
-    
-    // Debug: List all delete buttons in the row to see what's available
-    const allDeleteButtons = firstRow.locator('button[title*="delete" i]');
-    const deleteCount = await allDeleteButtons.count();
-    console.log(`🔍 Found ${deleteCount} delete buttons in the row`);
-    
-    for (let i = 0; i < deleteCount; i++) {
-      const buttonTitle = await allDeleteButtons.nth(i).getAttribute('title');
-      console.log(`   Delete Button ${i + 1}: title="${buttonTitle}"`);
-    }
+    console.log("⚠️ Download icon not found.");
   }
-} catch (error) {
-  console.log("⚠️ Delete action failed:", error.message);
-}
 
-// Helper function to handle delete confirmation
-async function handleDeleteConfirmation() {
-  console.log("🧹 Delete confirmation dialog opened...");
-  
-  // Wait for confirmation dialog to appear
-  await page.waitForTimeout(1000);
-  
-  // Try multiple confirmation button selectors
-  const confirmSelectors = [
-    page.getByRole('button', { name: /confirm/i }),
-    page.getByRole('button', { name: /delete/i }),
-    page.getByRole('button', { name: /yes/i }),
-    page.getByRole('button', { name: /ok/i }),
-    page.locator('button:has-text("Confirm")'),
-    page.locator('button:has-text("Delete")'),
-    page.locator('button:has-text("Yes")'),
-    page.locator('button:has-text("OK")'),
-    page.locator('//button[contains(text(), "Confirm")]'),
-    page.locator('//button[contains(text(), "Delete")]')
-  ];
-  
-  let confirmed = false;
-  
-  for (const confirmSelector of confirmSelectors) {
-    if (await confirmSelector.isVisible({ timeout: 3000 })) {
-      await confirmSelector.click();
-      console.log("✅ Delete confirmed!");
-      await page.waitForTimeout(3000);
-      confirmed = true;
-      break;
-    }
+  // === DELETE DOCUMENT ===
+  console.log("🗑 Attempting to delete document...");
+  const deleteBtn = page.locator('(//button[@title="Delete document"])[2]');
+  if (await deleteBtn.isVisible()) {
+    await deleteBtn.click();
+    console.log("🧹 Confirming delete...");
+    await confirmDelete(page);
+  } else {
+    console.log("⚠️ Delete button not found.");
   }
-  
-  if (!confirmed) {
-    console.log("⚠️ Confirm button not visible — modal issue suspected.");
-    
-    // Try to close the modal if confirmation failed
-    const cancelSelectors = [
-      page.getByRole('button', { name: /cancel/i }),
-      page.getByRole('button', { name: /no/i }),
-      page.locator('button:has-text("Cancel")'),
-      page.locator('button:has-text("No")'),
-      page.locator('[aria-label="Close"]'),
-      page.locator('//button[contains(text(), "Cancel")]')
-    ];
-    
-    for (const cancelSelector of cancelSelectors) {
-      if (await cancelSelector.isVisible({ timeout: 2000 })) {
-        await cancelSelector.click();
-        console.log("✅ Modal closed using cancel button");
-        await page.waitForTimeout(1000);
-        break;
-      }
-    }
-  }
-  
-  return confirmed;
-}
+
+  console.log("🎯 Full document workflow completed successfully!");
 });
+
+// ===========================================================
+// === HELPER FUNCTION: Confirm Delete ===
+// ===========================================================
+async function confirmDelete(page) {
+  const confirmSelectors = [
+    'button:has-text("Confirm")',
+    'button:has-text("Delete")',
+    'button:has-text("Yes")',
+    'button:has-text("OK")'
+  ];
+
+  for (const selector of confirmSelectors) {
+    const confirmBtn = page.locator(selector);
+    if (await confirmBtn.isVisible({ timeout: 2000 })) {
+      await confirmBtn.click();
+      console.log("✅ Delete confirmed!");
+      await page.waitForTimeout(2000);
+      return;
+    }
+  }
+
+  console.log("⚠️ No confirm button visible — trying to close modal...");
+  const cancelBtn = page.locator('button:has-text("Cancel")');
+  if (await cancelBtn.isVisible()) {
+    await cancelBtn.click();
+    console.log("🛑 Delete cancelled.");
+  }
+}

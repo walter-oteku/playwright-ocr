@@ -1,0 +1,46 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="79.201944">
+<testsuite name="auth.setup.js" timestamp="2025-11-04T18:56:18.108Z" hostname="setup" tests="1" failures="0" skipped="0" time="73.688" errors="0">
+<testcase name="authenticate" classname="auth.setup.js" time="73.688">
+<system-out>
+<![CDATA[🚀 Starting authentication setup...
+🌐 Login page loaded successfully.
+📝 Credentials entered.
+👀 Sign in button located, clicking...
+📸 Screenshot saved at test-results/auth-failure.png
+🔍 Current URL at failure: https://ocr.techsavanna.technology/login?identifier=reviewer1&password=password123
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\auth.setup.js-authenticate-setup\trace.zip]]
+🚀 Starting authentication setup...
+🌐 Login page loaded successfully.
+📝 Credentials entered.
+👀 Sign in button located, clicking...
+🔐 Clicked Sign in. Waiting for dashboard...
+⏳ Waiting... dashboard not found yet with text=Documents
+⏳ Waiting... dashboard not found yet with text=Dashboard
+✅ Dashboard detected via selector: text=Welcome
+💾 Authentication state saved to C:\Users\walte\playwright-ocr\playwright\.auth\user.json
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Authentication setup failed: locator.click: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('//button[normalize-space()=\'Sign in\']')[22m
+[2m    - locator resolved to <button tabindex="0" type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorSuccess MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorSuccess MuiButton-fullWidth css-1iczvv6">Sign in</button>[22m
+[2m  - attempting click action[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - performing click action[22m
+[2m    - click action done[22m
+[2m    - waiting for scheduled navigations to finish[22m
+
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

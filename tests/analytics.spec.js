@@ -5,33 +5,89 @@ test('Analytics dashboard interaction flow with date filter', async ({ page }) =
   test.setTimeout(180000);
 
   // === LOGIN ===
-  console.log("🌐 Navigating to login page...");
-  await page.goto('https://ocr-engine.netlify.app/login');
+   // === LOGIN ===
+   // Step 1: Navigate to the login page
+  console.log(" Navigating to login page...");
+  await page.goto('https://ocr.techsavanna.technology/login');
   await page.waitForLoadState('domcontentloaded');
 
-  console.log("📧 Typing email...");
-  await page.getByPlaceholder("Enter your email").type("admin@example.com", { delay: 100 });
+ // Step 2: Enter email address with visible typing
+console.log("📧 Typing email slowly...");
 
-  console.log("🔑 Typing password...");
-  await page.getByPlaceholder("Enter your password").type("password123", { delay: 100 });
+const emailSelector = "(//input[@id='_R_hlbinpfjrb_'])[1]";
+const emailField = page.locator(emailSelector);
 
-  console.log("🚪 Clicking Sign In...");
-  await page.getByRole('button', { name: /sign in/i }).click();
+// Wait for email input to appear and interact with it
+await emailField.waitFor({ state: "visible", timeout: 10000 });
+await emailField.click();
+await emailField.fill(""); // Clear any existing text
+await emailField.type("reviewer1", { delay: 150 }); // Simulate natural typing
 
-  console.log("⏳ Waiting for login success...");
-  await expect(page.getByText(/login successful/i)).toBeVisible({ timeout: 15000 });
-  console.log("✅ Login successful!");
 
-  // === STEP 1: Navigate to Analytics ===
-  console.log("📊 Navigating to 'Analytics' tab...");
-  await page.locator('(//a[normalize-space()="Analytics"])[1]').click();
-  await page.waitForURL(/analytics/, { timeout: 10000 });
-  console.log("✅ Analytics page loaded successfully!");
-  await page.waitForTimeout(2000);
+// Step 3: Enter password with visible typing
+console.log("🔒 Typing password slowly...");
+
+const passwordSelector = "(//input[@id='_R_ilbinpfjrb_'])[1]";
+const passwordField = page.locator(passwordSelector);
+
+// Wait for password field to be ready, clear it, then type naturally
+await passwordField.waitFor({ state: "visible", timeout: 10000 });
+await passwordField.click();
+await passwordField.fill(""); // Clear any pre-filled content
+await passwordField.type("password123", { delay: 150 }); // Simulate human typing
+
+
+  // Step 4: Click Sign In button (with visible pause)
+  console.log("Clicking Sign In button...");
+  const signInButton = page.getByRole('button', { name: /sign in/i });
+  await page.waitForTimeout(500); // short delay before click
+  await signInButton.click();
+
+  // Step 5: Wait for a login success message
+  console.log("Waiting for success message...");
+  const successMessage = page.getByText(/Login successful/i);
+
+ 
+console.log("⏳ Waiting for dashboard to load after login...");
+await page.waitForSelector('text=Dashboard', { timeout: 20000 }).catch(() => {
+  console.warn("⚠️ Dashboard not found — trying alternate selector...");
+});
+await page.waitForTimeout(2000);
+
+// === STEP 1: Navigate to Analytics ===
+console.log("📊 Navigating to 'Analytics' tab...");
+
+// Try a few possible locators to handle UI variations
+const analyticsLocators = [
+  'text=Analytics',
+  '//a[contains(., "Analytics")]',
+  '//span[normalize-space()="Analytics"]',
+  'role=link[name="Analytics"]'
+];
+
+let clicked = false;
+for (const selector of analyticsLocators) {
+  const locator = page.locator(selector).first();
+  if (await locator.isVisible()) {
+    await locator.click({ timeout: 5000 });
+    clicked = true;
+    console.log(`✅ Clicked Analytics tab using selector: ${selector}`);
+    break;
+  }
+}
+
+if (!clicked) {
+  throw new Error("❌ Analytics tab not found or clickable. Check selector or login flow.");
+}
+
+await page.waitForURL(/analytics/, { timeout: 20000 });
+console.log("✅ Analytics page loaded successfully!");
+await page.waitForTimeout(2000);
+
 
   // === STEP 2: Interact with Date Filter ===
   console.log("🗓 Clicking on date range section...");
-  const dateRangeButton = page.locator("(//*[name()='svg'][@class='h-4 w-4 text-gray-400'])[1]");
+ const dateRangeButton = page.locator("(//*[name()='svg'][@class='MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q7mezt'])[5]");
   await dateRangeButton.click();
   console.log("📅 Date picker opened!");
   await page.waitForTimeout(1500);
@@ -74,6 +130,33 @@ test('Analytics dashboard interaction flow with date filter', async ({ page }) =
     console.log("❌ Cancelled date selection as expected!");
   }
   await page.waitForTimeout(2000);
+
+    // === STEP 3: Interact with Document Type Dropdown ===
+  console.log("📂 Selecting Document Type from dropdown...");
+
+  const docTypeDropdown = page.locator("//div[@role='combobox']");
+  await docTypeDropdown.waitFor({ state: 'visible', timeout: 10000 });
+  await docTypeDropdown.click();
+  console.log("🔽 Dropdown opened...");
+
+  // Select 'Business Permit' option
+  const businessPermitOption = page.locator("//li[normalize-space()='Business Permit']");
+  await businessPermitOption.waitFor({ state: 'visible', timeout: 5000 });
+  await businessPermitOption.click();
+  console.log("🏢 'Business Permit' selected successfully!");
+
+  await page.waitForTimeout(1500);
+
+  // === STEP 3B: Click Clear Filter Button ===
+  console.log("🧹 Looking for Clear Filter button...");
+  const clearFilterButton = page.locator("(//button[normalize-space()='Clear Filter'])[1]");
+  
+  await clearFilterButton.waitFor({ state: 'visible', timeout: 5000 });
+  await clearFilterButton.click();
+  console.log("✅ Cleared filter successfully!");
+
+  await page.waitForTimeout(2000);
+
 
   // === STEP 3: Hover over Report Cards (with relaxed speed) ===
   console.log("🧾 Hovering over report summary cards...");

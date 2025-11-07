@@ -1,0 +1,109 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="77.16124400000001">
+<testsuite name="audit-log.spec.js" timestamp="2025-11-04T19:08:44.372Z" hostname="chromium" tests="1" failures="1" skipped="0" time="70.585" errors="0">
+<testcase name="Audit Logs dashboard interaction and filter flow" classname="audit-log.spec.js" time="70.585">
+<failure message="audit-log.spec.js:3:5 Audit Logs dashboard interaction and filter flow" type="FAILURE">
+<![CDATA[  [chromium] › audit-log.spec.js:3:5 › Audit Logs dashboard interaction and filter flow ────────────
+
+    TimeoutError: page.waitForURL: Timeout 15000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      54 |
+      55 | console.log("⏳ Waiting for Audit Logs page to load...");
+    > 56 | await page.waitForURL(/audit/, { timeout: 15000 });
+         |            ^
+      57 |
+      58 | console.log("✅ Audit Logs page loaded successfully!");
+      59 | await page.waitForTimeout(2000);
+        at C:\Users\walte\playwright-ocr\tests\audit-log.spec.js:56:12
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForURL: Timeout 15000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      54 |
+      55 | console.log("⏳ Waiting for Audit Logs page to load...");
+    > 56 | await page.waitForURL(/audit/, { timeout: 15000 });
+         |            ^
+      57 |
+      58 | console.log("✅ Audit Logs page loaded successfully!");
+      59 | await page.waitForTimeout(2000);
+        at C:\Users\walte\playwright-ocr\tests\audit-log.spec.js:56:12
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[ Navigating to login page...
+📧 Typing email slowly...
+🔒 Typing password slowly...
+Clicking Sign In button...
+Waiting for success message...
+📋 Navigating to 'Audit Logs' tab...
+⏳ Waiting for Audit Logs page to load...
+
+[[ATTACHMENT|..\..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium\trace.zip]]
+ Navigating to login page...
+📧 Typing email slowly...
+🔒 Typing password slowly...
+Clicking Sign In button...
+Waiting for success message...
+📋 Navigating to 'Audit Logs' tab...
+⏳ Waiting for Audit Logs page to load...
+
+[[ATTACHMENT|..\..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\audit-log-Audit-Logs-dashboard-interaction-and-filter-flow-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,111 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-05T09-50-16-025Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-05T09-50-16-025Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-05T09-50-16-025Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "SyntaxError: C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js: Unexpected token, expected \",\" (121:0)\n\n\u001b[0m \u001b[90m 119 |\u001b[39m\n \u001b[90m 120 |\u001b[39m \u001b[90m// === STEP 3: Select User Role ===\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 121 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m\"📜 Selecting user role...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 122 |\u001b[39m \u001b[36mconst\u001b[39m roleDropdown \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//select[@name='role'])[1]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m \u001b[36mawait\u001b[39m roleDropdown\u001b[33m.\u001b[39mselectOption(\u001b[32m'Manager'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 124 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m\"✅ Role selected as Manager.\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m",
+      "stack": "SyntaxError: C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js: Unexpected token, expected \",\" (121:0)\n\n\u001b[0m \u001b[90m 119 |\u001b[39m\n \u001b[90m 120 |\u001b[39m \u001b[90m// === STEP 3: Select User Role ===\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 121 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m\"📜 Selecting user role...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 122 |\u001b[39m \u001b[36mconst\u001b[39m roleDropdown \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//select[@name='role'])[1]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m \u001b[36mawait\u001b[39m roleDropdown\u001b[33m.\u001b[39mselectOption(\u001b[32m'Manager'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 124 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m\"✅ Role selected as Manager.\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m",
+      "location": {
+        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js",
+        "line": 121,
+        "column": 0
+      },
+      "snippet": "\u001b[90m   at \u001b[39muser.spec.js:121\n\n\u001b[0m \u001b[90m 119 |\u001b[39m\n \u001b[90m 120 |\u001b[39m \u001b[90m// === STEP 3: Select User Role ===\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 121 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m\"📜 Selecting user role...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 122 |\u001b[39m \u001b[36mconst\u001b[39m roleDropdown \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//select[@name='role'])[1]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m \u001b[36mawait\u001b[39m roleDropdown\u001b[33m.\u001b[39mselectOption(\u001b[32m'Manager'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 124 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m\"✅ Role selected as Manager.\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+    },
+    {
+      "message": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments.",
+      "stack": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments."
+    }
+  ],
+  "stats": {
+    "startTime": "2025-11-05T09:50:16.037Z",
+    "duration": 202.34400000000005,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

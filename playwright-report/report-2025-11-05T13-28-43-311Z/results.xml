@@ -1,0 +1,82 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="32.941739">
+<testsuite name="system-config.spec.js" timestamp="2025-11-05T13:28:43.634Z" hostname="chromium" tests="1" failures="1" skipped="0" time="20.812" errors="0">
+<testcase name="🧠 System Configuration Workflow (Updated UI)" classname="system-config.spec.js" time="20.812">
+<failure message="system-config.spec.js:282:5 🧠 System Configuration Workflow (Updated UI)" type="FAILURE">
+<![CDATA[  [chromium] › system-config.spec.js:282:5 › 🧠 System Configuration Workflow (Updated UI) ─────────
+
+    Error: locator.waitFor: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('//a[normalize-space()=\'System Config\']') to be visible
+
+
+      308 |   console.log("⚙️ Navigating to System Config tab...");
+      309 |   const systemConfigTab = page.locator("//a[normalize-space()='System Config']");
+    > 310 |   await systemConfigTab.waitFor({ state: 'visible', timeout: 15000 });
+          |                         ^
+      311 |   await systemConfigTab.click();
+      312 |   await page.waitForURL(/system/, { timeout: 15000 });
+      313 |   console.log("✅ System Config page opened.");
+        at C:\Users\walte\playwright-ocr\tests\system-config.spec.js:310:25
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\system-config-🧠-System-Configuration-Workflow-Updated-UI--chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\system-config-🧠-System-Configuration-Workflow-Updated-UI--chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\system-config-🧠-System-Configuration-Workflow-Updated-UI--chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://ocr.techsavanna.technology/login", waiting until "load"
+
+
+      285 |   // === STEP 1: LOGIN ===
+      286 |   console.log("🌍 Navigating to login page...");
+    > 287 |   await page.goto('https://ocr.techsavanna.technology/login');
+          |              ^
+      288 |   await page.waitForLoadState('domcontentloaded');
+      289 |
+      290 |   console.log("📧 Typing email...");
+        at C:\Users\walte\playwright-ocr\tests\system-config.spec.js:287:14
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\system-config-🧠-System-Configuration-Workflow-Updated-UI--chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\system-config-🧠-System-Configuration-Workflow-Updated-UI--chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\system-config-🧠-System-Configuration-Workflow-Updated-UI--chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🌍 Navigating to login page...
+📧 Typing email...
+🔒 Typing password...
+🚪 Clicking Sign In...
+✅ Logged in successfully.
+⚙️ Navigating to System Config tab...
+
+[[ATTACHMENT|..\..\test-results\system-config-🧠-System-Configuration-Workflow-Updated-UI--chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\system-config-🧠-System-Configuration-Workflow-Updated-UI--chromium\trace.zip]]
+🌍 Navigating to login page...
+
+[[ATTACHMENT|..\..\test-results\system-config-🧠-System-Configuration-Workflow-Updated-UI--chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\system-config-🧠-System-Configuration-Workflow-Updated-UI--chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
