@@ -1,0 +1,29 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="26.883732">
+<testsuite name="upload.spec.js" timestamp="2025-11-12T08:54:55.663Z" hostname="chromium" tests="1" failures="0" skipped="0" time="23.559" errors="0">
+<testcase name="Full document workflow: upload, search, filter, view, edit, delete" classname="upload.spec.js" time="23.559">
+<system-out>
+<![CDATA[🌐 Navigating to login page...
+🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+📁 Navigating to 'Upload' tab...
+✅ Upload page loaded.
+📎 Preparing to upload sample document...
+⌛ Starting simulated slow upload...
+🚀 Upload progress: 0%
+🚀 Upload progress: 20%
+🚀 Upload progress: 40%
+🚀 Upload progress: 60%
+🚀 Upload progress: 80%
+🚀 Upload progress: 100%
+📤 File upload initiated...
+✅ File uploaded successfully!
+🎉 Upload confirmed as successful!
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

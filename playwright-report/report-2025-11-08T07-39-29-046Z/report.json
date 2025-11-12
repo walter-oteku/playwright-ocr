@@ -1,0 +1,246 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-08T07-39-29-046Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-08T07-39-29-046Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-08T07-39-29-046Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "model-training.spec.js",
+      "file": "model-training.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "🧠 Full model training workflow: login, navigate, upload, start training",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1502,
+                  "error": {
+                    "message": "TypeError: page.waitForTimeout is not a function",
+                    "stack": "TypeError: page.waitForTimeout is not a function\n    at logStep (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:46:14)\n    at C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js:13:16",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                      "column": 14,
+                      "line": 46
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.js:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m logStep(page\u001b[33m,\u001b[39m message) {\n \u001b[90m 45 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`🧭 ${message}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m250\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m }\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                        "column": 14,
+                        "line": 46
+                      },
+                      "message": "TypeError: page.waitForTimeout is not a function\n\n\u001b[90m   at \u001b[39mutils.js:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m logStep(page\u001b[33m,\u001b[39m message) {\n \u001b[90m 45 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`🧭 ${message}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m250\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m }\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at logStep (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:46:14)\u001b[22m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js:13:16\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 undefined\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-08T07:39:30.918Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                    "column": 14,
+                    "line": 46
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1668,
+                  "error": {
+                    "message": "TypeError: page.waitForTimeout is not a function",
+                    "stack": "TypeError: page.waitForTimeout is not a function\n    at logStep (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:46:14)\n    at C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js:13:16",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                      "column": 14,
+                      "line": 46
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.js:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m logStep(page\u001b[33m,\u001b[39m message) {\n \u001b[90m 45 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`🧭 ${message}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m250\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m }\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                        "column": 14,
+                        "line": 46
+                      },
+                      "message": "TypeError: page.waitForTimeout is not a function\n\n\u001b[90m   at \u001b[39mutils.js:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m logStep(page\u001b[33m,\u001b[39m message) {\n \u001b[90m 45 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`🧭 ${message}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m250\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m }\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at logStep (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:46:14)\u001b[22m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\model-training.spec.js:13:16\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 undefined\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-08T07:39:35.663Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                    "column": 14,
+                    "line": 46
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4f4daf50f7a5a1f7b0a5-5647461b90249aac4c79",
+          "file": "model-training.spec.js",
+          "line": 8,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-08T07:39:29.061Z",
+    "duration": 9411.8,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

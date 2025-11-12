@@ -1,0 +1,101 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="47.298171">
+<testsuite name="profile.spec.js" timestamp="2025-11-12T07:23:28.314Z" hostname="chromium" tests="1" failures="1" skipped="0" time="39.306" errors="0">
+<testcase name="Profile navigation, edit, reset and logout flow" classname="profile.spec.js" time="39.306">
+<failure message="profile.spec.js:7:5 Profile navigation, edit, reset and logout flow" type="FAILURE">
+<![CDATA[  [chromium] › profile.spec.js:7:5 › Profile navigation, edit, reset and logout flow ───────────────
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//input[@id=\'_r_c_\'])[1]') to be visible
+
+
+       at utils.js:121
+
+      119 |  */
+      120 | export async function waitForVisible(locator, timeout = 10000, testName = "") {
+    > 121 |   await locator.waitFor({ state: 'visible', timeout });
+          |                 ^
+      122 |   console.log(`👀 [${testName}] Element became visible: ${locator}`);
+      123 | }
+      124 |
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:121:17)
+        at C:\Users\walte\playwright-ocr\tests\profile.spec.js:46:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://ocr.techsavanna.technology/login", waiting until "load"
+
+
+      10 |
+      11 |   await logStep('Navigating to login page...');
+    > 12 |   await page.goto('https://ocr.techsavanna.technology/login');
+         |              ^
+      13 |   await page.waitForLoadState('domcontentloaded');
+      14 |
+      15 |   // === STEP 1: LOGIN ===
+        at C:\Users\walte\playwright-ocr\tests\profile.spec.js:12:14
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 [] Navigating to login page...
+🧭 [] Logging in as Reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+🧭 [] Waiting for successful login confirmation...
+🧭 [] Opening profile dropdown...
+🧭 [] Navigating to "Your Profile"...
+✅ [] Page loaded and text "Your Profile" is visible.
+🧭 [] Updating profile information...
+🧭 [] Updating password fields...
+🧭 [] Verifying account role and last login...
+
+[[ATTACHMENT|..\..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\trace.zip]]
+🧭 [] Navigating to login page...
+
+[[ATTACHMENT|..\..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\profile-Profile-navigation-edit-reset-and-logout-flow-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

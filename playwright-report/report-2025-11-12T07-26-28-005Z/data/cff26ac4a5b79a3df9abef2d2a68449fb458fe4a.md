@@ -1,0 +1,103 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - img "SAF Logo" [ref=e9]
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "Dashboard" [ref=e13] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=e16]: Dashboard
+        - listitem [ref=e17]:
+          - link "Upload" [ref=e18] [cursor=pointer]:
+            - /url: /upload
+            - generic [ref=e21]: Upload
+        - listitem [ref=e22]:
+          - link "Documents" [ref=e23] [cursor=pointer]:
+            - /url: /documents
+            - generic [ref=e26]: Documents
+        - listitem [ref=e27]:
+          - link "Manual Review" [ref=e28] [cursor=pointer]:
+            - /url: /review
+            - generic [ref=e31]: Manual Review
+        - listitem [ref=e32]:
+          - link "Model Training" [ref=e33] [cursor=pointer]:
+            - /url: /modeltraining
+            - generic [ref=e36]: Model Training
+        - listitem [ref=e37]:
+          - link "Analytics" [ref=e38] [cursor=pointer]:
+            - /url: /analytics
+            - generic [ref=e41]: Analytics
+        - listitem [ref=e42]:
+          - link "Users" [ref=e43] [cursor=pointer]:
+            - /url: /users
+            - generic [ref=e46]: Users
+        - listitem [ref=e47]:
+          - link "System Config" [ref=e48] [cursor=pointer]:
+            - /url: /system
+            - generic [ref=e51]: System Config
+        - listitem [ref=e52]:
+          - link "Audit Logs" [ref=e53] [cursor=pointer]:
+            - /url: /audit
+            - generic [ref=e56]: Audit Logs
+      - generic [ref=e57]:
+        - text: Quick Actions
+        - list [ref=e58]:
+          - listitem [ref=e59]:
+            - link "Pending Documents" [ref=e60] [cursor=pointer]:
+              - /url: /review/pending
+              - generic [ref=e63]: Pending Documents
+          - listitem [ref=e64]:
+            - link "Failed Processing" [ref=e65] [cursor=pointer]:
+              - /url: /documents/failed
+              - generic [ref=e68]: Failed Processing
+    - generic [ref=e69]:
+      - banner [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e73]:
+            - paragraph [ref=e74]: OCR System
+            - generic [ref=e75]: Document Processing
+          - generic [ref=e76]:
+            - button "notifications" [ref=e77] [cursor=pointer]:
+              - img [ref=e79]
+            - generic [ref=e82]:
+              - generic [ref=e83]:
+                - paragraph [ref=e84]: Annotator One
+                - generic [ref=e86]: Administrator
+              - button "account" [ref=e87] [cursor=pointer]:
+                - img [ref=e88]
+      - main [ref=e90]:
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - heading "Train Document Classifier" [level=4] [ref=e96]
+              - paragraph [ref=e97]: Upload labeled documents to train the document classification model.
+            - link "Settings Manage Document Types" [ref=e98] [cursor=pointer]:
+              - /url: /document-types
+              - img "Settings" [ref=e100]
+              - text: Manage Document Types
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - generic: Document Category
+              - generic [ref=e104]:
+                - combobox "Document Category" [ref=e105] [cursor=pointer]
+                - textbox
+                - img
+                - group:
+                  - generic: Document Category
+            - generic [ref=e106]:
+              - button "Choose File" [ref=e107]
+              - paragraph [ref=e109]: Please enter a document category above to upload files
+            - generic [ref=e111]:
+              - heading "Training Guidelines" [level=3] [ref=e112]
+              - list [ref=e113]:
+                - listitem [ref=e114]: Select a document category from the dropdown above.
+                - listitem [ref=e115]: Select or drag and drop files - training will start automatically after upload.
+                - listitem [ref=e116]: Upload multiple files for the same category to improve training accuracy.
+                - listitem [ref=e117]: "Supported formats: JPEG, PNG, PDF, TIFF."
+                - listitem [ref=e118]: Training starts automatically after upload. Check the training status endpoint to monitor progress.
+  - alert [ref=e119]
+  - generic [ref=e120]: "0"
+```

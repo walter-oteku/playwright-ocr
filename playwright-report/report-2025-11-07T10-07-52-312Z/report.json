@@ -1,0 +1,242 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-07T10-07-52-312Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-07T10-07-52-312Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-07T10-07-52-312Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "documents.spec.js",
+      "file": "documents.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full Document Workflow: upload, search, filter, view, download, delete",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 36862,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌍 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "🔐 Logging in...\n"
+                    },
+                    {
+                      "text": "✅ Login successful — redirecting to Documents page...\n"
+                    },
+                    {
+                      "text": "📂 Opening 'Documents' tab...\n"
+                    },
+                    {
+                      "text": "✅ Documents page loaded.\n"
+                    },
+                    {
+                      "text": "📤 Clicking 'Upload Documents'...\n"
+                    },
+                    {
+                      "text": "✅ Upload page opened successfully!\n"
+                    },
+                    {
+                      "text": "📎 Selecting file to upload...\n"
+                    },
+                    {
+                      "text": "✅ File selected successfully!\n"
+                    },
+                    {
+                      "text": "🚀 Submitting file upload...\n"
+                    },
+                    {
+                      "text": "⚠️ Upload button not visible, skipping click.\n"
+                    },
+                    {
+                      "text": "🔄 Returned to Documents list.\n"
+                    },
+                    {
+                      "text": "🔍 Searching for uploaded document...\n"
+                    },
+                    {
+                      "text": "✅ Search completed.\n"
+                    },
+                    {
+                      "text": "🧹 Clearing search field...\n"
+                    },
+                    {
+                      "text": "⚙️ Opening Filters...\n"
+                    },
+                    {
+                      "text": "✅ Applying 'Completed' status filter...\n"
+                    },
+                    {
+                      "text": "✅ Applying 'Business Permit' type filter...\n"
+                    },
+                    {
+                      "text": "🧹 Clearing all filters...\n"
+                    },
+                    {
+                      "text": "📅 Setting Upload Date Range...\n"
+                    },
+                    {
+                      "text": "📊 Setting Confidence Score Range...\n"
+                    },
+                    {
+                      "text": "✅ Filters configured successfully.\n"
+                    },
+                    {
+                      "text": "⬆️ Collapsing Filters panel...\n"
+                    },
+                    {
+                      "text": "⚠️ Could not collapse filters.\n"
+                    },
+                    {
+                      "text": "\n📁 Handling first document entry...\n"
+                    },
+                    {
+                      "text": "👁 Viewing first document...\n"
+                    },
+                    {
+                      "text": "⚠️ View icon not visible.\n"
+                    },
+                    {
+                      "text": "⬇️ Downloading document...\n"
+                    },
+                    {
+                      "text": "⚠️ Download icon not found.\n"
+                    },
+                    {
+                      "text": "🗑 Attempting to delete document...\n"
+                    },
+                    {
+                      "text": "⚠️ Delete button not found.\n"
+                    },
+                    {
+                      "text": "\n🎯 Full document workflow completed successfully!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-07T10:07:54.312Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d6a5e959622d2fd9deae-09c791d71603d43e3ac0",
+          "file": "documents.spec.js",
+          "line": 8,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-07T10:07:52.335Z",
+    "duration": 40190.961,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

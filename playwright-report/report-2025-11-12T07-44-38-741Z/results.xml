@@ -1,0 +1,123 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="32.834561">
+<testsuite name="model-training.spec.js" timestamp="2025-11-12T07:44:38.842Z" hostname="chromium" tests="1" failures="1" skipped="0" time="25.414" errors="0">
+<testcase name="🧠 Full model training workflow: login, navigate, upload, start training" classname="model-training.spec.js" time="25.414">
+<failure message="model-training.spec.js:8:5 🧠 Full model training workflow: login, navigate, upload, start training" type="FAILURE">
+<![CDATA[  [chromium] › model-training.spec.js:8:5 › 🧠 Full model training workflow: login, navigate, upload, start training 
+
+    Error: Could not find document type input field
+
+      92 |       console.log("⚠️ Using first text input as fallback");
+      93 |     } else {
+    > 94 |       throw new Error("Could not find document type input field");
+         |             ^
+      95 |     }
+      96 |   }
+      97 |
+        at C:\Users\walte\playwright-ocr\tests\model-training.spec.js:94:13
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Could not find document type input field
+
+      92 |       console.log("⚠️ Using first text input as fallback");
+      93 |     } else {
+    > 94 |       throw new Error("Could not find document type input field");
+         |             ^
+      95 |     }
+      96 |   }
+      97 |
+        at C:\Users\walte\playwright-ocr\tests\model-training.spec.js:94:13
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 [] 🌐 Navigating to login page...
+🧭 [] 🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+🧭 [] 🧠 Navigating to 'Model Training' tab...
+👀 [] Element became visible: locator('xpath=(//a[normalize-space()=\'Model Training\'])[1]')
+✅ Model Training page loaded successfully!
+🧭 [] 🔍 Debugging page content...
+📸 Screenshot saved as 'debug-model-training.png'
+🔍 Found 2 input fields on the page
+Input 0: type=null, id=null, placeholder=null
+Input 1: type=file, id=null, placeholder=null
+🧭 [] 📝 Typing in the document type...
+❌ No document type field found with common selectors
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\trace.zip]]
+🧭 [] 🌐 Navigating to login page...
+🧭 [] 🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+🧭 [] 🧠 Navigating to 'Model Training' tab...
+👀 [] Element became visible: locator('xpath=(//a[normalize-space()=\'Model Training\'])[1]')
+✅ Model Training page loaded successfully!
+🧭 [] 🔍 Debugging page content...
+📸 Screenshot saved as 'debug-model-training.png'
+🔍 Found 2 input fields on the page
+Input 0: type=null, id=null, placeholder=null
+Input 1: type=file, id=null, placeholder=null
+🧭 [] 📝 Typing in the document type...
+❌ No document type field found with common selectors
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

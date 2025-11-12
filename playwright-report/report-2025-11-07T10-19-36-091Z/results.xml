@@ -1,0 +1,130 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="49.784008">
+<testsuite name="forgot-password.spec.js" timestamp="2025-11-07T10:19:36.269Z" hostname="chromium" tests="1" failures="1" skipped="0" time="43.864" errors="0">
+<testcase name="Forgot Password Flow - Invalid and Valid Email" classname="forgot-password.spec.js" time="43.864">
+<failure message="forgot-password.spec.js:4:5 Forgot Password Flow - Invalid and Valid Email" type="FAILURE">
+<![CDATA[  [chromium] › forgot-password.spec.js:4:5 › Forgot Password Flow - Invalid and Valid Email ────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('text=Forgot password failed: No account found with that email')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 15000ms
+      - waiting for getByText('text=Forgot password failed: No account found with that email')
+
+
+       at utils.js:62
+
+      60 |     } else {
+      61 |       // Text or RegExp
+    > 62 |       await expect(page.getByText(selectorOrText)).toBeVisible({ timeout });
+         |                                                    ^
+      63 |     }
+      64 |   } catch (error) {
+      65 |     console.error(`⚠️ Element not visible or timed out: ${selectorOrText}`);
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:62:52)
+        at C:\Users\walte\playwright-ocr\tests\forgot-password.spec.js:31:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('text=Forgot password failed: No account found with that email')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 15000ms
+      - waiting for getByText('text=Forgot password failed: No account found with that email')
+
+
+       at utils.js:62
+
+      60 |     } else {
+      61 |       // Text or RegExp
+    > 62 |       await expect(page.getByText(selectorOrText)).toBeVisible({ timeout });
+         |                                                    ^
+      63 |     }
+      64 |   } catch (error) {
+      65 |     console.error(`⚠️ Element not visible or timed out: ${selectorOrText}`);
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:62:52)
+        at C:\Users\walte\playwright-ocr\tests\forgot-password.spec.js:31:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login Page loaded.
+🧭 🧩 Clicking 'Forgot your password?' link...
+🧭 ✅ Forgot Password page ready.
+🧭 📧 Testing with INVALID email...
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip]]
+🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login Page loaded.
+🧭 🧩 Clicking 'Forgot your password?' link...
+🧭 ✅ Forgot Password page ready.
+🧭 📧 Testing with INVALID email...
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[⚠️ Element not visible or timed out: text=Forgot password failed: No account found with that email
+⚠️ Element not visible or timed out: text=Forgot password failed: No account found with that email
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

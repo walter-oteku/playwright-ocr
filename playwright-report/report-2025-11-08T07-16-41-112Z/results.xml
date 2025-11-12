@@ -1,0 +1,91 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="32.514037">
+<testsuite name="valid-login.spec.js" timestamp="2025-11-08T07:16:41.279Z" hostname="chromium" tests="1" failures="1" skipped="0" time="26.178" errors="0">
+<testcase name="✅ Verify valid login using reviewer credentials" classname="valid-login.spec.js" time="26.178">
+<failure message="valid-login.spec.js:7:5 ✅ Verify valid login using reviewer credentials" type="FAILURE">
+<![CDATA[  [chromium] › valid-login.spec.js:7:5 › ✅ Verify valid login using reviewer credentials ───────────
+
+    TimeoutError: locator.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Enter your email or username"]')
+
+
+       at pages.js:10
+
+       8 |
+       9 |   async login(email, password) {
+    > 10 |     await this.username.fill(email);
+         |                         ^
+      11 |     await this.password.fill(password);
+      12 |     await this.signInBtn.click();
+      13 |   }
+        at LoginPage.login (C:\Users\walte\playwright-ocr\tests\pages.js:10:25)
+        at C:\Users\walte\playwright-ocr\tests\valid-login.spec.js:16:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://ocr.techsavanna.technology/login", waiting until "load"
+
+
+      10 |
+      11 |   console.log("🌐 Navigating to login page...");
+    > 12 |   await page.goto('https://ocr.techsavanna.technology/login');
+         |              ^
+      13 |   await page.waitForLoadState('domcontentloaded');
+      14 |
+      15 |   console.log("🔐 Logging in as reviewer...");
+        at C:\Users\walte\playwright-ocr\tests\valid-login.spec.js:12:14
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🌐 Navigating to login page...
+🔐 Logging in as reviewer...
+
+[[ATTACHMENT|..\..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium\trace.zip]]
+🌐 Navigating to login page...
+
+[[ATTACHMENT|..\..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\valid-login-✅-Verify-valid-login-using-reviewer-credentials-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,119 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="59.390055000000004">
+<testsuite name="system-config.spec.js" timestamp="2025-11-12T09:02:40.738Z" hostname="chromium" tests="1" failures="1" skipped="0" time="53.171" errors="0">
+<testcase name="System Configuration Workflow (Updated UI)" classname="system-config.spec.js" time="53.171">
+<failure message="system-config.spec.js:7:5 System Configuration Workflow (Updated UI)" type="FAILURE">
+<![CDATA[  [chromium] › system-config.spec.js:7:5 › System Configuration Workflow (Updated UI) ──────────────
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//input[@id=\'_r_u_\'])[1]') to be visible
+
+
+      41 |
+      42 |   const maxFileSize = page.locator("(//input[@id='_r_u_'])[1]");
+    > 43 |   await maxFileSize.waitFor({ state: 'visible', timeout: 10000 });
+         |                     ^
+      44 |   await maxFileSize.fill('52428800');
+      45 |   console.log("✅ Updated maximum file size (MB).");
+      46 |
+        at C:\Users\walte\playwright-ocr\tests\system-config.spec.js:43:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//input[@id=\'_r_u_\'])[1]') to be visible
+
+
+      41 |
+      42 |   const maxFileSize = page.locator("(//input[@id='_r_u_'])[1]");
+    > 43 |   await maxFileSize.waitFor({ state: 'visible', timeout: 10000 });
+         |                     ^
+      44 |   await maxFileSize.fill('52428800');
+      45 |   console.log("✅ Updated maximum file size (MB).");
+      46 |
+        at C:\Users\walte\playwright-ocr\tests\system-config.spec.js:43:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🌐 Navigating to login page...
+🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+⚙️ Navigating to System Config tab...
+✅ System Config page opened.
+🧩 Clicking 'Edit Configuration'...
+✅ Edit Configuration mode activated.
+📂 Editing File Upload Settings...
+
+[[ATTACHMENT|..\..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium\trace.zip]]
+🌐 Navigating to login page...
+🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+⚙️ Navigating to System Config tab...
+✅ System Config page opened.
+🧩 Clicking 'Edit Configuration'...
+✅ Edit Configuration mode activated.
+📂 Editing File Upload Settings...
+
+[[ATTACHMENT|..\..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\system-config-System-Configuration-Workflow-Updated-UI--chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

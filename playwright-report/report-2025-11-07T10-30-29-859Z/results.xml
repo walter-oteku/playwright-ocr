@@ -1,0 +1,121 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="51.849614">
+<testsuite name="invalid-password.spec.js" timestamp="2025-11-07T10:30:30.027Z" hostname="chromium" tests="1" failures="1" skipped="0" time="42.119" errors="0">
+<testcase name="Verify invalid login with wrong password" classname="invalid-password.spec.js" time="42.119">
+<failure message="invalid-password.spec.js:6:5 Verify invalid login with wrong password" type="FAILURE">
+<![CDATA[  [chromium] › invalid-password.spec.js:6:5 › Verify invalid login with wrong password ─────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Invalid email or password')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 15000ms
+      - waiting for getByText('Invalid email or password')
+
+
+       at utils.js:62
+
+      60 |     } else {
+      61 |       // Text or RegExp
+    > 62 |       await expect(page.getByText(selectorOrText)).toBeVisible({ timeout });
+         |                                                    ^
+      63 |     }
+      64 |   } catch (error) {
+      65 |     console.error(`⚠️ Element not visible or timed out: ${selectorOrText}`);
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:62:52)
+        at C:\Users\walte\playwright-ocr\tests\invalid-password.spec.js:39:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Invalid email or password')
+    Expected: visible
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 15000ms
+      - waiting for getByText('Invalid email or password')
+
+
+       at utils.js:62
+
+      60 |     } else {
+      61 |       // Text or RegExp
+    > 62 |       await expect(page.getByText(selectorOrText)).toBeVisible({ timeout });
+         |                                                    ^
+      63 |     }
+      64 |   } catch (error) {
+      65 |     console.error(`⚠️ Element not visible or timed out: ${selectorOrText}`);
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:62:52)
+        at C:\Users\walte\playwright-ocr\tests\invalid-password.spec.js:39:23
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login page loaded successfully.
+🧭 📧 Typing login: annotator1
+🧭 🔒 Typing WRONG password...
+🧭 🧩 Clicking Sign In button...
+🧭 🕵️ Waiting for error message...
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\trace.zip]]
+🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login page loaded successfully.
+🧭 📧 Typing login: annotator1
+🧭 🔒 Typing WRONG password...
+🧭 🧩 Clicking Sign In button...
+🧭 🕵️ Waiting for error message...
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[⚠️ Element not visible or timed out: Invalid email or password
+⚠️ Element not visible or timed out: Invalid email or password
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

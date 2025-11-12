@@ -1,0 +1,18 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="21.227913">
+<testsuite name="invalid-password.spec.js" timestamp="2025-11-07T17:12:12.242Z" hostname="chromium" tests="1" failures="0" skipped="0" time="16.524" errors="0">
+<testcase name="Verify login fails with invalid password" classname="invalid-password.spec.js" time="16.524">
+<system-out>
+<![CDATA[🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login page loaded successfully.
+🧭 📧 Typing login: annotator1
+🧭 🔒 Typing WRONG password...
+🧭 🧩 Clicking Sign In button...
+🧭 🕵️ Waiting for error message...
+🧭 ✅ Error message displayed as expected.
+🧭 🔒 Checking user is still on login page...
+🧭 ✅ User did not log in with invalid password.
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,30 +1,24 @@
-
+// tests/system-configuration.spec.js
 import { test, expect } from '@playwright/test';
+import { LoginPage } from './pages.js';
+import { credentials } from './credentials.js';
+import { waitForPageLoad } from './utils.js';
 
-test('🧠 System Configuration Workflow (Updated UI)', async ({ page }) => {
-  test.setTimeout(240000);
+test('System Configuration Workflow (Updated UI)', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  const { username, password } = credentials.reviewer;
 
-  // === STEP 1: LOGIN ===
-  console.log("🌍 Navigating to login page...");
+  console.log("🌐 Navigating to login page...");
   await page.goto('https://ocr.techsavanna.technology/login');
   await page.waitForLoadState('domcontentloaded');
 
-  console.log("📧 Typing email...");
-  const emailField = page.locator("(//input[@id='_R_hlbinpfjrb_'])[1]");
-  await emailField.waitFor({ state: 'visible', timeout: 10000 });
-  await emailField.fill('');
-  await emailField.type('reviewer1', { delay: 120 });
+  console.log("🔐 Logging in as reviewer...");
+  await loginPage.login(username, password);
 
-  console.log("🔒 Typing password...");
-  const passwordField = page.locator("(//input[@id='_R_ilbinpfjrb_'])[1]");
-  await passwordField.waitFor({ state: 'visible', timeout: 10000 });
-  await passwordField.fill('');
-  await passwordField.type('password123', { delay: 120 });
+  await waitForPageLoad(page, 'Dashboard');
+  await expect(page.locator('text=Dashboard')).toBeVisible({ timeout: 10000 });
 
-  console.log("🚪 Clicking Sign In...");
-  await page.getByRole('button', { name: /sign in/i }).click();
-  await page.waitForTimeout(3000);
-  console.log("✅ Logged in successfully.");
+  console.log("✅ Login successful!");
 
   // === STEP 2: OPEN SYSTEM CONFIG TAB ===
   console.log("⚙️ Navigating to System Config tab...");
@@ -45,17 +39,17 @@ test('🧠 System Configuration Workflow (Updated UI)', async ({ page }) => {
   // === STEP 4: FILE UPLOAD SETTINGS ===
   console.log("📂 Editing File Upload Settings...");
 
-  const maxFileSize = page.locator("(//input[@id='_r_u_'])[1]");
+  const maxFileSize = page.locator("(//input[@id='_r_4b_'])[1]");
   await maxFileSize.waitFor({ state: 'visible', timeout: 10000 });
   await maxFileSize.fill('52428800');
   console.log("✅ Updated maximum file size (MB).");
 
   const allowedFileTypes = [
-    "(//input[@id='_r_v_'])[1]",
-    "(//input[@id='_r_10_'])[1]",
-    "(//input[@id='_r_11_'])[1]",
-    "(//input[@id='_r_12_'])[1]",
-    "(//input[@id='_r_13_'])[1]",
+    "(//input[@id='_r_4c_'])[1]",
+    "(//input[@id='_r_4d_'])[1]",
+    "(//input[@id='_r_4e_'])[1]",
+    "(//input[@id='_r_4f_'])[1]",
+    "(//input[@id='_r_4g_'])[1]",
   ];
 
   const fileTypeValues = [

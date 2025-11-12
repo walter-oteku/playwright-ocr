@@ -1,0 +1,99 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="51.090674">
+<testsuite name="upload.spec.js" timestamp="2025-11-12T08:47:12.319Z" hostname="chromium" tests="1" failures="1" skipped="0" time="45.608" errors="0">
+<testcase name="Full document workflow: upload, search, filter, view, edit, delete" classname="upload.spec.js" time="45.608">
+<failure message="upload.spec.js:8:5 Full document workflow: upload, search, filter, view, edit, delete" type="FAILURE">
+<![CDATA[  [chromium] › upload.spec.js:8:5 › Full document workflow: upload, search, filter, view, edit, delete 
+
+    TimeoutError: locator.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//input[@id=\'_R_hlbinpfjrb_\'])[1]')
+
+
+      15 |   console.log("📧 Typing email...");
+      16 |   const emailField = page.locator("(//input[@id='_R_hlbinpfjrb_'])[1]");
+    > 17 |   await emailField.fill(username);
+         |                    ^
+      18 |
+      19 |   console.log("🔒 Typing password...");
+      20 |   const passwordField = page.locator("(//input[@id='_R_ilbinpfjrb_'])[1]");
+        at C:\Users\walte\playwright-ocr\tests\upload.spec.js:17:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: locator.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//input[@id=\'_R_hlbinpfjrb_\'])[1]')
+
+
+      15 |   console.log("📧 Typing email...");
+      16 |   const emailField = page.locator("(//input[@id='_R_hlbinpfjrb_'])[1]");
+    > 17 |   await emailField.fill(username);
+         |                    ^
+      18 |
+      19 |   console.log("🔒 Typing password...");
+      20 |   const passwordField = page.locator("(//input[@id='_R_ilbinpfjrb_'])[1]");
+        at C:\Users\walte\playwright-ocr\tests\upload.spec.js:17:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[ Navigating to login page...
+📧 Typing email...
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\trace.zip]]
+ Navigating to login page...
+📧 Typing email...
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

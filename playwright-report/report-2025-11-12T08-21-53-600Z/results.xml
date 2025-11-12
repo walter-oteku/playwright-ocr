@@ -1,0 +1,123 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="60.444172">
+<testsuite name="user.spec.js" timestamp="2025-11-12T08:21:53.859Z" hostname="chromium" tests="1" failures="1" skipped="0" time="53.601" errors="0">
+<testcase name="Full user workflow: create, filter, edit, and delete users" classname="user.spec.js" time="53.601">
+<failure message="user.spec.js:7:5 Full user workflow: create, filter, edit, and delete users" type="FAILURE">
+<![CDATA[  [chromium] › user.spec.js:7:5 › Full user workflow: create, filter, edit, and delete users ───────
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//span[normalize-space()=\'Filters\'])[1]') to be visible
+
+
+       at utils.js:100
+
+       98 | export async function waitForVisible(locator, timeout = 10000, testName = "") {
+       99 |   try {
+    > 100 |     await locator.waitFor({ state: 'visible', timeout });
+          |                   ^
+      101 |     console.log(`👀 [${testName}] Element became visible: ${locator}`);
+      102 |   } catch (error) {
+      103 |     console.error(`❌ [${testName}] Element did not become visible within ${timeout}ms: ${locator}`);
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:100:19)
+        at C:\Users\walte\playwright-ocr\tests\user.spec.js:131:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - navigating to "https://ocr.techsavanna.technology/login", waiting until "load"
+
+
+      11 |   // === STEP 1: LOGIN ===
+      12 |   await logStep("🌐 Navigating to login page...");
+    > 13 |   await page.goto('https://ocr.techsavanna.technology/login');
+         |              ^
+      14 |   await page.waitForLoadState('domcontentloaded');
+      15 |
+      16 |   await logStep("🔐 Logging in as reviewer...");
+        at C:\Users\walte\playwright-ocr\tests\user.spec.js:13:14
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 [] 🌐 Navigating to login page...
+🧭 [] 🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+🧭 [] 👥 Navigating to 'Users' tab...
+👀 [] Element became visible: locator('xpath=(//a[normalize-space()=\'Users\'])[1]')
+✅ Users page loaded successfully!
+🧭 [] ➕ Clicking 'Add User' button...
+👀 [] Element became visible: locator('xpath=(//button[normalize-space()=\'Add User\'])[1]')
+✅ Navigated to 'Create New User' form.
+🧭 [] 📝 Filling new user details...
+👀 [] Element became visible: getByPlaceholder('Enter username')
+👀 [] Element became visible: getByPlaceholder('Enter email address')
+👀 [] Element became visible: getByPlaceholder('Enter username')
+👀 [] Element became visible: getByPlaceholder('Enter username')
+👀 [] Element became visible: getByPlaceholder('Enter password')
+🧭 [] 📜 Selecting user role...
+👀 [] Element became visible: locator('xpath=(//div[@role=\'combobox\'])[1]')
+🧭 [] Selecting Annotator role...
+👀 [] Element became visible: locator('xpath=(//input[@type=\'checkbox\'])[4]')
+👀 [] Element became visible: locator('xpath=(//button[normalize-space()=\'Apply\'])[1]')
+✅ Role selected as Annotator.
+🧭 [] 🚀 Creating new user...
+🧠 Waiting for user creation process to complete...
+✅ User created successfully!
+🧭 [] 🎛 Opening filter dropdown...
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\trace.zip]]
+🧭 [] 🌐 Navigating to login page...
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ [] Element did not become visible within 10000ms: locator('xpath=(//span[normalize-space()=\'Filters\'])[1]')
+🔍 Selector details: locator('xpath=(//span[normalize-space()=\'Filters\'])[1]')
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

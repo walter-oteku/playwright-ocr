@@ -1,0 +1,200 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-12T07-24-31-806Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T07-24-31-806Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T07-24-31-806Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "profile.spec.js",
+      "file": "profile.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Profile navigation, edit, reset and logout flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37708,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🧭 [] Navigating to login page...\n"
+                    },
+                    {
+                      "text": "🧭 [] Logging in as Reviewer...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔒 Typing password...\n"
+                    },
+                    {
+                      "text": "🚀 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "🧭 [] Waiting for successful login confirmation...\n"
+                    },
+                    {
+                      "text": "🧭 [] Opening profile dropdown...\n"
+                    },
+                    {
+                      "text": "🧭 [] Navigating to \"Your Profile\"...\n"
+                    },
+                    {
+                      "text": "✅ [] Page loaded and text \"Your Profile\" is visible.\n"
+                    },
+                    {
+                      "text": "🧭 [] Updating profile information...\n"
+                    },
+                    {
+                      "text": "🧭 [] Updating password fields...\n"
+                    },
+                    {
+                      "text": "🧭 [] Saving profile changes...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//button[normalize-space()=\"Save Changes\"])[1]')\n"
+                    },
+                    {
+                      "text": "⚠️ No visible toast detected — proceeding anyway.\n"
+                    },
+                    {
+                      "text": "✅ Profile changes saved successfully!\n"
+                    },
+                    {
+                      "text": "🧭 [] Resetting profile form...\n"
+                    },
+                    {
+                      "text": "✨ [] Click Reset button executed successfully.\n"
+                    },
+                    {
+                      "text": "✅ Reset button clicked successfully!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-12T07:24:33.580Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d3b94327e94fcbd90a1b-ed22ef3d787029fab0d2",
+          "file": "profile.spec.js",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-12T07:24:31.822Z",
+    "duration": 40866.332,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

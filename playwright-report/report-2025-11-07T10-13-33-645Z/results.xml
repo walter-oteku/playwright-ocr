@@ -1,0 +1,112 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="23.631066">
+<testsuite name="invalid-email.spec.js" timestamp="2025-11-07T10:13:33.824Z" hostname="chromium" tests="1" failures="1" skipped="0" time="17.585" errors="0">
+<testcase name="Invalid Login - Using incorrect email and password" classname="invalid-email.spec.js" time="17.585">
+<failure message="invalid-email.spec.js:5:5 Invalid Login - Using incorrect email and password" type="FAILURE">
+<![CDATA[  [chromium] › invalid-email.spec.js:5:5 › Invalid Login - Using incorrect email and password ──────
+
+    ReferenceError: expect is not defined
+
+       at utils.js:33
+
+      31 |       await page.waitForSelector(selectorOrText, { timeout });
+      32 |     } else {
+    > 33 |       await expect(page.getByText(selectorOrText)).toBeVisible({ timeout });
+         |       ^
+      34 |     }
+      35 |   } catch (error) {
+      36 |     console.error(`⚠️ Element not visible or timed out: ${selectorOrText}`);
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:33:7)
+        at C:\Users\walte\playwright-ocr\tests\invalid-email.spec.js:36:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    ReferenceError: expect is not defined
+
+       at utils.js:33
+
+      31 |       await page.waitForSelector(selectorOrText, { timeout });
+      32 |     } else {
+    > 33 |       await expect(page.getByText(selectorOrText)).toBeVisible({ timeout });
+         |       ^
+      34 |     }
+      35 |   } catch (error) {
+      36 |     console.error(`⚠️ Element not visible or timed out: ${selectorOrText}`);
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:33:7)
+        at C:\Users\walte\playwright-ocr\tests\invalid-email.spec.js:36:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login Page loaded successfully.
+🧭 📧 Typing invalid email...
+🧭 🔒 Typing invalid password...
+🧭 🚪 Clicking 'Sign In' button...
+🧭 ⏳ Waiting for invalid credentials error...
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\trace.zip]]
+🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login Page loaded successfully.
+🧭 📧 Typing invalid email...
+🧭 🔒 Typing invalid password...
+🧭 🚪 Clicking 'Sign In' button...
+🧭 ⏳ Waiting for invalid credentials error...
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[⚠️ Element not visible or timed out: /Invalid email or password/i
+⚠️ Element not visible or timed out: /Invalid email or password/i
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

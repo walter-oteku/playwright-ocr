@@ -1,0 +1,173 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - img "SAF Logo" [ref=e9]
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "Dashboard" [ref=e13] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=e16]: Dashboard
+        - listitem [ref=e17]:
+          - link "Upload" [ref=e18] [cursor=pointer]:
+            - /url: /upload
+            - generic [ref=e21]: Upload
+        - listitem [ref=e22]:
+          - link "Documents" [ref=e23] [cursor=pointer]:
+            - /url: /documents
+            - generic [ref=e26]: Documents
+        - listitem [ref=e27]:
+          - link "Manual Review" [ref=e28] [cursor=pointer]:
+            - /url: /review
+            - generic [ref=e31]: Manual Review
+        - listitem [ref=e32]:
+          - link "Model Training" [ref=e33] [cursor=pointer]:
+            - /url: /modeltraining
+            - generic [ref=e36]: Model Training
+        - listitem [ref=e37]:
+          - link "Analytics" [ref=e38] [cursor=pointer]:
+            - /url: /analytics
+            - generic [ref=e41]: Analytics
+        - listitem [ref=e42]:
+          - link "Users" [ref=e43] [cursor=pointer]:
+            - /url: /users
+            - generic [ref=e46]: Users
+        - listitem [ref=e47]:
+          - link "System Config" [ref=e48] [cursor=pointer]:
+            - /url: /system
+            - generic [ref=e51]: System Config
+        - listitem [ref=e52]:
+          - link "Audit Logs" [ref=e53] [cursor=pointer]:
+            - /url: /audit
+            - generic [ref=e56]: Audit Logs
+      - generic [ref=e57]:
+        - text: Quick Actions
+        - list [ref=e58]:
+          - listitem [ref=e59]:
+            - link "Pending Documents" [ref=e60] [cursor=pointer]:
+              - /url: /review/pending
+              - generic [ref=e63]: Pending Documents
+          - listitem [ref=e64]:
+            - link "Failed Processing" [ref=e65] [cursor=pointer]:
+              - /url: /documents/failed
+              - generic [ref=e68]: Failed Processing
+    - generic [ref=e69]:
+      - banner [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e73]:
+            - paragraph [ref=e74]: OCR System
+            - generic [ref=e75]: Document Processing
+          - generic [ref=e76]:
+            - button "notifications" [ref=e77] [cursor=pointer]:
+              - img [ref=e79]
+            - generic [ref=e82]:
+              - generic [ref=e83]:
+                - paragraph [ref=e84]: Annotator One
+                - generic [ref=e86]: Administrator
+              - button "account" [ref=e87] [cursor=pointer]:
+                - img [ref=e88]
+      - main [ref=e90]:
+        - generic [ref=e93]:
+          - generic [ref=e95]:
+            - heading "System Configuration" [level=4] [ref=e96]
+            - paragraph [ref=e97]: Changes to system configuration may affect document processing behavior. Please review all changes carefully before saving.
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - img [ref=e102]
+                - heading "File Upload Settings" [level=6] [ref=e104]
+              - generic [ref=e105]:
+                - generic [ref=e107]:
+                  - generic [ref=e108]: Maximum File Size (MB)
+                  - generic [ref=e109]:
+                    - spinbutton "Maximum File Size (MB)" [ref=e110]: "12345678900"
+                    - group:
+                      - generic: Maximum File Size (MB)
+                - generic [ref=e111]:
+                  - text: Allowed File Types
+                  - generic [ref=e112]:
+                    - generic [ref=e114]:
+                      - textbox [ref=e115]: image/jpeg
+                      - group
+                    - generic [ref=e117]:
+                      - textbox [ref=e118]: image/png
+                      - group
+                    - generic [ref=e120]:
+                      - textbox [ref=e121]: image/tiff
+                      - group
+                    - generic [ref=e123]:
+                      - textbox [ref=e124]: image/bmp
+                      - group
+                    - generic [ref=e126]:
+                      - textbox [ref=e127]: application/pdf
+                      - group
+                    - button "+ Add File Type" [ref=e128] [cursor=pointer]
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - img [ref=e131]
+                - heading "Processing Settings" [level=6] [ref=e133]
+              - generic [ref=e134]:
+                - generic [ref=e136]:
+                  - generic: Confidence Threshold
+                  - generic [ref=e137]:
+                    - spinbutton "Confidence Threshold" [ref=e138]
+                    - group:
+                      - generic: Confidence Threshold
+                - generic [ref=e140] [cursor=pointer]:
+                  - checkbox "Enable automatic processing" [ref=e143]
+                  - generic [ref=e146]: Enable automatic processing
+            - generic [ref=e147]:
+              - generic [ref=e148]:
+                - img [ref=e149]
+                - heading "OCR Settings" [level=6] [ref=e151]
+              - generic [ref=e152]:
+                - generic [ref=e154]:
+                  - generic: Language
+                  - generic [ref=e155]:
+                    - combobox "Language" [ref=e156] [cursor=pointer]
+                    - textbox
+                    - img
+                    - group:
+                      - generic: Language
+                - generic [ref=e158] [cursor=pointer]:
+                  - checkbox "Enable image preprocessing" [ref=e161]
+                  - generic [ref=e164]: Enable image preprocessing
+                - generic [ref=e166] [cursor=pointer]:
+                  - checkbox "Enable quality optimization" [ref=e169]
+                  - generic [ref=e172]: Enable quality optimization
+            - generic [ref=e173]:
+              - generic [ref=e174]:
+                - img [ref=e175]
+                - heading "Data Retention Settings" [level=6] [ref=e177]
+              - generic [ref=e180]:
+                - generic: Retention Period (Days)
+                - generic [ref=e181]:
+                  - spinbutton "Retention Period (Days)" [ref=e182]
+                  - group:
+                    - generic: Retention Period (Days)
+            - generic [ref=e183]:
+              - generic [ref=e184]:
+                - img [ref=e185]
+                - heading "Notification Settings" [level=6] [ref=e187]
+              - generic [ref=e188]:
+                - generic [ref=e189] [cursor=pointer]:
+                  - checkbox "Enable email notifications" [ref=e192]
+                  - generic [ref=e195]: Enable email notifications
+                - generic [ref=e196] [cursor=pointer]:
+                  - checkbox "Enable webhook notifications" [ref=e199]
+                  - generic [ref=e202]: Enable webhook notifications
+                - generic [ref=e203]:
+                  - generic: Webhook URL
+                  - generic [ref=e204]:
+                    - textbox "Webhook URL" [ref=e205]:
+                      - /placeholder: https://example.com/webhook
+                    - group:
+                      - generic: Webhook URL
+            - generic [ref=e206]:
+              - button "Cancel" [ref=e207] [cursor=pointer]
+              - button "Save Configuration" [ref=e208] [cursor=pointer]
+  - alert [ref=e209]
+  - generic [ref=e210]: "0"
+```

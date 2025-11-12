@@ -1,0 +1,268 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-07T10-24-08-480Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-07T10-24-08-480Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-07T10-24-08-480Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "invalid-password.spec.js",
+      "file": "invalid-password.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify invalid login with wrong password",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3829,
+                  "error": {
+                    "message": "Error: locator.type: text: expected string, got undefined",
+                    "stack": "Error: locator.type: text: expected string, got undefined\n    at C:\\Users\\walte\\playwright-ocr\\tests\\invalid-password.spec.js:19:28",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\invalid-password.spec.js",
+                      "column": 28,
+                      "line": 19
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mfill(\u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mtype(validUser\u001b[33m.\u001b[39memail\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m150\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[90m// === Fill invalid password ===\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(page\u001b[33m,\u001b[39m \u001b[32m\"🔒 Typing WRONG password...\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\invalid-password.spec.js",
+                        "column": 28,
+                        "line": 19
+                      },
+                      "message": "Error: locator.type: text: expected string, got undefined\n\n\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mfill(\u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mtype(validUser\u001b[33m.\u001b[39memail\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m150\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[90m// === Fill invalid password ===\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(page\u001b[33m,\u001b[39m \u001b[32m\"🔒 Typing WRONG password...\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\invalid-password.spec.js:19:28\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 🌐 Navigating to OCR Login Page...\n"
+                    },
+                    {
+                      "text": "🧭 ✅ Login page loaded successfully.\n"
+                    },
+                    {
+                      "text": "🧭 📧 Typing valid email...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-07T10:24:10.200Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\invalid-password-Verify-invalid-login-with-wrong-password-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\invalid-password-Verify-invalid-login-with-wrong-password-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\invalid-password-Verify-invalid-login-with-wrong-password-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\invalid-password-Verify-invalid-login-with-wrong-password-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\invalid-password.spec.js",
+                    "column": 28,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3882,
+                  "error": {
+                    "message": "Error: locator.type: text: expected string, got undefined",
+                    "stack": "Error: locator.type: text: expected string, got undefined\n    at C:\\Users\\walte\\playwright-ocr\\tests\\invalid-password.spec.js:19:28",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\invalid-password.spec.js",
+                      "column": 28,
+                      "line": 19
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mfill(\u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mtype(validUser\u001b[33m.\u001b[39memail\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m150\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[90m// === Fill invalid password ===\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(page\u001b[33m,\u001b[39m \u001b[32m\"🔒 Typing WRONG password...\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\invalid-password.spec.js",
+                        "column": 28,
+                        "line": 19
+                      },
+                      "message": "Error: locator.type: text: expected string, got undefined\n\n\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mfill(\u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39mtype(validUser\u001b[33m.\u001b[39memail\u001b[33m,\u001b[39m { delay\u001b[33m:\u001b[39m \u001b[35m150\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[90m// === Fill invalid password ===\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(page\u001b[33m,\u001b[39m \u001b[32m\"🔒 Typing WRONG password...\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\invalid-password.spec.js:19:28\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 🌐 Navigating to OCR Login Page...\n"
+                    },
+                    {
+                      "text": "🧭 ✅ Login page loaded successfully.\n"
+                    },
+                    {
+                      "text": "🧭 📧 Typing valid email...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-07T10:24:16.869Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\invalid-password.spec.js",
+                    "column": 28,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b55fe855bc43fd042cea-539e7aa1bb699e2a0f94",
+          "file": "invalid-password.spec.js",
+          "line": 6,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-07T10:24:08.496Z",
+    "duration": 13469.437999999998,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,48 +1,41 @@
-
 import { test, expect } from '@playwright/test';
+import testData from './testData.json' assert { type: 'json' };
+import { logStep, waitForVisible } from './utils.js'; // centralized utils
 
-test('Verify invalid login with invalid email', async ({ page }) => {
-  // Step 1: Navigate to the login page
-  console.log(" Navigating to login page...");
+test('Invalid Login - Using incorrect email and password', async ({ page }) => {
+  test.setTimeout(60000);
+  const { invalidUser } = testData;
+
+  // === STEP 1: NAVIGATE TO LOGIN PAGE ===
+  await logStep(page, "🌐 Navigating to OCR Login Page...");
   await page.goto('https://ocr.techsavanna.technology/login');
   await page.waitForLoadState('domcontentloaded');
+  await waitForVisible(page, "(//input[@id='_R_hlbinpfjrb_'])[1]");
+  await logStep(page, "✅ Login Page loaded successfully.");
 
-  // Step 2: Enter email address with visible typing
-console.log("📧 Typing email slowly...");
-
-const emailSelector = "(//input[@id='_R_hlbinpfjrb_'])[1]";
-const emailField = page.locator(emailSelector);
-
-// Wait for email input to appear and interact with it
-await emailField.waitFor({ state: "visible", timeout: 10000 });
-await emailField.click();
-await emailField.fill(""); // Clear any existing text
-await emailField.type("admin@ocrplatform.org", { delay: 150 }); // Simulate natural typing
-
-// Step 3: Enter password with visible typing
-console.log("🔒 Typing password slowly...");
-
-const passwordSelector = "(//input[@id='_R_ilbinpfjrb_'])[1]";
-const passwordField = page.locator(passwordSelector);
-
-// Wait for password field to be ready, clear it, then type naturally
-await passwordField.waitFor({ state: "visible", timeout: 10000 });
-await passwordField.click();
-await passwordField.fill(""); // Clear any pre-filled content
-await passwordField.type("admin123", { delay: 150 }); // Simulate human typing
-
-  // Step 4: Click Sign In button (with visible pause)
-  console.log("Clicking Sign In button...");
+  // === STEP 2: ENTER INVALID CREDENTIALS ===
+  const emailField = page.locator("(//input[@id='_R_hlbinpfjrb_'])[1]");
+  const passwordField = page.locator("(//input[@id='_R_ilbinpfjrb_'])[1]");
   const signInButton = page.getByRole('button', { name: /sign in/i });
-  await page.waitForTimeout(500); // short delay before click
+
+  await logStep(page, "📧 Typing invalid email...");
+  await emailField.fill('');
+  await emailField.type(invalidUser.email, { delay: 120 });
+
+  await logStep(page, "🔒 Typing invalid password...");
+  await passwordField.fill('');
+  await passwordField.type(invalidUser.password, { delay: 120 });
+
+  // === STEP 3: ATTEMPT LOGIN ===
+  await logStep(page, "🚪 Clicking 'Sign In' button...");
   await signInButton.click();
 
-  // Step 5: Wait for invalid login error message
-  console.log("Waiting for Error message...");
-  const errorMessage = page.getByText(/Invalid email or password/i);
+  // === STEP 4: VERIFY ERROR MESSAGE ===
+  const errorText = /Invalid email or password/i;
+  await logStep(page, "⏳ Waiting for invalid credentials error...");
+  await waitForVisible(page, errorText);
+  await expect(page.getByText(errorText)).toBeVisible();
+  await logStep(page, "❌ Correct error message displayed for invalid credentials.");
 
-  // Wait up to 10 seconds for the error message to appear
-  await expect(errorMessage).toBeVisible({ timeout: 10000 });
-
-  console.log("Login test passed!");
+  console.log("🎯 Invalid login test completed successfully!");
 });

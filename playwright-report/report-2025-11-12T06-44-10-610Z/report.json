@@ -1,0 +1,298 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-12T06-44-10-610Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T06-44-10-610Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T06-44-10-610Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "logout.spec.js",
+      "file": "logout.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "🔐 Full login and logout flow with visible typing",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20794,
+                  "error": {
+                    "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=undefined') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=undefined') to be visible\u001b[22m\n\n    at waitForPageLoad (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:103:14)\n    at C:\\Users\\walte\\playwright-ocr\\tests\\logout.spec.js:31:3",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                      "column": 14,
+                      "line": 103
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.js:103\n\n\u001b[0m \u001b[90m 101 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForPageLoad(page\u001b[33m,\u001b[39m text) {\n \u001b[90m 102 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 103 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${text}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 104 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Page loaded and text \"${text}\" is visible.`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 105 |\u001b[39m }\n \u001b[90m 106 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                        "column": 14,
+                        "line": 103
+                      },
+                      "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=undefined') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mutils.js:103\n\n\u001b[0m \u001b[90m 101 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForPageLoad(page\u001b[33m,\u001b[39m text) {\n \u001b[90m 102 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 103 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${text}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 104 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Page loaded and text \"${text}\" is visible.`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 105 |\u001b[39m }\n \u001b[90m 106 |\u001b[39m\u001b[0m\n\u001b[2m    at waitForPageLoad (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:103:14)\u001b[22m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\logout.spec.js:31:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 🌐 Navigating to OCR Login Page...\n"
+                    },
+                    {
+                      "text": "🧭 📧 Typing email...\n"
+                    },
+                    {
+                      "text": "👀 Element became visible: locator('xpath=(//input[@id=\"_R_1lbinpfjrb_\"])[1]')\n"
+                    },
+                    {
+                      "text": "🧭 🔒 Typing password...\n"
+                    },
+                    {
+                      "text": "👀 Element became visible: locator('xpath=(//input[@id=\"_R_2lbinpfjrb_\"])[1]')\n"
+                    },
+                    {
+                      "text": "🧭 🧩 Clicking Sign In button...\n"
+                    },
+                    {
+                      "text": "👀 Element became visible: locator('xpath=(//button[normalize-space()=\\'Sign in\\'])[1]')\n"
+                    },
+                    {
+                      "text": "🧭 ⏳ Waiting for Dashboard to load...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-12T06:44:12.390Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                    "column": 14,
+                    "line": 103
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20634,
+                  "error": {
+                    "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=undefined') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=undefined') to be visible\u001b[22m\n\n    at waitForPageLoad (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:103:14)\n    at C:\\Users\\walte\\playwright-ocr\\tests\\logout.spec.js:31:3",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                      "column": 14,
+                      "line": 103
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.js:103\n\n\u001b[0m \u001b[90m 101 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForPageLoad(page\u001b[33m,\u001b[39m text) {\n \u001b[90m 102 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 103 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${text}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 104 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Page loaded and text \"${text}\" is visible.`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 105 |\u001b[39m }\n \u001b[90m 106 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                        "column": 14,
+                        "line": 103
+                      },
+                      "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=undefined') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mutils.js:103\n\n\u001b[0m \u001b[90m 101 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForPageLoad(page\u001b[33m,\u001b[39m text) {\n \u001b[90m 102 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 103 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${text}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 104 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Page loaded and text \"${text}\" is visible.`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 105 |\u001b[39m }\n \u001b[90m 106 |\u001b[39m\u001b[0m\n\u001b[2m    at waitForPageLoad (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:103:14)\u001b[22m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\logout.spec.js:31:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 🌐 Navigating to OCR Login Page...\n"
+                    },
+                    {
+                      "text": "🧭 📧 Typing email...\n"
+                    },
+                    {
+                      "text": "👀 Element became visible: locator('xpath=(//input[@id=\"_R_1lbinpfjrb_\"])[1]')\n"
+                    },
+                    {
+                      "text": "🧭 🔒 Typing password...\n"
+                    },
+                    {
+                      "text": "👀 Element became visible: locator('xpath=(//input[@id=\"_R_2lbinpfjrb_\"])[1]')\n"
+                    },
+                    {
+                      "text": "🧭 🧩 Clicking Sign In button...\n"
+                    },
+                    {
+                      "text": "👀 Element became visible: locator('xpath=(//button[normalize-space()=\\'Sign in\\'])[1]')\n"
+                    },
+                    {
+                      "text": "🧭 ⏳ Waiting for Dashboard to load...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T06:44:36.255Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                    "column": 14,
+                    "line": 103
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b7773ae6a53e211c23cf-b5377ecb02e381c6dbd7",
+          "file": "logout.spec.js",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-12T06:44:10.623Z",
+    "duration": 47606.256,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

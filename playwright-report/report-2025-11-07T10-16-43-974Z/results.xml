@@ -1,0 +1,114 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="20.577571">
+<testsuite name="forgot-password.spec.js" timestamp="2025-11-07T10:16:44.065Z" hostname="chromium" tests="1" failures="1" skipped="0" time="14.378" errors="0">
+<testcase name="Forgot Password Flow - Invalid and Valid Email" classname="forgot-password.spec.js" time="14.378">
+<failure message="forgot-password.spec.js:4:5 Forgot Password Flow - Invalid and Valid Email" type="FAILURE">
+<![CDATA[  [chromium] › forgot-password.spec.js:4:5 › Forgot Password Flow - Invalid and Valid Email ────────
+
+    ReferenceError: expect is not defined
+
+       at utils.js:33
+
+      31 |       await page.waitForSelector(selectorOrText, { timeout });
+      32 |     } else {
+    > 33 |       await expect(page.getByText(selectorOrText)).toBeVisible({ timeout });
+         |       ^
+      34 |     }
+      35 |   } catch (error) {
+      36 |     console.error(`⚠️ Element not visible or timed out: ${selectorOrText}`);
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:33:7)
+        at C:\Users\walte\playwright-ocr\tests\forgot-password.spec.js:41:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    ReferenceError: expect is not defined
+
+       at utils.js:33
+
+      31 |       await page.waitForSelector(selectorOrText, { timeout });
+      32 |     } else {
+    > 33 |       await expect(page.getByText(selectorOrText)).toBeVisible({ timeout });
+         |       ^
+      34 |     }
+      35 |   } catch (error) {
+      36 |     console.error(`⚠️ Element not visible or timed out: ${selectorOrText}`);
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:33:7)
+        at C:\Users\walte\playwright-ocr\tests\forgot-password.spec.js:41:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login Page loaded.
+🧭 🧩 Clicking 'Forgot your password?' link...
+🧭 ✅ Forgot Password page ready.
+🧭 📧 Testing with INVALID email...
+🧭 🚫 Error message displayed correctly for invalid email.
+🧭 📧 Testing with VALID email...
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip]]
+🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login Page loaded.
+🧭 🧩 Clicking 'Forgot your password?' link...
+🧭 ✅ Forgot Password page ready.
+🧭 📧 Testing with INVALID email...
+🧭 🚫 Error message displayed correctly for invalid email.
+🧭 📧 Testing with VALID email...
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[⚠️ Element not visible or timed out: /Password reset link sent to your email/i
+⚠️ Element not visible or timed out: /Password reset link sent to your email/i
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,115 +1,85 @@
-﻿// import { test as setup } from '@playwright/test';
-// import path from 'path';
-// import fs from 'fs';
-
-// const authFile = path.resolve(__dirname, 'playwright/.auth/user.json');
-
-// setup('authenticate', async ({ page }) => {
-// console.log('🚀 Starting authentication setup...');
-
-// try {
-// await page.goto('/login', { waitUntil: 'domcontentloaded', timeout: 15000 });
-// console.log('🌐 Login page loaded.');
-
-// await page.fill('input[placeholder="Enter your email or username"]', 'reviewer1');
-// await page.fill('input[placeholder="Enter your password"]', 'password123');
-
-// const signInButton = page.locator("//button[normalize-space()='Sign in']");
-// await signInButton.waitFor({ state: 'visible', timeout: 10000 });
-// await signInButton.click();
-//     console.log('🔐 Clicked Sign in... waiting for redirect.');
-
-//     await page.waitForURL(/(documents|dashboard)/, { timeout: 15000 });
-//     console.log('✅ Login successful!');
-
-//     const authDir = path.dirname(authFile);
-//     if (!fs.existsSync(authDir)) fs.mkdirSync(authDir, { recursive: true });
-
-//     await page.context().storageState({ path: authFile });
-//     console.log(`💾 Authentication state saved to ${authFile}`);
-//   } catch (err) {
-//     console.error('❌ Authentication setup failed:', err.message);
-//     await page.screenshot({ path: 'test-results/auth-failure.png', fullPage: true });
-//     throw err;
-//   }
-// });
-// tests/auth.setup.js
+﻿// tests/auth.setup.js
 import { test as setup } from '@playwright/test';
 import path from 'path';
 import fs from 'fs';
+import { credentials } from './credentials.js';
 
+// 🔐 Define path where authenticated session will be stored
 const authFile = path.resolve(__dirname, '../playwright/.auth/user.json');
 
-setup('authenticate', async ({ page }) => {
+setup('🔑 Authenticate user and save session', async ({ page }) => {
   console.log('🚀 Starting authentication setup...');
 
+  // Choose which user to log in as — update as needed
+  const { username, password } = credentials.annotator || {
+    username: 'annotator1',
+    password: 'password123',
+  };
+
   try {
-    // Explicit URL (not relying on baseURL)
+    // === STEP 1: Navigate to Login Page ===
+    console.log('🌍 Navigating to login page...');
     await page.goto('https://ocr.techsavanna.technology/login', {
       waitUntil: 'domcontentloaded',
       timeout: 30000,
     });
-    console.log('🌐 Login page loaded successfully.');
 
-    // === Step 1: Fill credentials ===
-    await page.fill('input[placeholder="Enter your email or username"]', 'reviewer1');
-    await page.fill('input[placeholder="Enter your password"]', 'password123');
-    console.log('📝 Credentials entered.');
+    // === STEP 2: Fill in Credentials ===
+    console.log(`👤 Logging in as: ${username}`);
+    await page.fill('input[placeholder="Enter your email or username"]', username);
+    await page.fill('input[placeholder="Enter your password"]', password);
 
-    // === Step 2: Click Sign In ===
+    // === STEP 3: Click Sign In ===
     const signInButton = page.locator("//button[normalize-space()='Sign in']");
     await signInButton.waitFor({ state: 'visible', timeout: 10000 });
-    console.log('👀 Sign in button located, clicking...');
-
-    // ✅ Avoid waiting for navigation — use Promise.race to avoid hanging
+    console.log('👉 Clicking "Sign in" button...');
     await Promise.race([
       signInButton.click(),
-      page.waitForTimeout(3000), // give it time to process AJAX calls
+      page.waitForTimeout(2000),
     ]);
-    console.log('🔐 Clicked Sign in. Waiting for dashboard...');
 
-    // === Step 3: Detect successful login ===
-    // Try multiple selectors since the UI might differ slightly
+    // === STEP 4: Wait for Successful Login ===
+    console.log('⏳ Waiting for dashboard or home indicators...');
     const possibleSelectors = [
-      'text=Documents',
       'text=Dashboard',
+      'text=Documents',
       'text=Welcome',
+      'text=Projects',
     ];
 
-    let dashboardDetected = false;
+    let success = false;
     for (const selector of possibleSelectors) {
       try {
-        console.log(`⏳ Waiting... dashboard not found yet with ${selector}`);
         await page.waitForSelector(selector, { timeout: 10000 });
-        console.log(`✅ Dashboard detected via selector: ${selector}`);
-        dashboardDetected = true;
+        console.log(`✅ Login confirmed via selector: ${selector}`);
+        success = true;
         break;
       } catch {
-        continue; // move to the next possible selector
+        continue;
       }
     }
 
-    if (!dashboardDetected) {
-      throw new Error('Dashboard not detected after login — login may have failed.');
+    if (!success) {
+      throw new Error('❌ Login failed: Dashboard not detected.');
     }
 
-    // === Step 4: Save authentication state ===
+    // === STEP 5: Save Authenticated Session ===
     const authDir = path.dirname(authFile);
     if (!fs.existsSync(authDir)) fs.mkdirSync(authDir, { recursive: true });
     await page.context().storageState({ path: authFile });
 
-    console.log(`💾 Authentication state saved to ${authFile}`);
+    console.log(`💾 Authentication state saved successfully at: ${authFile}`);
+
   } catch (err) {
-    console.error('❌ Authentication setup failed:', err.message);
+    console.error(`🚨 Authentication setup failed: ${err.message}`);
 
-    // Ensure folder exists before saving screenshot
-    if (!fs.existsSync('test-results')) fs.mkdirSync('test-results', { recursive: true });
-    await page.screenshot({
-      path: 'test-results/auth-failure.png',
-      fullPage: true,
-    });
-    console.log('📸 Screenshot saved at test-results/auth-failure.png');
+    // Capture screenshot for debugging
+    const failDir = path.resolve('test-results');
+    if (!fs.existsSync(failDir)) fs.mkdirSync(failDir, { recursive: true });
+    const screenshotPath = path.join(failDir, 'auth-failure.png');
+    await page.screenshot({ path: screenshotPath, fullPage: true });
 
+    console.log(`📸 Screenshot saved at: ${screenshotPath}`);
     throw err;
   }
 });

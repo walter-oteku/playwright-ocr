@@ -1,0 +1,279 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-12T07-23-28-104Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T07-23-28-104Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T07-23-28-104Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "profile.spec.js",
+      "file": "profile.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Profile navigation, edit, reset and logout flow",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 36241,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//input[@id=\\'_r_c_\\'])[1]') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//input[@id=\\'_r_c_\\'])[1]') to be visible\u001b[22m\n\n    at waitForVisible (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:121:17)\n    at C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js:46:23",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                      "column": 17,
+                      "line": 121
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.js:121\n\n\u001b[0m \u001b[90m 119 |\u001b[39m \u001b[90m */\u001b[39m\n \u001b[90m 120 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForVisible(locator\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[35m10000\u001b[39m\u001b[33m,\u001b[39m testName \u001b[33m=\u001b[39m \u001b[32m\"\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 121 |\u001b[39m   \u001b[36mawait\u001b[39m locator\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 122 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`👀 [${testName}] Element became visible: ${locator}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m }\n \u001b[90m 124 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                        "column": 17,
+                        "line": 121
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//input[@id=\\'_r_c_\\'])[1]') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mutils.js:121\n\n\u001b[0m \u001b[90m 119 |\u001b[39m \u001b[90m */\u001b[39m\n \u001b[90m 120 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForVisible(locator\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[35m10000\u001b[39m\u001b[33m,\u001b[39m testName \u001b[33m=\u001b[39m \u001b[32m\"\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 121 |\u001b[39m   \u001b[36mawait\u001b[39m locator\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 122 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`👀 [${testName}] Element became visible: ${locator}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 123 |\u001b[39m }\n \u001b[90m 124 |\u001b[39m\u001b[0m\n\u001b[2m    at waitForVisible (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:121:17)\u001b[22m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js:46:23\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 [] Navigating to login page...\n"
+                    },
+                    {
+                      "text": "🧭 [] Logging in as Reviewer...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔒 Typing password...\n"
+                    },
+                    {
+                      "text": "🚀 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "🧭 [] Waiting for successful login confirmation...\n"
+                    },
+                    {
+                      "text": "🧭 [] Opening profile dropdown...\n"
+                    },
+                    {
+                      "text": "🧭 [] Navigating to \"Your Profile\"...\n"
+                    },
+                    {
+                      "text": "✅ [] Page loaded and text \"Your Profile\" is visible.\n"
+                    },
+                    {
+                      "text": "🧭 [] Updating profile information...\n"
+                    },
+                    {
+                      "text": "🧭 [] Updating password fields...\n"
+                    },
+                    {
+                      "text": "🧭 [] Verifying account role and last login...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-12T07:23:30.246Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\profile-Profile-navigation-edit-reset-and-logout-flow-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                    "column": 17,
+                    "line": 121
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3065,
+                  "error": {
+                    "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://ocr.techsavanna.technology/login\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://ocr.techsavanna.technology/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js:12:14",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js",
+                      "column": 14,
+                      "line": 12
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(\u001b[32m'Navigating to login page...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://ocr.techsavanna.technology/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'domcontentloaded'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[90m// === STEP 1: LOGIN ===\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js",
+                        "column": 14,
+                        "line": 12
+                      },
+                      "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://ocr.techsavanna.technology/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(\u001b[32m'Navigating to login page...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://ocr.techsavanna.technology/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'domcontentloaded'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[90m// === STEP 1: LOGIN ===\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js:12:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 [] Navigating to login page...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T07:24:11.200Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\profile-Profile-navigation-edit-reset-and-logout-flow-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\profile-Profile-navigation-edit-reset-and-logout-flow-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\profile.spec.js",
+                    "column": 14,
+                    "line": 12
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d3b94327e94fcbd90a1b-ed22ef3d787029fab0d2",
+          "file": "profile.spec.js",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-12T07:23:28.122Z",
+    "duration": 47298.171,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

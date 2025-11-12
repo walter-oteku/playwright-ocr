@@ -1,0 +1,81 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="8.57808">
+<testsuite name="invalid-email.spec.js" timestamp="2025-11-07T10:11:44.566Z" hostname="chromium" tests="1" failures="1" skipped="0" time="2.503" errors="0">
+<testcase name="Invalid Login - Using incorrect email and password" classname="invalid-email.spec.js" time="2.503">
+<failure message="invalid-email.spec.js:5:5 Invalid Login - Using incorrect email and password" type="FAILURE">
+<![CDATA[  [chromium] › invalid-email.spec.js:5:5 › Invalid Login - Using incorrect email and password ──────
+
+    TypeError: (0 , _utils.logStep) is not a function
+
+       8 |
+       9 |   // === STEP 1: NAVIGATE TO LOGIN PAGE ===
+    > 10 |   await logStep(page, "🌐 Navigating to OCR Login Page...");
+         |                ^
+      11 |   await page.goto('https://ocr.techsavanna.technology/login');
+      12 |   await page.waitForLoadState('domcontentloaded');
+      13 |   await waitForVisible(page, "(//input[@id='_R_hlbinpfjrb_'])[1]");
+        at C:\Users\walte\playwright-ocr\tests\invalid-email.spec.js:10:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TypeError: (0 , _utils.logStep) is not a function
+
+       8 |
+       9 |   // === STEP 1: NAVIGATE TO LOGIN PAGE ===
+    > 10 |   await logStep(page, "🌐 Navigating to OCR Login Page...");
+         |                ^
+      11 |   await page.goto('https://ocr.techsavanna.technology/login');
+      12 |   await page.waitForLoadState('domcontentloaded');
+      13 |   await waitForVisible(page, "(//input[@id='_R_hlbinpfjrb_'])[1]");
+        at C:\Users\walte\playwright-ocr\tests\invalid-email.spec.js:10:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium\trace.zip]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\invalid-email-Invalid-Logi-c635b-ncorrect-email-and-password-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

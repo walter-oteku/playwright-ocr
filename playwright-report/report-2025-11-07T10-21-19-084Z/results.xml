@@ -1,0 +1,17 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="11.211356">
+<testsuite name="invalid-email.spec.js" timestamp="2025-11-07T10:21:19.162Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.481" errors="0">
+<testcase name="Invalid Login - Using incorrect email and password" classname="invalid-email.spec.js" time="8.481">
+<system-out>
+<![CDATA[🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login Page loaded successfully.
+🧭 📧 Typing invalid email...
+🧭 🔒 Typing invalid password...
+🧭 🚪 Clicking 'Sign In' button...
+🧭 ⏳ Waiting for invalid credentials error...
+🧭 ❌ Correct error message displayed for invalid credentials.
+🎯 Invalid login test completed successfully!
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

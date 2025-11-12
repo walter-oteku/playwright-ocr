@@ -1,0 +1,89 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="9.4118">
+<testsuite name="model-training.spec.js" timestamp="2025-11-08T07:39:29.257Z" hostname="chromium" tests="1" failures="1" skipped="0" time="3.17" errors="0">
+<testcase name="🧠 Full model training workflow: login, navigate, upload, start training" classname="model-training.spec.js" time="3.17">
+<failure message="model-training.spec.js:8:5 🧠 Full model training workflow: login, navigate, upload, start training" type="FAILURE">
+<![CDATA[  [chromium] › model-training.spec.js:8:5 › 🧠 Full model training workflow: login, navigate, upload, start training 
+
+    TypeError: page.waitForTimeout is not a function
+
+       at utils.js:46
+
+      44 | export async function logStep(page, message) {
+      45 |   console.log(`🧭 ${message}`);
+    > 46 |   await page.waitForTimeout(250);
+         |              ^
+      47 | }
+      48 |
+      49 | /**
+        at logStep (C:\Users\walte\playwright-ocr\tests\utils.js:46:14)
+        at C:\Users\walte\playwright-ocr\tests\model-training.spec.js:13:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TypeError: page.waitForTimeout is not a function
+
+       at utils.js:46
+
+      44 | export async function logStep(page, message) {
+      45 |   console.log(`🧭 ${message}`);
+    > 46 |   await page.waitForTimeout(250);
+         |              ^
+      47 | }
+      48 |
+      49 | /**
+        at logStep (C:\Users\walte\playwright-ocr\tests\utils.js:46:14)
+        at C:\Users\walte\playwright-ocr\tests\model-training.spec.js:13:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 undefined
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium\trace.zip]]
+🧭 undefined
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\model-training-🧠-Full-mod-8eeb4-igate-upload-start-training-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

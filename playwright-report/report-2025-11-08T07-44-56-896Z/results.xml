@@ -1,0 +1,149 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="118.27071299999999">
+<testsuite name="manual-review.spec.js" timestamp="2025-11-08T07:44:56.992Z" hostname="chromium" tests="1" failures="1" skipped="0" time="111.675" errors="0">
+<testcase name="📋 Manual Review workflow: navigate, filter, view, edit, approve" classname="manual-review.spec.js" time="111.675">
+<failure message="manual-review.spec.js:7:5 📋 Manual Review workflow: navigate, filter, view, edit, approve" type="FAILURE">
+<![CDATA[  [chromium] › manual-review.spec.js:7:5 › 📋 Manual Review workflow: navigate, filter, view, edit, approve 
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//select[contains(@class,\'focus:ring-primary-500\')])[1]')
+
+
+      61 |
+      62 |   const docTypeDropdown = page.locator("(//select[contains(@class,'focus:ring-primary-500')])[1]");
+    > 63 |   await docTypeDropdown.selectOption({ label: 'Business Permit' });
+         |                         ^
+      64 |   console.log("✅ Document Type: Business Permit");
+      65 |
+      66 |   const confidenceDropdown = page.locator("(//select[contains(@class,'focus:ring-primary-500')])[2]");
+        at C:\Users\walte\playwright-ocr\tests\manual-review.spec.js:63:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//select[contains(@class,\'focus:ring-primary-500\')])[1]')
+
+
+      61 |
+      62 |   const docTypeDropdown = page.locator("(//select[contains(@class,'focus:ring-primary-500')])[1]");
+    > 63 |   await docTypeDropdown.selectOption({ label: 'Business Permit' });
+         |                         ^
+      64 |   console.log("✅ Document Type: Business Permit");
+      65 |
+      66 |   const confidenceDropdown = page.locator("(//select[contains(@class,'focus:ring-primary-500')])[2]");
+        at C:\Users\walte\playwright-ocr\tests\manual-review.spec.js:63:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 [object Object]
+🧭 [object Object]
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+🧭 [object Object]
+✅ Manual Review page loaded!
+👀 Hovering over summary cards...
+⚠️ Could not find or hover on card: Total Pending — locator.waitFor: Timeout 7000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//div[contains(@class,\'bg-white\') or contains(@class,\'rounded\') or contains(@class,\'shadow\')]//*[contains(text(),"Total Pending")]/ancestor::div[contains(@class,\'bg-white\')])[1]') to be visible[22m
+
+⚠️ Could not find or hover on card: Pending Review — locator.waitFor: Timeout 7000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//div[contains(@class,\'bg-white\') or contains(@class,\'rounded\') or contains(@class,\'shadow\')]//*[contains(text(),"Pending Review")]/ancestor::div[contains(@class,\'bg-white\')])[1]') to be visible[22m
+
+⚠️ Could not find or hover on card: Failed Processing — locator.waitFor: Timeout 7000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//div[contains(@class,\'bg-white\') or contains(@class,\'rounded\') or contains(@class,\'shadow\')]//*[contains(text(),"Failed Processing")]/ancestor::div[contains(@class,\'bg-white\')])[1]') to be visible[22m
+
+⚠️ Could not find or hover on card: High Priority — locator.waitFor: Timeout 7000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//div[contains(@class,\'bg-white\') or contains(@class,\'rounded\') or contains(@class,\'shadow\')]//*[contains(text(),"High Priority")]/ancestor::div[contains(@class,\'bg-white\')])[1]') to be visible[22m
+
+🧭 [object Object]
+
+[[ATTACHMENT|..\..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium\trace.zip]]
+🧭 [object Object]
+🧭 [object Object]
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+🧭 [object Object]
+✅ Manual Review page loaded!
+👀 Hovering over summary cards...
+⚠️ Could not find or hover on card: Total Pending — locator.waitFor: Timeout 7000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//div[contains(@class,\'bg-white\') or contains(@class,\'rounded\') or contains(@class,\'shadow\')]//*[contains(text(),"Total Pending")]/ancestor::div[contains(@class,\'bg-white\')])[1]') to be visible[22m
+
+⚠️ Could not find or hover on card: Pending Review — locator.waitFor: Timeout 7000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//div[contains(@class,\'bg-white\') or contains(@class,\'rounded\') or contains(@class,\'shadow\')]//*[contains(text(),"Pending Review")]/ancestor::div[contains(@class,\'bg-white\')])[1]') to be visible[22m
+
+⚠️ Could not find or hover on card: Failed Processing — locator.waitFor: Timeout 7000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//div[contains(@class,\'bg-white\') or contains(@class,\'rounded\') or contains(@class,\'shadow\')]//*[contains(text(),"Failed Processing")]/ancestor::div[contains(@class,\'bg-white\')])[1]') to be visible[22m
+
+⚠️ Could not find or hover on card: High Priority — locator.waitFor: Timeout 7000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//div[contains(@class,\'bg-white\') or contains(@class,\'rounded\') or contains(@class,\'shadow\')]//*[contains(text(),"High Priority")]/ancestor::div[contains(@class,\'bg-white\')])[1]') to be visible[22m
+
+🧭 [object Object]
+
+[[ATTACHMENT|..\..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\manual-review-📋-Manual-Re-15b02-te-filter-view-edit-approve-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

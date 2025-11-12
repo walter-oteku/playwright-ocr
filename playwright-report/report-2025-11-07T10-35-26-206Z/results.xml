@@ -1,0 +1,101 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="34.33530499999999">
+<testsuite name="invalid-password.spec.js" timestamp="2025-11-07T10:35:26.382Z" hostname="chromium" tests="1" failures="1" skipped="0" time="28.261" errors="0">
+<testcase name="Verify login fails with invalid password" classname="invalid-password.spec.js" time="28.261">
+<failure message="invalid-password.spec.js:6:5 Verify login fails with invalid password" type="FAILURE">
+<![CDATA[  [chromium] › invalid-password.spec.js:6:5 › Verify login fails with invalid password ─────────────
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Enter your email or username"]') to be visible
+
+
+      22 |   // === Enter correct login value ===
+      23 |   await logStep(page, `📧 Typing login: ${loginValue}`);
+    > 24 |   await loginPage.username.waitFor({ state: "visible", timeout: 10000 });
+         |                            ^
+      25 |   await loginPage.username.fill('');
+      26 |   await loginPage.username.type(loginValue, { delay: 150 });
+      27 |
+        at C:\Users\walte\playwright-ocr\tests\invalid-password.spec.js:24:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Enter your email or username"]') to be visible
+
+
+      22 |   // === Enter correct login value ===
+      23 |   await logStep(page, `📧 Typing login: ${loginValue}`);
+    > 24 |   await loginPage.username.waitFor({ state: "visible", timeout: 10000 });
+         |                            ^
+      25 |   await loginPage.username.fill('');
+      26 |   await loginPage.username.type(loginValue, { delay: 150 });
+      27 |
+        at C:\Users\walte\playwright-ocr\tests\invalid-password.spec.js:24:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login page loaded successfully.
+🧭 📧 Typing login: annotator1
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium\trace.zip]]
+🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login page loaded successfully.
+🧭 📧 Typing login: annotator1
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-login-fails-with-invalid-password-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

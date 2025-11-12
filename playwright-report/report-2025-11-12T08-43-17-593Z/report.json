@@ -1,0 +1,298 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-12T08-43-17-593Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T08-43-17-593Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T08-43-17-593Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upload.spec.js",
+      "file": "upload.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full document workflow: upload, search, filter, view, edit, delete",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 22709,
+                  "error": {
+                    "message": "TypeError: (0 , _utils.waitForElementBySelectors) is not a function",
+                    "stack": "TypeError: (0 , _utils.waitForElementBySelectors) is not a function\n    at C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js:26:52",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                      "column": 52,
+                      "line": 26
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[90m// === STEP 2: NAVIGATE TO UPLOAD PAGE ===\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(\u001b[32m\"📁 Navigating to 'Upload' tab...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m   \u001b[36mconst\u001b[39m uploadTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m waitForElementBySelectors(page\u001b[33m,\u001b[39m [\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m     \u001b[32m'//a[normalize-space()=\"Upload\"]'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[32m'a[href*=\"upload\"]'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[32m'[data-testid*=\"upload-tab\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                        "column": 52,
+                        "line": 26
+                      },
+                      "message": "TypeError: (0 , _utils.waitForElementBySelectors) is not a function\n\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[90m// === STEP 2: NAVIGATE TO UPLOAD PAGE ===\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(\u001b[32m\"📁 Navigating to 'Upload' tab...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m   \u001b[36mconst\u001b[39m uploadTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m waitForElementBySelectors(page\u001b[33m,\u001b[39m [\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m     \u001b[32m'//a[normalize-space()=\"Upload\"]'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[32m'a[href*=\"upload\"]'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[32m'[data-testid*=\"upload-tab\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js:26:52\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 [] 🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "🧭 [] 🔐 Logging in as reviewer...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔒 Typing password...\n"
+                    },
+                    {
+                      "text": "🚀 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "✅ [] Page loaded and text \"Dashboard\" is visible.\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "🧭 [] 📁 Navigating to 'Upload' tab...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-12T08:43:19.464Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                    "column": 52,
+                    "line": 26
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 23681,
+                  "error": {
+                    "message": "TypeError: (0 , _utils.waitForElementBySelectors) is not a function",
+                    "stack": "TypeError: (0 , _utils.waitForElementBySelectors) is not a function\n    at C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js:26:52",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                      "column": 52,
+                      "line": 26
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[90m// === STEP 2: NAVIGATE TO UPLOAD PAGE ===\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(\u001b[32m\"📁 Navigating to 'Upload' tab...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m   \u001b[36mconst\u001b[39m uploadTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m waitForElementBySelectors(page\u001b[33m,\u001b[39m [\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m     \u001b[32m'//a[normalize-space()=\"Upload\"]'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[32m'a[href*=\"upload\"]'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[32m'[data-testid*=\"upload-tab\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                        "column": 52,
+                        "line": 26
+                      },
+                      "message": "TypeError: (0 , _utils.waitForElementBySelectors) is not a function\n\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[90m// === STEP 2: NAVIGATE TO UPLOAD PAGE ===\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(\u001b[32m\"📁 Navigating to 'Upload' tab...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m   \u001b[36mconst\u001b[39m uploadTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m waitForElementBySelectors(page\u001b[33m,\u001b[39m [\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m     \u001b[32m'//a[normalize-space()=\"Upload\"]'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[32m'a[href*=\"upload\"]'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[32m'[data-testid*=\"upload-tab\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js:26:52\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 [] 🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "🧭 [] 🔐 Logging in as reviewer...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔒 Typing password...\n"
+                    },
+                    {
+                      "text": "🚀 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "✅ [] Page loaded and text \"Dashboard\" is visible.\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "🧭 [] 📁 Navigating to 'Upload' tab...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T08:43:45.281Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\upload.spec.js",
+                    "column": 52,
+                    "line": 26
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "795c7691ef25a13245f8-bb0445549e72afa6691e",
+          "file": "upload.spec.js",
+          "line": 8,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-12T08:43:17.613Z",
+    "duration": 52551.369,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,95 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="13.469437999999998">
+<testsuite name="invalid-password.spec.js" timestamp="2025-11-07T10:24:08.645Z" hostname="chromium" tests="1" failures="1" skipped="0" time="7.711" errors="0">
+<testcase name="Verify invalid login with wrong password" classname="invalid-password.spec.js" time="7.711">
+<failure message="invalid-password.spec.js:6:5 Verify invalid login with wrong password" type="FAILURE">
+<![CDATA[  [chromium] › invalid-password.spec.js:6:5 › Verify invalid login with wrong password ─────────────
+
+    Error: locator.type: text: expected string, got undefined
+
+      17 |   await loginPage.username.waitFor({ state: "visible", timeout: 10000 });
+      18 |   await loginPage.username.fill('');
+    > 19 |   await loginPage.username.type(validUser.email, { delay: 150 });
+         |                            ^
+      20 |
+      21 |   // === Fill invalid password ===
+      22 |   await logStep(page, "🔒 Typing WRONG password...");
+        at C:\Users\walte\playwright-ocr\tests\invalid-password.spec.js:19:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: locator.type: text: expected string, got undefined
+
+      17 |   await loginPage.username.waitFor({ state: "visible", timeout: 10000 });
+      18 |   await loginPage.username.fill('');
+    > 19 |   await loginPage.username.type(validUser.email, { delay: 150 });
+         |                            ^
+      20 |
+      21 |   // === Fill invalid password ===
+      22 |   await logStep(page, "🔒 Typing WRONG password...");
+        at C:\Users\walte\playwright-ocr\tests\invalid-password.spec.js:19:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login page loaded successfully.
+🧭 📧 Typing valid email...
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium\trace.zip]]
+🧭 🌐 Navigating to OCR Login Page...
+🧭 ✅ Login page loaded successfully.
+🧭 📧 Typing valid email...
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\invalid-password-Verify-invalid-login-with-wrong-password-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

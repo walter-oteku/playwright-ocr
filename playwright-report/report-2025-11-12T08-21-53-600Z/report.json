@@ -1,0 +1,337 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-12T08-21-53-600Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T08-21-53-600Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T08-21-53-600Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "user.spec.js",
+      "file": "user.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full user workflow: create, filter, edit, and delete users",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 47957,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//span[normalize-space()=\\'Filters\\'])[1]') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//span[normalize-space()=\\'Filters\\'])[1]') to be visible\u001b[22m\n\n    at waitForVisible (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:100:19)\n    at C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js:131:23",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                      "column": 19,
+                      "line": 100
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.js:100\n\n\u001b[0m \u001b[90m  98 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForVisible(locator\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[35m10000\u001b[39m\u001b[33m,\u001b[39m testName \u001b[33m=\u001b[39m \u001b[32m\"\"\u001b[39m) {\n \u001b[90m  99 |\u001b[39m   \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 100 |\u001b[39m     \u001b[36mawait\u001b[39m locator\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 101 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`👀 [${testName}] Element became visible: ${locator}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 102 |\u001b[39m   } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 103 |\u001b[39m     console\u001b[33m.\u001b[39merror(\u001b[32m`❌ [${testName}] Element did not become visible within ${timeout}ms: ${locator}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                        "column": 19,
+                        "line": 100
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//span[normalize-space()=\\'Filters\\'])[1]') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mutils.js:100\n\n\u001b[0m \u001b[90m  98 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForVisible(locator\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[35m10000\u001b[39m\u001b[33m,\u001b[39m testName \u001b[33m=\u001b[39m \u001b[32m\"\"\u001b[39m) {\n \u001b[90m  99 |\u001b[39m   \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 100 |\u001b[39m     \u001b[36mawait\u001b[39m locator\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 101 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`👀 [${testName}] Element became visible: ${locator}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 102 |\u001b[39m   } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 103 |\u001b[39m     console\u001b[33m.\u001b[39merror(\u001b[32m`❌ [${testName}] Element did not become visible within ${timeout}ms: ${locator}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at waitForVisible (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:100:19)\u001b[22m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js:131:23\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 [] 🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "🧭 [] 🔐 Logging in as reviewer...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔒 Typing password...\n"
+                    },
+                    {
+                      "text": "🚀 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "✅ [] Page loaded and text \"Dashboard\" is visible.\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "🧭 [] 👥 Navigating to 'Users' tab...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//a[normalize-space()=\\'Users\\'])[1]')\n"
+                    },
+                    {
+                      "text": "✅ Users page loaded successfully!\n"
+                    },
+                    {
+                      "text": "🧭 [] ➕ Clicking 'Add User' button...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//button[normalize-space()=\\'Add User\\'])[1]')\n"
+                    },
+                    {
+                      "text": "✅ Navigated to 'Create New User' form.\n"
+                    },
+                    {
+                      "text": "🧭 [] 📝 Filling new user details...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: getByPlaceholder('Enter username')\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: getByPlaceholder('Enter email address')\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: getByPlaceholder('Enter username')\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: getByPlaceholder('Enter username')\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: getByPlaceholder('Enter password')\n"
+                    },
+                    {
+                      "text": "🧭 [] 📜 Selecting user role...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//div[@role=\\'combobox\\'])[1]')\n"
+                    },
+                    {
+                      "text": "🧭 [] Selecting Annotator role...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//input[@type=\\'checkbox\\'])[4]')\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//button[normalize-space()=\\'Apply\\'])[1]')\n"
+                    },
+                    {
+                      "text": "✅ Role selected as Annotator.\n"
+                    },
+                    {
+                      "text": "🧭 [] 🚀 Creating new user...\n"
+                    },
+                    {
+                      "text": "🧠 Waiting for user creation process to complete...\n"
+                    },
+                    {
+                      "text": "✅ User created successfully!\n"
+                    },
+                    {
+                      "text": "🧭 [] 🎛 Opening filter dropdown...\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "❌ [] Element did not become visible within 10000ms: locator('xpath=(//span[normalize-space()=\\'Filters\\'])[1]')\n"
+                    },
+                    {
+                      "text": "🔍 Selector details: locator('xpath=(//span[normalize-space()=\\'Filters\\'])[1]')\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-11-12T08:21:55.636Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                    "column": 19,
+                    "line": 100
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5644,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://ocr.techsavanna.technology/login\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://ocr.techsavanna.technology/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js:13:14",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js",
+                      "column": 14,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[90m// === STEP 1: LOGIN ===\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(\u001b[32m\"🌐 Navigating to login page...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://ocr.techsavanna.technology/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'domcontentloaded'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(\u001b[32m\"🔐 Logging in as reviewer...\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js",
+                        "column": 14,
+                        "line": 13
+                      },
+                      "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://ocr.techsavanna.technology/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[90m// === STEP 1: LOGIN ===\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(\u001b[32m\"🌐 Navigating to login page...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://ocr.techsavanna.technology/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'domcontentloaded'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m logStep(\u001b[32m\"🔐 Logging in as reviewer...\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js:13:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 [] 🌐 Navigating to login page...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-11-12T08:22:47.402Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js",
+                    "column": 14,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5bb1f9dec247018c1123-c198f1c8f40b915a9140",
+          "file": "user.spec.js",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-12T08:21:53.618Z",
+    "duration": 60444.172,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

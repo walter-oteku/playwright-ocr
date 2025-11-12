@@ -1,0 +1,81 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="7.940077000000001">
+<testsuite name="forgot-password.spec.js" timestamp="2025-11-07T10:10:05.889Z" hostname="chromium" tests="1" failures="1" skipped="0" time="2.388" errors="0">
+<testcase name="Forgot Password Flow - Invalid and Valid Email" classname="forgot-password.spec.js" time="2.388">
+<failure message="forgot-password.spec.js:4:5 Forgot Password Flow - Invalid and Valid Email" type="FAILURE">
+<![CDATA[  [chromium] › forgot-password.spec.js:4:5 › Forgot Password Flow - Invalid and Valid Email ────────
+
+    TypeError: (0 , _utils.logStep) is not a function
+
+       6 |
+       7 |   // === STEP 1: LOGIN PAGE ===
+    >  8 |   await logStep(page, "🌐 Navigating to OCR Login Page...");
+         |                ^
+       9 |   await page.goto('https://ocr.techsavanna.technology/login');
+      10 |   await waitForVisible(page, "(//a[normalize-space()='Forgot your password?'])[1]");
+      11 |   await logStep(page, "✅ Login Page loaded.");
+        at C:\Users\walte\playwright-ocr\tests\forgot-password.spec.js:8:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TypeError: (0 , _utils.logStep) is not a function
+
+       6 |
+       7 |   // === STEP 1: LOGIN PAGE ===
+    >  8 |   await logStep(page, "🌐 Navigating to OCR Login Page...");
+         |                ^
+       9 |   await page.goto('https://ocr.techsavanna.technology/login');
+      10 |   await waitForVisible(page, "(//a[normalize-space()='Forgot your password?'])[1]");
+      11 |   await logStep(page, "✅ Login Page loaded.");
+        at C:\Users\walte\playwright-ocr\tests\forgot-password.spec.js:8:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\trace.zip]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

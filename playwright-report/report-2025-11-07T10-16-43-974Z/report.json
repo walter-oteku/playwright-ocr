@@ -1,0 +1,300 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-07T10-16-43-974Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-07T10-16-43-974Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-07T10-16-43-974Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "forgot-password.spec.js",
+      "file": "forgot-password.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Forgot Password Flow - Invalid and Valid Email",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7629,
+                  "error": {
+                    "message": "ReferenceError: expect is not defined",
+                    "stack": "ReferenceError: expect is not defined\n    at waitForVisible (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:33:7)\n    at C:\\Users\\walte\\playwright-ocr\\tests\\forgot-password.spec.js:41:23",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                      "column": 7,
+                      "line": 33
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.js:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(selectorOrText\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     } \u001b[36melse\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(selectorOrText))\u001b[33m.\u001b[39mtoBeVisible({ timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m     }\n \u001b[90m 35 |\u001b[39m   } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 36 |\u001b[39m     console\u001b[33m.\u001b[39merror(\u001b[32m`⚠️ Element not visible or timed out: ${selectorOrText}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                        "column": 7,
+                        "line": 33
+                      },
+                      "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mutils.js:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(selectorOrText\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     } \u001b[36melse\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(selectorOrText))\u001b[33m.\u001b[39mtoBeVisible({ timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m     }\n \u001b[90m 35 |\u001b[39m   } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 36 |\u001b[39m     console\u001b[33m.\u001b[39merror(\u001b[32m`⚠️ Element not visible or timed out: ${selectorOrText}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at waitForVisible (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:33:7)\u001b[22m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\forgot-password.spec.js:41:23\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 🌐 Navigating to OCR Login Page...\n"
+                    },
+                    {
+                      "text": "🧭 ✅ Login Page loaded.\n"
+                    },
+                    {
+                      "text": "🧭 🧩 Clicking 'Forgot your password?' link...\n"
+                    },
+                    {
+                      "text": "🧭 ✅ Forgot Password page ready.\n"
+                    },
+                    {
+                      "text": "🧭 📧 Testing with INVALID email...\n"
+                    },
+                    {
+                      "text": "🧭 🚫 Error message displayed correctly for invalid email.\n"
+                    },
+                    {
+                      "text": "🧭 📧 Testing with VALID email...\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "⚠️ Element not visible or timed out: /Password reset link sent to your email/i\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-11-07T10:16:45.711Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                    "column": 7,
+                    "line": 33
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6749,
+                  "error": {
+                    "message": "ReferenceError: expect is not defined",
+                    "stack": "ReferenceError: expect is not defined\n    at waitForVisible (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:33:7)\n    at C:\\Users\\walte\\playwright-ocr\\tests\\forgot-password.spec.js:41:23",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                      "column": 7,
+                      "line": 33
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.js:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(selectorOrText\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     } \u001b[36melse\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(selectorOrText))\u001b[33m.\u001b[39mtoBeVisible({ timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m     }\n \u001b[90m 35 |\u001b[39m   } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 36 |\u001b[39m     console\u001b[33m.\u001b[39merror(\u001b[32m`⚠️ Element not visible or timed out: ${selectorOrText}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                        "column": 7,
+                        "line": 33
+                      },
+                      "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mutils.js:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(selectorOrText\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     } \u001b[36melse\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(selectorOrText))\u001b[33m.\u001b[39mtoBeVisible({ timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m     }\n \u001b[90m 35 |\u001b[39m   } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 36 |\u001b[39m     console\u001b[33m.\u001b[39merror(\u001b[32m`⚠️ Element not visible or timed out: ${selectorOrText}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at waitForVisible (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:33:7)\u001b[22m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\forgot-password.spec.js:41:23\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 🌐 Navigating to OCR Login Page...\n"
+                    },
+                    {
+                      "text": "🧭 ✅ Login Page loaded.\n"
+                    },
+                    {
+                      "text": "🧭 🧩 Clicking 'Forgot your password?' link...\n"
+                    },
+                    {
+                      "text": "🧭 ✅ Forgot Password page ready.\n"
+                    },
+                    {
+                      "text": "🧭 📧 Testing with INVALID email...\n"
+                    },
+                    {
+                      "text": "🧭 🚫 Error message displayed correctly for invalid email.\n"
+                    },
+                    {
+                      "text": "🧭 📧 Testing with VALID email...\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "⚠️ Element not visible or timed out: /Password reset link sent to your email/i\n"
+                    }
+                  ],
+                  "retry": 1,
+                  "startTime": "2025-11-07T10:16:56.543Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\forgot-password-Forgot-Pas-43df9-w---Invalid-and-Valid-Email-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                    "column": 7,
+                    "line": 33
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bd264db5de3f2dd4f749-7e55a49246df00777b5e",
+          "file": "forgot-password.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-07T10:16:43.988Z",
+    "duration": 20577.571,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,155 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="76.386523">
+<testsuite name="user.spec.js" timestamp="2025-11-12T08:36:52.799Z" hostname="chromium" tests="1" failures="1" skipped="0" time="68.039" errors="0">
+<testcase name="Full user workflow: create, filter, edit, and delete users" classname="user.spec.js" time="68.039">
+<failure message="user.spec.js:7:5 Full user workflow: create, filter, edit, and delete users" type="FAILURE">
+<![CDATA[  [chromium] › user.spec.js:7:5 › Full user workflow: create, filter, edit, and delete users ───────
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//*[name()=\'svg\'][@class=\'MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pqasgp\'])[1]')
+        - locator resolved to <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ExpandMoreIcon" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pqasgp">…</svg>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div tabindex="-1" role="presentation" class="MuiDialog-container MuiDialog-scrollPaper css-8azq84">…</div> from <div role="presentation" class="MuiDialog-root MuiModal-root css-1egf66k">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div tabindex="-1" role="presentation" class="MuiDialog-container MuiDialog-scrollPaper css-8azq84">…</div> from <div role="presentation" class="MuiDialog-root MuiModal-root css-1egf66k">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        16 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <div tabindex="-1" role="presentation" class="MuiDialog-container MuiDialog-scrollPaper css-8azq84">…</div> from <div role="presentation" class="MuiDialog-root MuiModal-root css-1egf66k">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+
+
+      130 |   const filterDropdown = page.locator("(//*[name()='svg'][@class='MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pqasgp'])[1]");
+      131 |   await waitForVisible(filterDropdown, 10000);
+    > 132 |   await filterDropdown.click();
+          |                        ^
+      133 |   console.log("✅ Filter dropdown opened!");
+      134 |
+      135 |   // === STEP 8: APPLY ROLE AND STATUS FILTERS ===
+        at C:\Users\walte\playwright-ocr\tests\user.spec.js:132:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: page.waitForSelector: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('text=Dashboard') to be visible
+
+
+       at utils.js:87
+
+      85 |
+      86 |   try {
+    > 87 |     await page.waitForSelector(`text=${text}`, { timeout: 10000 });
+         |                ^
+      88 |     console.log(`✅ [${testName}] Page loaded and text "${text}" is visible.`);
+      89 |   } catch (err) {
+      90 |     console.error(`❌ [${testName}] Could not find text "${text}" within 10s.`);
+        at waitForPageLoad (C:\Users\walte\playwright-ocr\tests\utils.js:87:16)
+        at C:\Users\walte\playwright-ocr\tests\user.spec.js:19:3
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 [] 🌐 Navigating to login page...
+🧭 [] 🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+🧭 [] 👥 Navigating to 'Users' tab...
+👀 [] Element became visible: locator('xpath=(//a[normalize-space()=\'Users\'])[1]')
+✅ Users page loaded successfully!
+🧭 [] ➕ Clicking 'Add User' button...
+👀 [] Element became visible: locator('xpath=(//button[normalize-space()=\'Add User\'])[1]')
+✅ Navigated to 'Create New User' form.
+🧭 [] 📝 Filling new user details...
+👀 [] Element became visible: getByPlaceholder('Enter username')
+👀 [] Element became visible: getByPlaceholder('Enter email address')
+👀 [] Element became visible: getByPlaceholder('Enter username')
+👀 [] Element became visible: getByPlaceholder('Enter username')
+👀 [] Element became visible: getByPlaceholder('Enter password')
+🧭 [] 📜 Selecting user role...
+👀 [] Element became visible: locator('xpath=(//div[@role=\'combobox\'])[1]')
+🧭 [] Selecting Annotator role...
+👀 [] Element became visible: locator('xpath=(//input[@type=\'checkbox\'])[4]')
+👀 [] Element became visible: locator('xpath=(//button[normalize-space()=\'Apply\'])[1]')
+✅ Role selected as Annotator.
+🧭 [] 🚀 Creating new user...
+🧠 Waiting for user creation process to complete...
+✅ User created successfully!
+🧭 [] 🎛 Opening filter dropdown...
+👀 [] Element became visible: locator('xpath=(//*[name()=\'svg\'][@class=\'MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pqasgp\'])[1]')
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\trace.zip]]
+🧭 [] 🌐 Navigating to login page...
+🧭 [] 🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ [] Could not find text "Dashboard" within 10s.
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,99 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="36.596696">
+<testsuite name="logout.spec.js" timestamp="2025-11-08T07:14:27.677Z" hostname="chromium" tests="1" failures="1" skipped="0" time="30.796" errors="0">
+<testcase name="🔐 Full login and logout flow with visible typing" classname="logout.spec.js" time="30.796">
+<failure message="logout.spec.js:7:5 🔐 Full login and logout flow with visible typing" type="FAILURE">
+<![CDATA[  [chromium] › logout.spec.js:7:5 › 🔐 Full login and logout flow with visible typing ──────────────
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Enter your email or username"]') to be visible
+
+
+      15 |
+      16 |   await logStep(page, "📧 Typing email...");
+    > 17 |   await loginPage.username.waitFor({ state: "visible", timeout: 10000 });
+         |                            ^
+      18 |   await loginPage.username.fill('');
+      19 |   await loginPage.username.type(username, { delay: 150 });
+      20 |
+        at C:\Users\walte\playwright-ocr\tests\logout.spec.js:17:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Enter your email or username"]') to be visible
+
+
+      15 |
+      16 |   await logStep(page, "📧 Typing email...");
+    > 17 |   await loginPage.username.waitFor({ state: "visible", timeout: 10000 });
+         |                            ^
+      18 |   await loginPage.username.fill('');
+      19 |   await loginPage.username.type(username, { delay: 150 });
+      20 |
+        at C:\Users\walte\playwright-ocr\tests\logout.spec.js:17:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 🌐 Navigating to OCR Login Page...
+🧭 📧 Typing email...
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\trace.zip]]
+🧭 🌐 Navigating to OCR Login Page...
+🧭 📧 Typing email...
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

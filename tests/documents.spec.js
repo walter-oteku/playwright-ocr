@@ -1,33 +1,24 @@
+// tests/document-workflow.spec.js
 import { test, expect } from '@playwright/test';
 import path from 'path';
+import { LoginPage } from './pages.js';
+import { credentials } from './credentials.js';
+import { waitForPageLoad } from './utils.js';
 
-test('Full document workflow: upload, search, filter, view, download, delete', async ({ page }) => {
-  test.setTimeout(180000);
+test('Full Document Workflow: upload, search, filter, view, download, delete', async ({ page }) => {
+  test.setTimeout(240000);
 
-  // ===========================================================
-  // === LOGIN SECTION ===
-  // ===========================================================
-  console.log("🚀 Navigating to login page...");
+  const { username, password } = credentials.reviewer;
+  const loginPage = new LoginPage(page);
+
+  console.log("🌍 Navigating to login page...");
   await page.goto('https://ocr.techsavanna.technology/login');
   await page.waitForLoadState('domcontentloaded');
 
-  console.log("📧 Typing username...");
-  const emailField = page.locator("(//input[@id='_R_hlbinpfjrb_'])[1]");
-  await emailField.waitFor({ state: "visible", timeout: 10000 });
-  await emailField.fill("reviewer1", { delay: 120 });
-
-  console.log("🔒 Typing password...");
-  const passwordField = page.locator("(//input[@id='_R_ilbinpfjrb_'])[1]");
-  await passwordField.waitFor({ state: "visible", timeout: 10000 });
-  await passwordField.fill("password123", { delay: 120 });
-
-  console.log("🖱️ Clicking 'Sign In' button...");
-  const signInButton = page.locator("//button[normalize-space()='Sign in']");
-  await signInButton.click();
-
-  console.log("⏳ Waiting for dashboard to load...");
-  await page.waitForURL(/dashboard/, { timeout: 20000 });
-  console.log("✅ Logged in successfully!");
+  console.log("🔐 Logging in...");
+  await loginPage.login(username, password);
+  await waitForPageLoad(page, 'Dashboard');
+  console.log("✅ Login successful — redirecting to Documents page...");
 
   // ===========================================================
   // === NAVIGATE TO DOCUMENTS ===
@@ -77,7 +68,6 @@ test('Full document workflow: upload, search, filter, view, download, delete', a
   await page.waitForTimeout(3000);
   console.log("✅ Search completed.");
 
-  // Clear search for next steps
   console.log("🧹 Clearing search field...");
   await searchBox.click();
   await page.keyboard.press('Control+A');
@@ -93,23 +83,16 @@ test('Full document workflow: upload, search, filter, view, download, delete', a
 
   console.log("✅ Applying 'Completed' status filter...");
   const completedCheck = page.locator('label:has-text("Completed") input[type="checkbox"]');
-  if (await completedCheck.isVisible()) {
-    await completedCheck.check();
-  }
+  if (await completedCheck.isVisible()) await completedCheck.check();
 
   console.log("✅ Applying 'Business Permit' type filter...");
   const docTypeCheck = page.locator('label:has-text("Business Permit") input[type="checkbox"]');
-  if (await docTypeCheck.isVisible()) {
-    await docTypeCheck.check();
-  }
+  if (await docTypeCheck.isVisible()) await docTypeCheck.check();
 
   console.log("🧹 Clearing all filters...");
   const clearFilters = page.getByRole('button', { name: /Clear all/i });
-  if (await clearFilters.isVisible()) {
-    await clearFilters.click();
-  }
+  if (await clearFilters.isVisible()) await clearFilters.click();
 
-  // === Date & Confidence Range ===
   console.log("📅 Setting Upload Date Range...");
   await page.fill('(//input[@type="date"])[1]', '2025-10-01');
   await page.fill('(//input[@type="date"])[2]', '2025-10-27');
@@ -128,6 +111,7 @@ test('Full document workflow: upload, search, filter, view, download, delete', a
   // ===========================================================
   // === VIEW / DOWNLOAD / DELETE ACTIONS ===
   // ===========================================================
+  console.log("\n📁 Handling first document entry...");
   const firstRow = page.locator('table tbody tr').first();
 
   // === VIEW DOCUMENT ===
@@ -146,7 +130,7 @@ test('Full document workflow: upload, search, filter, view, download, delete', a
   console.log("⬇️ Downloading document...");
   const downloadBtn = firstRow.locator('(//*[name()="svg"][@class="h-4 w-4"])[2]');
   if (await downloadBtn.isVisible()) {
-    const [ download ] = await Promise.all([
+    const [download] = await Promise.all([
       page.waitForEvent('download'),
       downloadBtn.click()
     ]);
@@ -167,7 +151,7 @@ test('Full document workflow: upload, search, filter, view, download, delete', a
     console.log("⚠️ Delete button not found.");
   }
 
-  console.log("🎯 Full document workflow completed successfully!");
+  console.log("\n🎯 Full document workflow completed successfully!");
 });
 
 // ===========================================================

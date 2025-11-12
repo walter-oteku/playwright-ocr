@@ -1,0 +1,105 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="52.551369">
+<testsuite name="upload.spec.js" timestamp="2025-11-12T08:43:17.824Z" hostname="chromium" tests="1" failures="1" skipped="0" time="46.39" errors="0">
+<testcase name="Full document workflow: upload, search, filter, view, edit, delete" classname="upload.spec.js" time="46.39">
+<failure message="upload.spec.js:8:5 Full document workflow: upload, search, filter, view, edit, delete" type="FAILURE">
+<![CDATA[  [chromium] › upload.spec.js:8:5 › Full document workflow: upload, search, filter, view, edit, delete 
+
+    TypeError: (0 , _utils.waitForElementBySelectors) is not a function
+
+      24 |   // === STEP 2: NAVIGATE TO UPLOAD PAGE ===
+      25 |   await logStep("📁 Navigating to 'Upload' tab...");
+    > 26 |   const uploadTab = await waitForElementBySelectors(page, [
+         |                                                    ^
+      27 |     '//a[normalize-space()="Upload"]',
+      28 |     'a[href*="upload"]',
+      29 |     '[data-testid*="upload-tab"]',
+        at C:\Users\walte\playwright-ocr\tests\upload.spec.js:26:52
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TypeError: (0 , _utils.waitForElementBySelectors) is not a function
+
+      24 |   // === STEP 2: NAVIGATE TO UPLOAD PAGE ===
+      25 |   await logStep("📁 Navigating to 'Upload' tab...");
+    > 26 |   const uploadTab = await waitForElementBySelectors(page, [
+         |                                                    ^
+      27 |     '//a[normalize-space()="Upload"]',
+      28 |     'a[href*="upload"]',
+      29 |     '[data-testid*="upload-tab"]',
+        at C:\Users\walte\playwright-ocr\tests\upload.spec.js:26:52
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 [] 🌐 Navigating to login page...
+🧭 [] 🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+🧭 [] 📁 Navigating to 'Upload' tab...
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\trace.zip]]
+🧭 [] 🌐 Navigating to login page...
+🧭 [] 🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+🧭 [] 📁 Navigating to 'Upload' tab...
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,107 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="36.947675">
+<testsuite name="logout.spec.js" timestamp="2025-11-12T06:38:44.700Z" hostname="chromium" tests="1" failures="1" skipped="0" time="29.098" errors="0">
+<testcase name="🔐 Full login and logout flow with visible typing" classname="logout.spec.js" time="29.098">
+<failure message="logout.spec.js:7:5 🔐 Full login and logout flow with visible typing" type="FAILURE">
+<![CDATA[  [chromium] › logout.spec.js:7:5 › 🔐 Full login and logout flow with visible typing ──────────────
+
+    TypeError: locator.waitFor is not a function
+
+       at utils.js:112
+
+      110 |  */
+      111 | export async function waitForVisible(locator, timeout = 10000) {
+    > 112 |   await locator.waitFor({ state: 'visible', timeout });
+          |                 ^
+      113 |   console.log(`👀 Element became visible: ${locator}`);
+      114 | }
+      115 |
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:112:17)
+        at C:\Users\walte\playwright-ocr\tests\logout.spec.js:31:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TypeError: locator.waitFor is not a function
+
+       at utils.js:112
+
+      110 |  */
+      111 | export async function waitForVisible(locator, timeout = 10000) {
+    > 112 |   await locator.waitFor({ state: 'visible', timeout });
+          |                 ^
+      113 |   console.log(`👀 Element became visible: ${locator}`);
+      114 | }
+      115 |
+        at waitForVisible (C:\Users\walte\playwright-ocr\tests\utils.js:112:17)
+        at C:\Users\walte\playwright-ocr\tests\logout.spec.js:31:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🧭 [object Object]
+🧭 [object Object]
+🧭 [object Object]
+🧭 [object Object]
+🧭 [object Object]
+✅ Page loaded and text "Dashboard" is visible.
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium\trace.zip]]
+🧭 [object Object]
+🧭 [object Object]
+🧭 [object Object]
+🧭 [object Object]
+🧭 [object Object]
+✅ Page loaded and text "Dashboard" is visible.
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\logout-🔐-Full-login-and-logout-flow-with-visible-typing-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

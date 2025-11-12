@@ -1,4 +1,12 @@
 {
-  "validUser": { "email": "admin@ocrplatform.com", "password": "admin123" },
-  "invalidUser": { "email": "fake@ocr.com", "password": "wrongpass" }
+  "validUser": { 
+    "username": "annotator1", 
+    "password": "password123" 
+  },
+  "invalidUser": { 
+    "email": "fake@ocr.com", 
+    "password": "wrongpass" 
+  }
+ 
 }
+

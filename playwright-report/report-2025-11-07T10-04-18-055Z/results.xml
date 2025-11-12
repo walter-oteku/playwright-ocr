@@ -1,0 +1,58 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="90.49472999999999">
+<testsuite name="dashboard.spec.js" timestamp="2025-11-07T10:04:18.262Z" hostname="chromium" tests="1" failures="0" skipped="0" time="87.677" errors="0">
+<testcase name="Login → Dashboard Navigation (Charts + Documents)" classname="dashboard.spec.js" time="87.677">
+<system-out>
+<![CDATA[🌐 Navigating to login page as annotator1...
+🔐 Logging in...
+✅ Successfully logged in to dashboard!
+
+⚡ Testing Quick Action cards...
+🖱️ Clicking on: Upload Documents
+✅ Upload Documents section loaded successfully!
+⚠️ Failed Upload Documents: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//h6[normalize-space()=\'Dashboard\']/ancestor::a)[1]') to be visible[22m
+
+🖱️ Clicking on: Manual Review
+⚠️ Failed Manual Review: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//h6[normalize-space()=\'Manual Review\']/ancestor::a)[1]') to be visible[22m
+
+🖱️ Clicking on: Pending Documents
+⚠️ Failed Pending Documents: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//h6[normalize-space()=\'Pending Documents\']/ancestor::a)[1]') to be visible[22m
+
+🖱️ Clicking on: Analytics
+⚠️ Failed Analytics: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//h6[normalize-space()=\'Analytics\']/ancestor::a)[1]') to be visible[22m
+
+🖱️ Clicking on: User Management
+⚠️ Failed User Management: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//h6[normalize-space()=\'User Management\']/ancestor::a)[1]') to be visible[22m
+
+🖱️ Clicking on: System Settings
+⚠️ Failed System Settings: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=(//h6[normalize-space()=\'System Settings\']/ancestor::a)[1]') to be visible[22m
+
+
+📈 Starting chart hover with scrollbar positioning...
+🔄 Scrolling to charts...
+🎨 Found 0 canvas charts
+✅ Chart hover sequence completed
+
+📋 Checking recent documents section...
+🔄 Scrolling to recent-documents...
+📄 Found 0 document items
+✅ Finished checking recent documents
+🔄 Scrolling to top...
+
+🎯 Full dashboard navigation sequence completed.
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

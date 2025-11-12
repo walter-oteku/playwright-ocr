@@ -1,0 +1,145 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="72.798629">
+<testsuite name="upload.spec.js" timestamp="2025-11-12T08:51:27.300Z" hostname="chromium" tests="1" failures="1" skipped="0" time="65.161" errors="0">
+<testcase name="Full document workflow: upload, search, filter, view, edit, delete" classname="upload.spec.js" time="65.161">
+<failure message="upload.spec.js:8:5 Full document workflow: upload, search, filter, view, edit, delete" type="FAILURE">
+<![CDATA[  [chromium] › upload.spec.js:8:5 › Full document workflow: upload, search, filter, view, edit, delete 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText(/upload successful|document uploaded/i)
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for getByText(/upload successful|document uploaded/i)
+
+
+      48 |
+      49 |   // === OPTIONAL: Verify upload success message ===
+    > 50 |   await expect(page.getByText(/upload successful|document uploaded/i)).toBeVisible({ timeout: 10000 });
+         |                                                                        ^
+      51 |   console.log("🎉 Upload confirmed as successful!");
+      52 | });
+        at C:\Users\walte\playwright-ocr\tests\upload.spec.js:50:72
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText(/upload successful|document uploaded/i)
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for getByText(/upload successful|document uploaded/i)
+
+
+      48 |
+      49 |   // === OPTIONAL: Verify upload success message ===
+    > 50 |   await expect(page.getByText(/upload successful|document uploaded/i)).toBeVisible({ timeout: 10000 });
+         |                                                                        ^
+      51 |   console.log("🎉 Upload confirmed as successful!");
+      52 | });
+        at C:\Users\walte\playwright-ocr\tests\upload.spec.js:50:72
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🌐 Navigating to login page...
+🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+📁 Navigating to 'Upload' tab...
+✅ Upload page loaded.
+📎 Preparing to upload sample document...
+⌛ Starting simulated slow upload...
+🚀 Upload progress: 0%
+🚀 Upload progress: 20%
+🚀 Upload progress: 40%
+🚀 Upload progress: 60%
+🚀 Upload progress: 80%
+🚀 Upload progress: 100%
+📤 File upload initiated...
+✅ File uploaded successfully!
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium\trace.zip]]
+🌐 Navigating to login page...
+🔐 Logging in as reviewer...
+📧 Typing email...
+🔒 Typing password...
+🚀 Clicking Sign In...
+✅ [] Page loaded and text "Dashboard" is visible.
+✅ Login successful!
+📁 Navigating to 'Upload' tab...
+✅ Upload page loaded.
+📎 Preparing to upload sample document...
+⌛ Starting simulated slow upload...
+🚀 Upload progress: 0%
+🚀 Upload progress: 20%
+🚀 Upload progress: 40%
+🚀 Upload progress: 60%
+🚀 Upload progress: 80%
+🚀 Upload progress: 100%
+📤 File upload initiated...
+✅ File uploaded successfully!
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\upload-Full-document-workf-c52cf-rch-filter-view-edit-delete-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

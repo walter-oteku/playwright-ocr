@@ -1,0 +1,341 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\walte\\playwright-ocr\\playwright.config.js",
+    "rootDir": "C:/Users/walte/playwright-ocr/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report/report-2025-11-12T08-36-52-723Z",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T08-36-52-723Z/report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-report/report-2025-11-12T08-36-52-723Z/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/walte/playwright-ocr/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/walte/playwright-ocr/tests",
+        "testIgnore": [
+          "**/*.setup.js"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.js/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "user.spec.js",
+      "file": "user.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Full user workflow: create, filter, edit, and delete users",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 62870,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js",
+                        "column": 24,
+                        "line": 132
+                      },
+                      "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//*[name()=\\'svg\\'][@class=\\'MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pqasgp\\'])[1]')\u001b[22m\n\u001b[2m    - locator resolved to <svg focusable=\"false\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" data-testid=\"ExpandMoreIcon\" class=\"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pqasgp\">…</svg>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div tabindex=\"-1\" role=\"presentation\" class=\"MuiDialog-container MuiDialog-scrollPaper css-8azq84\">…</div> from <div role=\"presentation\" class=\"MuiDialog-root MuiModal-root css-1egf66k\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div tabindex=\"-1\" role=\"presentation\" class=\"MuiDialog-container MuiDialog-scrollPaper css-8azq84\">…</div> from <div role=\"presentation\" class=\"MuiDialog-root MuiModal-root css-1egf66k\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    16 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div tabindex=\"-1\" role=\"presentation\" class=\"MuiDialog-container MuiDialog-scrollPaper css-8azq84\">…</div> from <div role=\"presentation\" class=\"MuiDialog-root MuiModal-root css-1egf66k\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\n\n\u001b[0m \u001b[90m 130 |\u001b[39m   \u001b[36mconst\u001b[39m filterDropdown \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//*[name()='svg'][@class='MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pqasgp'])[1]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 131 |\u001b[39m   \u001b[36mawait\u001b[39m waitForVisible(filterDropdown\u001b[33m,\u001b[39m \u001b[35m10000\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 132 |\u001b[39m   \u001b[36mawait\u001b[39m filterDropdown\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 133 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"✅ Filter dropdown opened!\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 134 |\u001b[39m\n \u001b[90m 135 |\u001b[39m   \u001b[90m// === STEP 8: APPLY ROLE AND STATUS FILTERS ===\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js:132:24\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 [] 🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "🧭 [] 🔐 Logging in as reviewer...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔒 Typing password...\n"
+                    },
+                    {
+                      "text": "🚀 Clicking Sign In...\n"
+                    },
+                    {
+                      "text": "✅ [] Page loaded and text \"Dashboard\" is visible.\n"
+                    },
+                    {
+                      "text": "✅ Login successful!\n"
+                    },
+                    {
+                      "text": "🧭 [] 👥 Navigating to 'Users' tab...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//a[normalize-space()=\\'Users\\'])[1]')\n"
+                    },
+                    {
+                      "text": "✅ Users page loaded successfully!\n"
+                    },
+                    {
+                      "text": "🧭 [] ➕ Clicking 'Add User' button...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//button[normalize-space()=\\'Add User\\'])[1]')\n"
+                    },
+                    {
+                      "text": "✅ Navigated to 'Create New User' form.\n"
+                    },
+                    {
+                      "text": "🧭 [] 📝 Filling new user details...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: getByPlaceholder('Enter username')\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: getByPlaceholder('Enter email address')\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: getByPlaceholder('Enter username')\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: getByPlaceholder('Enter username')\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: getByPlaceholder('Enter password')\n"
+                    },
+                    {
+                      "text": "🧭 [] 📜 Selecting user role...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//div[@role=\\'combobox\\'])[1]')\n"
+                    },
+                    {
+                      "text": "🧭 [] Selecting Annotator role...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//input[@type=\\'checkbox\\'])[4]')\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//button[normalize-space()=\\'Apply\\'])[1]')\n"
+                    },
+                    {
+                      "text": "✅ Role selected as Annotator.\n"
+                    },
+                    {
+                      "text": "🧭 [] 🚀 Creating new user...\n"
+                    },
+                    {
+                      "text": "🧠 Waiting for user creation process to complete...\n"
+                    },
+                    {
+                      "text": "✅ User created successfully!\n"
+                    },
+                    {
+                      "text": "🧭 [] 🎛 Opening filter dropdown...\n"
+                    },
+                    {
+                      "text": "👀 [] Element became visible: locator('xpath=(//*[name()=\\'svg\\'][@class=\\'MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pqasgp\\'])[1]')\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-12T08:36:54.644Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium\\trace.zip"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5169,
+                  "error": {
+                    "message": "Error: page.waitForSelector: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('text=Dashboard') to be visible\u001b[22m\n",
+                    "stack": "Error: page.waitForSelector: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('text=Dashboard') to be visible\u001b[22m\n\n    at waitForPageLoad (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:87:16)\n    at C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js:19:3",
+                    "location": {
+                      "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                      "column": 16,
+                      "line": 87
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.js:87\n\n\u001b[0m \u001b[90m 85 |\u001b[39m\n \u001b[90m 86 |\u001b[39m   \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${text}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ [${testName}] Page loaded and text \"${text}\" is visible.`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 89 |\u001b[39m   } \u001b[36mcatch\u001b[39m (err) {\n \u001b[90m 90 |\u001b[39m     console\u001b[33m.\u001b[39merror(\u001b[32m`❌ [${testName}] Could not find text \"${text}\" within 10s.`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                        "column": 16,
+                        "line": 87
+                      },
+                      "message": "Error: page.waitForSelector: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('text=Dashboard') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mutils.js:87\n\n\u001b[0m \u001b[90m 85 |\u001b[39m\n \u001b[90m 86 |\u001b[39m   \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${text}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ [${testName}] Page loaded and text \"${text}\" is visible.`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 89 |\u001b[39m   } \u001b[36mcatch\u001b[39m (err) {\n \u001b[90m 90 |\u001b[39m     console\u001b[33m.\u001b[39merror(\u001b[32m`❌ [${testName}] Could not find text \"${text}\" within 10s.`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at waitForPageLoad (C:\\Users\\walte\\playwright-ocr\\tests\\utils.js:87:16)\u001b[22m\n\u001b[2m    at C:\\Users\\walte\\playwright-ocr\\tests\\user.spec.js:19:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "🧭 [] 🌐 Navigating to login page...\n"
+                    },
+                    {
+                      "text": "🧭 [] 🔐 Logging in as reviewer...\n"
+                    },
+                    {
+                      "text": "📧 Typing email...\n"
+                    },
+                    {
+                      "text": "🔒 Typing password...\n"
+                    },
+                    {
+                      "text": "🚀 Clicking Sign In...\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "❌ [] Could not find text \"Dashboard\" within 10s.\n"
+                    }
+                  ],
+                  "retry": 1,
+                  "startTime": "2025-11-12T08:38:02.528Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\walte\\playwright-ocr\\test-results\\user-Full-user-workflow-create-filter-edit-and-delete-users-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\walte\\playwright-ocr\\tests\\utils.js",
+                    "column": 16,
+                    "line": 87
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5bb1f9dec247018c1123-c198f1c8f40b915a9140",
+          "file": "user.spec.js",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-12T08:36:52.735Z",
+    "duration": 76386.523,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
